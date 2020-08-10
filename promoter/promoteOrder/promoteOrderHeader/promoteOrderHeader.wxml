@@ -1,0 +1,12 @@
+<view class='GroupMenbersOrderHeader'>
+  <block wx:for='{{menu}}' wx:key='{{menu.id}}'>
+    <view class='GroupMenbersOrderHeader-item {{ index == menuIndex ? "select" : "" }}' catchtap='changeindex' data-index='{{index}}'>
+      {{item.text}}
+      <text class='{{ index == menuIndex ? "selectline" : "" }}'></text>
+    </view>
+  </block>
+</view>
+<view class='search'>
+  <image lazy-load catchtap='search' class='search-icon' src='/images/search/search/search.png'></image>
+  <input bindblur="search" value='{{searchData}}' class='search-input' placeholder='请输入' bindinput='write'></input>
+</view>

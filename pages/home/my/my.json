@@ -1,0 +1,8 @@
+{
+  "usingComponents":{
+    "login": "/pages/login/login",
+    "layer": "/pages/utill/layer/layer",
+    "footer": "/pages/footer/footer"
+  },
+  "enablePullDownRefresh": true
+}

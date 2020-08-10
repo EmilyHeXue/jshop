@@ -1,0 +1,97 @@
+page{
+  background: #eeeeee;
+}
+.ItemEvaluation{
+  background:#fff;
+  margin: 15rpx;
+  border-radius:15rpx;
+}
+.ItemEvaluation-head{
+  display:flex;
+  justify-content:flex-start;
+  flex-flow:row nowrap;
+  align-items:center;
+  padding:2vw 0vw;
+  background:#fff;
+}
+.ItemEvaluation-head-img{
+  width:12vw;
+  height:12vw;
+  border-radius:3vw;
+}
+.ItemEvaluation-head-test{
+  font-size:4vw;
+  font-weight:600;
+  padding:0 2vw;
+}
+.ItemEvaluation-head-star{
+  width:60vw;
+}
+
+.ItemEvaluation-content{
+  margin:1vw;
+  border-bottom:1px solid #eee;
+}
+textarea{
+  width:96vw;
+  border:0px solid red;
+  height:20vw;
+  font-weight:600;
+  font-size:3.5vw;
+  letter-spacing:0.1px;
+}
+.ItemEvaluation-content-item{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:flex-start;
+  align-items:center;
+}
+.ItemEvaluation-content-choose{
+  width:28vw;
+  height:28vw;
+  margin-right:2.65vw;
+  margin-left:0.65vw;
+  margin-bottom:2vw;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-flow:column wrap;
+  border:1px dotted #eee;
+  box-sizing: border-box;
+}
+.ItemEvaluation-content-choose-img{
+  width:10vw;
+  height:10vw;
+}
+.ItemEvaluation-content-img{
+  width:30vw;
+  height:30vw;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:2vw;
+  margin-right:0.65vw;
+  margin-left:0.65vw;
+}
+.ItemEvaluation-content-img-item{
+  width:28vw;
+  height:28vw;
+}
+.del{
+  border-radius:50%;
+  position:absolute;
+  width:5vw;
+  height:5vw;
+  top:0vw;
+  right:0vw;
+}
+
+.del{
+  border-radius:50%;
+  position:absolute;
+  width:5vw;
+  height:5vw;
+  top:0vw;
+  right:0vw;
+}

@@ -1,0 +1,43 @@
+.BPDL{
+  background: #fff;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  min-height: 366rpx;
+  padding: 30rpx;
+  font-size: 16px;
+  color: #111;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  margin-bottom: 46rpx;
+  overflow: hidden;
+  flex-flow: row nowrap;
+}
+.item-avatar{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+.item-name{
+  flex: 1;
+  font-size: 32rpx; 
+  margin: 0 38rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+.name{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160rpx;
+  margin-right: 16rpx;
+}
+.number{
+  
+}
+.item-date{
+  font-size: 12px;
+  white-space: nowrap;
+}

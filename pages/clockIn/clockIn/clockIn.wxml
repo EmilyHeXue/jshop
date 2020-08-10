@@ -1,0 +1,143 @@
+<view class='{{page ? "page":""}}'>
+  <view class='tab-btn'>
+      <view bindtap='tab_btn' data-index='0' class='{{active==0?"on":""}}'>签到</view>
+      <view bindtap='tab_btn' data-index='1' class='{{active==1?"on":""}}'>足迹</view>
+  </view>
+  <view class='main1' hidden='{{active!=0}}'>
+      <view class='head'>
+          <image lazy-load src='{{activityImg}}'></image>
+          <view class='foot'>
+              <view class='date'>{{continuousTime}}
+                  <text>天</text>
+              </view>
+              <view class='time'>
+                  <view>{{activityName}}</view>
+                  <text>{{createTime}} 开始</text>
+              </view>
+          </view>
+      </view>
+      <view class='ginseng'>
+          <text>{{cumulative}}人参加</text>
+          <block wx:for='{{avatar}}' wx:key='index'>
+            <image lazy-load wx:if='{{index < 10}}' src='{{item.avatar}}'></image>
+          </block>
+          <view wx:if='{{avatar.length > 10}}'>...</view>
+      </view>
+      <view class='btn'>
+          <view wx:if='{{!isSign}}' catchtap='goClockIng' data-status='{{isSign}}'>立即签到</view>
+          <view wx:else>已签到</view>
+          <text catchtap='remarkShow'>活动规则</text>
+      </view>
+      <view class='screen-btn'>
+          <!--<view bindtap='screen_btn' data-index='0' class='{{current==0?"on":""}}'>早起榜</view>-->
+          <view bindtap='screen_btn' data-index='1' class='{{current==1?"on":""}}'>累计榜</view>
+          <!--<view bindtap='screen_btn' data-index='2' class='{{current==2?"on":""}}'>坚持榜</view>-->
+          
+      </view>
+      <view class='rankinghead'>
+          <view class='item'>
+              <view>
+                  <image lazy-load src='{{rankingList[1].avatar ? rankingList[1].avatar:"/images/clockIn/clockIn/1.png"}}'></image>
+                  <image lazy-load src='/images/clockIn/clockIn/a2.png'></image>
+              </view>
+              <text style='color: #bccddd'>{{rankingList[1].nickname ? rankingList[1].nickname:"暂无用户"}}</text>
+          </view>
+          <view class='item'>
+              <view>
+                  <image lazy-load src='{{rankingList[0].avatar ? rankingList[0].avatar:"/images/clockIn/clockIn/1.png"}}'></image>
+                  <image lazy-load src='/images/clockIn/clockIn/a1.png'></image>
+              </view>
+              <text style='color: #ef525b'>{{rankingList[0].nickname ? rankingList[0].nickname:"暂无用户"}}</text>
+          </view>
+          <view class='item'>
+              <view>
+                  <image lazy-load src='{{rankingList[2].avatar ? rankingList[2].avatar:"/images/clockIn/clockIn/1.png"}}'></image>
+                  <image lazy-load src='/images/clockIn/clockIn/a3.png'></image>
+              </view>
+              <text style='color: #e59c77'>{{rankingList[2].nickname ? rankingList[2].nickname:"暂无用户"}}</text>
+          </view>
+      </view>
+      <view class='rankinglist'>
+        <block wx:for='{{rankingList}}' wx:key='index'>
+          <view class='rankinglist-item'>
+              <text>{{index + 1}}</text>
+              <view class='Headportrait'>
+                  <image lazy-load src='{{item.avatar}}'></image>
+                  <image lazy-load src='/images/clockIn/clockIn/v4.png'></image>
+              </view>
+              <view class='name'>{{item.nickname}}</view>
+              <view class='frequency'>签到次数{{item.num ? item.num:0}}次</view>
+          </view>
+        </block>
+      </view>
+  </view>
+
+  <view class='calendar' hidden='{{active!=1}}'>
+      <view class='box'>
+          <view class='top'>
+              <image lazy-load class='prve' src='/images/clockIn/clockIn/l.png'></image>
+              <view>{{year}}年{{month}}月</view>
+              <image lazy-load class='next' src='/images/clockIn/clockIn/r.png'></image>
+          </view>
+          <view class='Cumulative'>已累计{{leiji}}天，连续{{lianxu}}天</view>
+          <view class='week'>
+              <view>日</view>
+              <view>一</view>
+              <view>二</view>
+              <view>三</view>
+              <view>四</view>
+              <view>五</view>
+              <view>六</view>
+          </view>
+          <view class='day'>
+            <block wx:for='{{list}}' wx:key='index'>
+              <view class='day-item'>
+                <view 
+                  class='{{item.day == chooseday ? "day-on":""}}' 
+                  catchtap='changeChoose' 
+                  data-index='{{index}}' 
+                  data-day='{{item.day}}'>
+                  <text 
+                    class='isSign' 
+                    wx:if='{{item.status && item.day != chooseday}}'
+                  ></text>
+                  {{item.day}}
+                </view>
+              </view>
+              
+            </block>
+          </view>
+      </view>
+      <view class='head'>
+          <image lazy-load 
+            wx:if='{{list[chooseIndex].pic_url.length != 0}}' 
+            src='{{list[chooseIndex].pic_url}}'
+            alt='签到图片'
+          ></image>
+          <button 
+            catchtap='retroactive' 
+            wx:if='{{list[chooseIndex].pic_url.length == 0 && list[chooseIndex].status == false && chooseday < today}}' >
+            补签</button>
+          <button 
+          catchtap='goClockIng' data-status='{{isSign}}'
+          wx:if='{{list[chooseIndex].pic_url.length == 0 && !list[chooseIndex].status && chooseday == today}}' >
+          签到</button>
+          <view 
+            class='retroactive' 
+            wx:if='{{list[chooseIndex].pic_url.length == 0 && list[chooseIndex].status && chooseday <= today}}' >
+            签到成功</view>
+      </view>
+  </view>
+  <image lazy-load catchtap='index' class='home' src='/images/clockIn/home.png'></image>
+</view>
+<footer bindshow='show'></footer>
+
+<view class='layer' wx:if='{{remarkFlag}}'>
+  <view class='layer-item'>
+    <view class='layer-item-title'>活动规则</view>
+    <view class='layer-item-row'>{{activityRemark}}</view>
+    <view class='layer-item-tabbar'>
+      <view class='layer-item-btn'  catchtap='remarkShow'>关闭</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+/* pages/returnOrder/goods/goods.wxss */
+.goods{
+  
+}
+.goods-item{
+  display:flex;
+  justify-content:flex-start;
+  align-items:flex-start;
+  margin-bottom:15rpx;
+}
+.goods-item-img{
+  width:150rpx;
+  height:150rpx;
+  margin-right:15rpx;
+}
+.goods-item-center{
+  flex:1;
+}
+.goods-item-name{
+  font-size:26.25rpx;
+}
+.goods-item-property{
+  font-size:22.5rpx;
+  color:#999999;
+}
+.goods-item-right{
+  width:150rpx;
+  text-align:right;
+  margin-left:15rpx;
+}
+.goods-item-price{
+  font-size:26.25rpx;
+}
+.goods-item-number{
+  font-size:22.5rpx;
+  color:#999999;
+}

@@ -1,0 +1,6 @@
+<form class='button' report-submit bindsubmit='sub'>
+  <button form-type='submit' class='btn' style='background-color: {{data.details.color2}}; color: {{data.details.color1}}; border-radius: {{data.details.radius}}; border: {{borderShow ? "1px" : "0px"}} solid {{data.details.color3}}'>
+    <image lazy-load wx:if='{{data.details.iconShow}}' src='{{data.details.imgs[0].src}}' class='icon'></image>
+    {{data.details.text}}
+  </button>
+</form>

@@ -1,0 +1,77 @@
+<form bindsubmit="postData" class='group-form'>
+  <!--头像-->
+  <view class='group-form-item'>
+    <view class='group-form-label'>头像</view>
+    <image lazy-load class='avatar' src='{{avatar}}'></image>
+    <!--<input hidden='{{true}}' name='avatar' value='{{avatar}}'></input>-->
+  </view>
+
+  <!--昵称
+  <view class='group-form-item'>
+    <view class='group-form-label'>昵称</view>
+    <input class='group-form-input' name='nick_name' value='{{nick_name}}'></input>
+  </view>-->
+
+  <!--性别
+  <view class='group-form-item'>
+    <view class='group-form-label'>性别</view>
+    <picker class='group-form-input' bindchange='chooseSex' value="{{sexIndex}}" range="{{sex}}">
+      <view>
+        {{sex[sexIndex]}}
+      </view>
+    </picker>
+    <input hidden='{{true}}' class='group-form-input' name='sex' value='{{sex[sexIndex]}}'></input>
+  </view>-->
+
+  <!--姓名-->
+  <view class='group-form-item'>
+    <view class='group-form-label'>姓名</view>
+    <input class='group-form-input' name='realname' value='{{name}}'></input>
+  </view>
+
+  <!--手机-->
+  <view class='group-form-item'>
+    <view class='group-form-label'>手机</view>
+    <input class='group-form-input' disabled='{{true}}' name='phone' value='{{phone}}'></input>
+  </view>
+
+  <!--自提点地区-->
+  <view class='group-form-item'>
+    <view class='group-form-label'>是否创建自提点</view>
+    <switch class='group-form-input' value='{{flag}}' bindchange='show'></switch>
+  </view>
+
+  <!--自提点地区-->
+  <view wx:if='{{flag}}' class='group-form-item'>
+    <view class='group-form-label'>自提点地区</view>
+    <picker class='group-form-input' bindchange='chooseAddress' value="{{address}}" mode='region' >
+      <view class='{{address == "" ? "placeholder-class":""}}'>
+        {{address == "" ? "请选择自提点地区": address}}
+      </view>
+    </picker>
+    <input hidden='{{true}}' class='group-form-input' name='province_code' value='{{province_code}}'></input>
+    <input hidden='{{true}}' class='group-form-input' name='city_code' value='{{city_code}}'></input>
+    <input hidden='{{true}}' class='group-form-input' name='area_code' value='{{area_code}}'></input>
+  </view>
+
+  <!--自提点小区-->
+  <view wx:if='{{flag}}' class='group-form-item'>
+    <view class='group-form-label'>自提点小区</view>
+    <view bindtap='chooseArea' class='group-form-input {{area == "" ? "placeholder-class":""}}'>{{area == '' ? "请选择小区名称":area}}</view>
+    <input hidden='{{true}}' class='group-form-input' name='area_name' value='{{area}}'></input>
+    <input hidden='{{true}}' class='group-form-input' name='latitude' value='{{latitude}}'></input>
+    <input hidden='{{true}}' class='group-form-input' name='longitude' value='{{longitude}}'></input>
+  </view>
+
+  <!--自提点地址-->
+  <view wx:if='{{flag}}' class='group-form-item'>
+    <view class='group-form-label'>自提点地址</view>
+    <input class='group-form-input' name='addr' value='{{addr}}'></input>
+  </view>
+
+  <view class='group-form-item'>
+    <view class='group-form-label'>备注</view>
+    <textarea class='group-form-textarea' name='remark' value='{{remark}}' placeholder='请输入内容'></textarea>
+  </view>
+  <button class="group-form-btn" form-type="submit" style="background:#FE5802">申请{{leader_name}}</button>
+</form>

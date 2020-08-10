@@ -1,0 +1,77 @@
+.view-product{
+  box-sizing: border-box;
+  padding: 20rpx 20rpx;
+  margin: 20rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.item{
+  display: flex;
+  position: relative;
+}
+.item .con .txt2{
+  color:#999;
+}
+.style1{
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+.style1:first-child{
+  margin-top: 0px;
+}
+.style1 .img{
+  width: 100px;
+  height: 100px;
+  margin-right: 10px; 
+}
+
+
+/**** 样式2 ****/
+.style2{
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column wrap;
+  margin-bottom:10px;
+}
+.style2:first-child{
+  margin-top: 0px;
+}
+.style2:last-child{
+  margin-bottom:0px;
+}
+
+.style2 .con{
+  padding:5px 10px;
+  line-height:24px;
+}
+.style2 .img{
+  width: 100%;
+  border-radius: 10rpx;
+}
+
+.style3{
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.style3 .img{
+  width: 100%;
+}
+.style3 .con{
+  flex: 1;
+  padding:5px 10px;
+  text-align: left;
+}
+
+.fa3{
+  display: grid;
+  flex-flow: row wrap;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 10rpx;
+  grid-column-gap: 10rpx;
+}

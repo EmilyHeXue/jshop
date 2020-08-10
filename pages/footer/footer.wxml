@@ -1,0 +1,10 @@
+<!--pages/footer/footer.wxml-->
+<view wx:if='{{show}}' class='menu'>
+  <block wx:for='{{menu}}' wx:key='name'>
+    <view class='menu-item' catchtap='go' data-url='{{item.choice_page_url}}'>
+      <image lazy-load class='menu-item-img' src='{{url == menuUrl[index] ? item.filePutSelection : item.filePut}}'></image>
+      <view class='menu-item-name' style='color: {{url == menuUrl[index] ? text_selection : bottom_text}}'>{{item.name}}</view>
+      <view class="brage" style='background-color: {{text_selection}}'  wx:if='{{item.name == "购物车" && nums != 0}}'>{{nums}}</view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,23 @@
+.start{
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content:space-between;
+  align-items:center;
+}
+.star-item{
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content:space-between;
+  align-items:center;
+}
+.star-item-img{
+  width:6vw;
+  height:6vw;
+}
+.star-text{
+  font-size:4vw;
+  width:14vw;
+  text-align:right;
+  color:#ccc;
+  font-weight:600;
+}

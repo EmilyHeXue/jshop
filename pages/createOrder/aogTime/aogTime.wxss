@@ -1,0 +1,90 @@
+/* pages/createOrder/aogTime/aogTime.wxss */
+.aogTime{
+  margin: 26rpx;
+  padding: 20rpx 40rpx;
+  background: #ffffff;
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.aog-right{
+  text-align: right;
+  font-size: 24rpx;
+  color: #888888;
+}
+.mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+.layer{
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 750rpx;
+  box-sizing: border-box;
+  height: 80vh;
+}
+.layer-title{
+  text-align: center;
+  padding: 40rpx;
+  border-bottom: 1px solid #f2f2f2;
+  font-size: 36rpx;
+  color: #101010;
+}
+.layer-content{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: calc(80vh - 116rpx - 100rpx);
+}
+.left{
+  width: 224rpx;
+  text-align: center;
+  color: #404040;
+  background: #f9f9f9;
+  height: 100%;
+  margin-right: 38rpx;
+}
+.left-item{
+  padding: 37rpx 27rpx;
+}
+.right{ 
+  flex: 1;
+  height: 100%;
+}
+.bind{
+  color: red;
+  background: #ffffff;
+}
+.right-item{
+  padding: 39rpx 0 39rpx 4rpx;
+  border-top: 1px solid #f2f2f2;
+}
+.right-item:first-child{
+  border-width: 0;
+}
+.layer-footer{
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.layer-footer-btn{
+  flex: 1;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  border-top: 1rpx solid #f2f2f2;
+}
+.ok{
+  background: red;
+  color: #ffffff;
+}

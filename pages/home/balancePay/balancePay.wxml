@@ -1,0 +1,13 @@
+<view class='balancePay'>
+  <view class='title'>
+    <view>余额支付</view>
+    <view class="right">
+      <view>余额:</view>
+      <view class='price'>{{money}}</view>
+    </view>
+  </view>
+  <view class='content'>
+    <image lazy-load class='qrcode' src='{{qrcode}}'></image>
+    <view class='label'>出示给店员扫码扣余额</view>
+  </view>
+</view>

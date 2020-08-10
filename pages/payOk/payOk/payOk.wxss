@@ -1,0 +1,102 @@
+
+page{
+  background: #f2f2f2;
+}
+.payok{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.payok-img{
+  width: 200rpx;
+  height: 200rpx;
+  margin: 40rpx;
+}
+
+.payok-text{
+  margin-bottom: 30rpx;
+  font-size: 40rpx;
+}
+.payok-btn{
+  margin-top: 50rpx;
+  width: 500rpx;
+}
+
+mask{
+  width: 750rpx;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+layer{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+layer .icon{
+  width: 600rpx;
+}
+.layer-btn{
+  position: absolute;
+  bottom: 40rpx;
+  width: 600rpx;
+  opacity: 0;
+}
+.close{
+  width: 60rpx;
+  position: absolute;
+  right: 0;
+}
+
+.uc-helpShare, .uc-helpShare2, .uc-helpShareList {background-color: #fff; width: 100vw; }
+
+.uc-helpShare .panel, .uc-helpShare2 .panel, .uc-helpShareList .panel { background-color: #1aad19; color: #fff; font-size: 36rpx; font-weight: bold; padding: 50rpx 30rpx 60rpx; text-align: center; }
+
+.uc-helpShare .panel .face-box, .uc-helpShare2 .panel .face-box, .uc-helpShareList .panel .face-box { width: 100rpx; height: 100rpx; border-radius: 100%; background-color: #fff; border: #fff 1px solid; overflow: hidden; margin: 0 auto 20rpx; }
+
+.uc-helpShare .panel .face-box image, .uc-helpShare2 .panel .face-box image, .uc-helpShareList .panel .face-box image { width: 100%; height: 100%; display: block; -o-object-fit: cover; object-fit: cover; }
+
+.uc-helpShare .box, .uc-helpShare2 .box, .uc-helpShareList .box { position: relative; z-index: 9; background-color: #fff; border-radius: 30rpx 30rpx 0 0; padding: 30rpx; position: relative; margin-top: -30rpx; z-index: 9; }
+
+.uc-helpShare .box .title, .uc-helpShare2 .box .title, .uc-helpShareList .box .title { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-bottom: 30rpx; }
+
+.uc-helpShare .box .title .uc-b, .uc-helpShare2 .box .title .uc-b, .uc-helpShareList .box .title .uc-b { font-size: 40rpx; }
+
+.uc-helpShare .box .title .big, .uc-helpShare2 .box .title .big, .uc-helpShareList .box .title .big { font-size: 48rpx; }
+
+.uc-helpShare .box .title .price, .uc-helpShare2 .box .title .price, .uc-helpShareList .box .title .price { font-weight: bold; color: #ff2a2a; }
+
+.uc-helpShare .box .user, .uc-helpShare2 .box .user, .uc-helpShareList .box .user { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -ms-flex-wrap: wrap; flex-wrap: wrap; font-size: 36rpx; font-weight: bold; }
+
+.uc-helpShare .box .face-box, .uc-helpShare2 .box .face-box, .uc-helpShareList .box .face-box { width: 80rpx; height: 80rpx; border-radius: 100%; overflow: hidden; margin-right: 20rpx; }
+
+.uc-helpShare .box .face-box image, .uc-helpShare2 .box .face-box image, .uc-helpShareList .box .face-box image { width: 100%; height: 100%; display: block; -o-object-fit: cover; object-fit: cover; }
+
+.uc-helpShare .list .item, .uc-helpShare2 .list .item { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -ms-flex-wrap: wrap; flex-wrap: wrap; position: relative; }
+
+.uc-helpShare .list image, .uc-helpShare2 .list image { width: 210rpx; height: 210rpx; display: block; margin-right: 20rpx; margin-bottom: 20rpx; }
+
+.uc-helpShare .list image:nth-child(3n), .uc-helpShare2 .list image:nth-child(3n) { margin-right: 0; }
+
+.uc-helpShare .list .uc-btn, .uc-helpShare2 .list .uc-btn { color: #ffffff; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); background-color: rgba(26, 173, 25, 0.9); height: 80rpx; border-radius: 80rpx; width: 250rpx; font-size: 36rpx; line-height: 80rpx;}
+
+.uc-helpShareList .list { position: relative; }
+
+.uc-helpShareList .list .item { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-bottom: 10rpx; font-size: 32rpx; }
+
+.uc-helpShareList .list .face-box { width: 50rpx; height: 50rpx; border-radius: 100%; overflow: hidden; }
+
+.uc-helpShareList .list .face-box image { width: 100%; height: 100%; display: block; -o-object-fit: cover; object-fit: cover; }
+
+.uc-helpShareList .list .time { color: #999999; font-size: 24rpx; }
+
+.uc-helpShareList .list .uc-btn {color: #ffffff; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); background-color: rgba(26, 173, 25, 0.9); height: 80rpx; border-radius: 80rpx; width: 250rpx; font-size: 36rpx; }
+
+.uc-helpShareList .list .num { min-width: 2em; text-align: right; }
+
+.uc-helpShareList .list .name { min-width: 0; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; white-space: nowrap; overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+
+.uc-helpShareList .list .num, .uc-helpShareList .list .face-box, .uc-helpShareList .list .name, .uc-helpShareList .list .time { margin-right: 10rpx; }

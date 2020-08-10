@@ -1,0 +1,144 @@
+/* pages/order/orderItem/orderItem.wxss */
+.orderItem{
+  margin-top:85rpx;
+}
+.orderItem-item{
+  display:flex;
+  background-color:#ffffff;
+  margin:20rpx;
+  flex-flow:column wrap;
+  border-radius:15rpx;
+  padding:15rpx;
+}
+.orderItem-header{
+  font-size: 26rpx;
+  border-bottom: 1rpx solid #eee;
+  padding: 10rpx 0 20rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #aaaaaa;
+}
+
+.orderItem-content{
+  width:100%;
+  
+}
+.orderItem-goods{
+  
+  border-bottom:1px solid #eee;
+}
+.orderItem-goods-item{
+  margin-bottom:15rpx;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.orderItem-goods-img{
+  width:150rpx;
+  height:150rpx;
+}
+.orderItem-goods-text{
+  flex:1;
+  margin:0 15rpx;
+  height:150rpx;
+}
+.orderItem-goods-name{
+  font-size:26.25rpx;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow:hidden;
+}
+.orderItem-goods-property{
+  font-size:24rpx;
+  color:#aaaaaa;
+  margin-top:10rpx;
+}
+.orderItem-goods-Number{
+  height:150rpx;
+  text-align:right;
+  font-size:24rpx;
+}
+.orderItem-goods-price{
+  
+}
+.orderItem-goods-number{
+  color:#aaaaaa;
+  margin-top:10rpx;
+}
+.orderItem-content-statistical{
+  margin:15rpx 0 22.5rpx 0;
+  font-size:24rpx;
+  text-align:right;
+  margin-bottom:15rpx;
+}
+.orderItem-tabbar{
+  color:#aaaaaa;
+  font-size:24rpx;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.orderItem-tabbar-left{
+  
+}
+.orderItem-tabbar-right{
+  display:flex;
+}
+.orderItem-tabbar-btn{
+  padding:7.5rpx 22.5rpx;
+  border:1px solid #aaa;
+  margin-left:15rpx;
+  border-radius:25rpx;
+}
+
+
+.mask{
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  width: 750rpx;
+  height: 100vh;
+  background: rgba( 0, 0, 0, .5 );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layer{
+  width: 600rpx;
+  height: 600rpx;
+  background: #fff;
+}
+.qrcode{
+  width: 600rpx;
+  height: 600rpx;
+}
+.layer-header{
+  text-align: center;
+  font-size: 30rpx;
+  padding-top: 40rpx;
+}
+
+
+.tuaninfo{
+  border-bottom: 1px solid #eee;
+  font-size: 28rpx;
+  color: #888;
+  padding: 10rpx 0;
+}
+
+.shopname{
+  color: #ff9800;
+}
+.shopname::after{
+  content: '提供';
+  color: #aaaaaa;
+}
+.shopname::before{
+  content: '该订单商品由';
+  color: #aaaaaa;
+}

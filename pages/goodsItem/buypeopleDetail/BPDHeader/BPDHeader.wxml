@@ -1,0 +1,7 @@
+<view class='header'>
+  <view class='header-top'>已购买记录</view>
+  <!--<view class='header-content'>
+    <view class='content-price'>{{people}}</view>
+    <view class='content-number'>{{number}}</view>
+  </view>-->
+</view>

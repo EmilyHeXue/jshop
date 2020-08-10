@@ -1,0 +1,16 @@
+<view class='groupRecommended' wx:if='{{data.length != 0}}'>
+  <view class='groupRecommended-header'>{{total}}人在参加拼团, 可直接参团</view>
+  <view class='groupRecommended-content'>
+    <block wx:for='{{data}}' wx:key='{{item.id}}'>
+      <view wx:if='{{index < 3}}' class='groupRecommended-item'>
+          <image lazy-load src='{{item.avatar}}' class='item-icon'></image>
+          <view class='item-name'>{{item.nickname}}</view>
+          <view class='item-right-left'>
+            <view class='item-people'>还差{{item.poor}}人成团</view>
+            <view class='item-time'>剩余{{expire_time[index]}}</view>
+          </view>
+          <view data-id='{{item.id}}' style='background: {{background}};' data-num='{{item.number}}' catchtap="go" class='item-btn'>去拼团</view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+.item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  padding-top: 0;
+}
+.icon{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  margin-right: 15rpx;
+}
+.center{
+  flex:1;
+}
+.icon-tel{
+  width:32px;
+  height:32px;
+  display:block;
+}

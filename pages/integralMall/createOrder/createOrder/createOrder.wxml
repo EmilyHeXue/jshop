@@ -1,0 +1,7 @@
+<ChooseAddress bind:addressid='getAddressid' />
+<GoodData data='{{data}}' />
+<form report-submit bindsubmit='createOrder'>
+  <button form-type='submit' class='btn'>立即兑换</button>
+</form>
+
+<buyLayer data='{{data}}' goodsScore='{{goodsScore}}' addressid='{{addressid}}' score='{{score}}' show='{{showLayer}}' bind:show='show'/>

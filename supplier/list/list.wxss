@@ -1,0 +1,105 @@
+page{
+  background: #f4f4f4;
+}
+.header{
+  background: #eeeeee;
+  width: 750rpx;
+  border-bottom-left-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+}
+.list{
+  margin-top: -100px;
+  position: relative;
+  padding: 0 18rpx;
+}
+.list-item{
+  background: #ffffff;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+  padding: 26rpx;
+}
+
+.item-store{
+  display: flex;
+  margin-bottom: 26rpx;
+}
+.item-logo{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #f3f3f3;
+  margin-right: 12rpx;
+}
+.item-top-center{
+  flex: 1;
+  overflow: hidden;
+}
+.item-name{
+  font-size: 32rpx;
+  color: #333333;
+}
+.item-label{
+  width: auto;
+  font-size: 24rpx;
+  color: #848484;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.item-btn{
+  color: #a8a8a8;
+  border: 1px solid #a8a8a8;
+  font-size: 22rpx;
+  padding: 6rpx 17rpx;
+  display: inline-block;
+  height: 30rpx;
+  line-height: 30rpx;
+  border-radius: 50rpx;
+  margin-left: 22rpx;
+}
+
+.item-goods{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 30rpx;
+}
+.goods-item{
+  overflow: hidden;
+}
+.goods-img{
+  background: #ffffff;
+  width: 200rpx;
+  height: 200rpx;
+}
+.goods-content{
+  overflow: hidden;
+}
+.goods-name{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #2f2f2f;
+}
+.goods-price{
+  color: #ff1b1b;
+  font-size: 31rpx;
+}
+.goods-price::before{
+  content: '￥';
+  font-size: 28rpx;
+}
+
+good:empty{
+  background: #ffffff;
+}
+
+.back{
+  position: fixed;
+  top: 55px;
+  left: 20rpx;
+  z-index: 100;
+}
+.backindex{
+  width: 60px;
+}

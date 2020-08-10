@@ -1,0 +1,23 @@
+<view class="orderItemOrder">
+  <view>订单信息</view>
+  <view class="orderItemOrder-item">
+    <view class="orderItemOrder-item-left">订单编号:</view>
+    <view class="orderItemOrder-item-right">{{orderItem.order_sn}}</view>
+  </view>
+  <view class="orderItemOrder-item">
+    <view class="orderItemOrder-item-left">微信交易号:</view>
+    <view class="orderItemOrder-item-right">{{orderItem.transaction_id}}</view>
+  </view>
+  <view class="orderItemOrder-item">
+    <view class="orderItemOrder-item-left">创建时间:</view>
+    <view class="orderItemOrder-item-right">{{orderItem.create_time}}</view>
+  </view>
+  <view class="orderItemOrder-item">
+    <view class="orderItemOrder-item-left">付款时间:</view>
+    <view class="orderItemOrder-item-right">{{orderItem.pay_time}}</view>
+  </view>
+  <view class="orderItemOrder-item">
+    <view class="orderItemOrder-item-left">发货时间:</view>
+    <view class="orderItemOrder-item-right">{{orderItem.send_out_time}}</view>
+  </view>
+</view>

@@ -1,0 +1,138 @@
+<!--pages/goodsItem/goodsItem.wxml-->
+<view class='goodsitem'>
+  <!--图片-->
+  <goodsimage 
+    data='{{data}}'
+    interFlag='{{interFlag}}'
+    bind:showShare='showShare'
+  ></goodsimage>
+  <canvas type='2d' id='shareimg' style='width: 375px; height: 302px; position: fixed; left: -375px; top: 0;'></canvas>
+  <!--返回上一页-->
+  <image 
+    lazy-load 
+    bindtap="back" 
+    src='/images/png/back.png' 
+    class='back' 
+    style='top: {{top}}px; padding: calc(({{height}}px - 50rpx)/2);'/>
+    
+  <!--支付尾款时间-->
+  <advanceInfo  data='{{data}}'/>
+
+  <!--秒杀商品价格-->
+  <!--
+  <goodsPrice
+    max_price='{{max_price}}'
+    min_price='{{min_price}}'
+    end_time='{{end_time}}'
+    start_time='{{start_time}}'
+    interFlag='{{interFlag}}'
+    wx:if='{{goodstype == 1}}'/>
+    -->
+  <!--秒杀商品信息-->
+  <goodsInfo
+    data='{{data}}'
+    bind:showShare='showShare'/>
+
+  <!--购买人数-->
+  <buyPeople data='{{data}}'/>
+
+  <!--团长信息-->
+  <groupInfo/>
+
+  <!--弹窗,放的商品分类价格-->
+  <layer 
+    data='{{data}}'
+    interFlag='{{interFlag}}'
+    show='{{show}}' 
+    goodsid='{{id}}' 
+    btnStatus='{{btnStatus}}'
+    tuanNum='{{tuanNum}}'
+    group_id='{{group_id}}'
+    service_goods_is_ship='{{service_goods_is_ship}}'
+    start_time='{{start_time}}'
+    type='{{type}}'
+    supplier_id='{{supplier_id}}'
+    supplier_name='{{supplier_name}}'
+    submit_type='{{submit_type}}'
+    bind:colseLayer='colseLayer'
+  ></layer>
+
+  <!--红包领取-->
+  <goodsCoupons data='{{data}}' wx:if='{{goodstype != 2}}' ></goodsCoupons>
+
+  <!--选择规格-->
+  <!--<goodsclassify wx:if='{{goodstype != 2}}' bind:show='showLayer'></goodsclassify>-->
+
+  <!--商品评价-->
+  <goodsComment  goodsId='{{id}}'></goodsComment>
+
+  
+
+  <!--拼团推荐-->
+  <groupRecommended
+    bind:setTuanId='setTuanId'
+    bind:show='showLayer'
+    interFlag='{{interFlag}}'
+    goodsid='{{id}}'
+    wx:if='{{goodstype == 2}}'/>
+
+  <!--拼团玩法介绍-->
+  <groupPlayer wx:if='{{goodstype == 2}}' />
+
+  
+  <!--店铺信息-->
+  <store data='{{data}}' supplier_name='{{supplier_name}}' supplier_id='{{supplier_id}}' label='{{label}}'></store>
+
+  
+  <!--推荐商品-->
+  <recommendGoods type='centre_show'/>
+
+
+  <!--富文本-->
+  <view class='rithtext'>
+    <view style="color: {{bg}}" class='rithtext-title'>商品详情<view style='background: {{bg}}' class="bottomline"></view></view>
+    <rich-text nodes='{{info_header}}'></rich-text>
+    <view class='table' wx:if='{{attribute[0]}}'>
+      <block wx:for='{{attribute}}' wx:if='{{item != ""}}' wx:key='index'>
+        <view style='width: {{index % 2 == 0 && index + 1 == attribute.length ? "99.7%" : "50%"}}' class='table-item'>{{item}}</view>
+      </block>
+    </view>
+    <rich-text nodes='{{html}}'></rich-text>
+    <rich-text nodes='{{info_bottom}}'></rich-text>
+  </view>
+
+  <!--推荐商品-->
+  <recommendGoods type='bottom_show'/>
+
+
+  <!--直播-->
+  <navigator wx:if='{{roomid != 0}}' url="plugin-private://{{appid}}/pages/live-player-plugin?room_id={{roomid}}" class="live">
+    <image lazy-load class="live-icon" src='/images/live/in.gif'></image>
+    <view class="live-label">正在直播</view>
+  </navigator>
+
+  <!--分享页面-->
+  <Share 
+    goodsid='{{id}}' 
+    bannerList='{{banner}}'
+    goodName='{{goodsName}}'
+    shareFlag='{{shareFlag}}' 
+    data='{{data}}'
+    bind:showShare='showShare' />
+  <!--底部菜单-->
+  <goodsfooter
+    property='{{property}}'
+    goodstype='{{goodstype}}'
+    price='{{price}}'
+    group_price='{{min_price}}'
+    data='{{data}}'
+    bind:show='showLayer'
+    bind:toBuy='showLayer'
+    show='{{show}}'></goodsfooter>
+</view>
+
+<view wx:if='{{data.solitaire_id != 0}}' style='position: fixed; right: 10px; top: 40vh; z-index: 10; border-radius: 50%; opacity: .8;'>
+	<navigator url='/solitaire/activity/activity?id={{data.solitaire_id}}'>
+		<image src='/images/goodsItem/postSolitaire.png' style='width: 90rpx; height: 90rpx;'></image>
+	</navigator>
+</view>

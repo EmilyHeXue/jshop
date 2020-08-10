@@ -1,0 +1,12 @@
+<!--pages/goodsClassify/goodsClassify/goodsClassify.wxml-->
+<view class='{{page ? "page":""}}'>
+  <data
+    data='{{data}}'
+    classifyData='{{classifyData}}'
+    bind:cartUpdata='cartUpdata'
+    bind:changeData='changeData'>
+  </data>
+</view>
+
+
+<footer cartUpdata='{{cartUpdata}}' bindshow='{{footerFlag}}'></footer>

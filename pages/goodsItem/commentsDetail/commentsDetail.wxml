@@ -1,0 +1,30 @@
+<view class="comments">
+  <block wx:for='{{data}}' wx:key='{{item.id}}'>
+    <view class='comments-item'>
+      <view class='comment-user'>
+        <image lazy-load src='{{item.avatar}}' class='comments-head'></image>
+        <view>{{item.nickname}}</view>
+      </view>
+      <view class='comment-time'>
+        <view class='comment-data'>{{item.create_time}}</view>
+        <view class='comment-classification'>{{item.property1_name}}{{item.property2_name}}</view>
+      </view>
+      <view class='comment-text'>
+        {{item.content.length == 0 && item.pics_url.length == 0 ? "系统默认好评" : item.content }}
+      </view>
+      <view class='comment-imgs' wx:if='{{item.pics_url.length != 0 && item.pics_url[0].length != 0}}'>
+        <block wx:for='{{item.pics_url}}' wx:for-item='imgitem' wx:for-index='imgindex' wx:key='{{imgindex}}'>
+          <image lazy-load 
+            class='comment-img'  
+            src='{{imgitem}}' 
+            catchtap='lookImg(imgindex,item.pics_url)'
+            data-index='{{imgindex}}'
+            data-pic_url='{{item.pics_url}}'
+          ></image>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>
+
+<footer bindshow='show'></footer>

@@ -1,0 +1,2 @@
+<GroupSalesTabbar bind:change='change'/>
+<GroupSalesData list='{{list}}' total_price='{{total_price}}' total_number='{{total_number}}' time='{{time}}'/>

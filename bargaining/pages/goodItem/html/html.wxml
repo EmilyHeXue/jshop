@@ -1,0 +1,4 @@
+<view class='html'>
+  <view class='header'>商品详情</view>
+  <rich-text nodes='{{html}}'></rich-text>
+</view>

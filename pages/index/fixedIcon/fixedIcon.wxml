@@ -1,0 +1,34 @@
+<view 
+  class="view-service" 
+  style="right:{{data.details.positionRight}}%;bottom:{{data.details.positionBottom}}%;opacity:{{data.details.opacity}}">
+  <button wx:if='{{data.details.type == 2}}' class='icon' catchtap='show'>
+    <image lazy-load  class='icon' src="{{data.details.imgs[0].src}}"></image>
+  </button>
+  <image lazy-load wx:if='{{data.details.type == 1}}' catchtap='toTop' class='icon' src="{{data.details.imgs[0].src}}"></image>
+  <image lazy-load wx:if='{{data.details.type == 3}}' catchtap='go' class='icon' src="{{data.details.imgs[0].src}}" data-url='/pages/goodsItem/goodsItem/goodsItem?id={{data.details.imgs[0].link}}'></image>
+</view>
+
+<layer show='{{showFlag}}' bind:show='show'>
+  <view catchtap class='layer' slot='layer-content'>
+    <view class='layer-title'>
+      <view class='layer-title-head'>分享到</view>
+      <image mode='widthFix' lazy-load catchtap='show' class='layer-title-icon' src='/images/goodsItem/image/close2.png'></image>
+    </view>
+    <view class='layer-content'>
+    <!--
+      <view class='layer-item' catchtap="toclip">
+        <image lazy-load class='layer-icon' src='/images/goodsItem/image/group_info.png'></image>
+        <view class='layer-content'>团购信息</view>
+      </view>
+      -->
+      <button open-type="share" class='layer-item'>
+        <image lazy-load class='layer-icon' src='/images/goodsItem/image/weixin.png'></image>
+        <view class='layer-content'>微信好友</view>
+      </button>
+      <view catchtap="toShare" class='layer-item'>
+        <image lazy-load class='layer-icon' src='/images/goodsItem/image/image.png'></image>
+        <view class='layer-content'>生成海报</view>
+      </view>
+    </view>
+  </view>
+</layer>

@@ -1,0 +1,14 @@
+<!--pages/shopCart/footer/footer.wxml-->
+<view class='footer' >
+  <view class='flex-left' bindtap='change'>
+    <checkbox checked="{{checked}}"/>
+    <view>全选</view>
+  </view>
+  <view class='flex-right' wx:if='{{show}}'>
+    <view class='flex-right-price' style='color: {{background}}'>{{allPrice}}</view>
+    <view class='btn' style='background: {{background}}; filter: grayscale({{chooseData.length != 0 ? 0 : 100}}%);' bindtap='subscribeMessage'>结算</view>
+  </view>
+  <view class='flex-right' wx:if='{{!show}}'>
+    <view class='delbtn' bindtap='delGoods'>删除</view>
+  </view>
+</view>

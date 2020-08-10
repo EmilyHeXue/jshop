@@ -1,0 +1,18 @@
+page{
+  background: #f5f5f5;
+}
+.menu{
+  background: #ffffff;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+.menu-item{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 30rpx;
+}
+.menu-item-img{
+  width: 45rpx;
+  height: 45rpx;
+}

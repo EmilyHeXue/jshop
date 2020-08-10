@@ -1,0 +1,25 @@
+<view class='GroupSalesData'>
+
+  <view class='GroupSalesData-card'>
+    <view class='card-date'>{{time}}</view>
+    <view class='card-flex'>
+      <view class='card-item'>
+        <view class='card-price'>{{total_price}}</view>
+        <view class='card-text'>总金额</view>
+      </view>
+      <view class='card-item'>
+        <view class='card-number'>{{total_number}}</view>
+        <view class='card-text'>总份数</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='list'>
+    <block wx:for='{{list}}' wx:key='{{item.nickname}}'>
+      <view class='list-item'>
+      <view class='list-left'>{{item.goods_name || item.nickname}}</view>
+      <view class='list-right'>{{item.numbers}}份</view>
+    </view>
+    </block>
+  </view>
+</view>

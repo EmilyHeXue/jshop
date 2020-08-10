@@ -1,0 +1,36 @@
+.header{
+  text-align: center;
+  padding: 54rpx 0;
+}
+.header-top{
+  margin-bottom: 30rpx;
+  font-size: 40rpx;
+}
+.header-content{
+  display: flex;
+  justify-content: center;
+  font-size: 28rpx;
+}
+.content-price{
+  color: red;
+}
+.content-price::after{
+  content: '人参与购买,';
+  color: #101010;
+  margin-right: 28rpx;
+}
+.content-price::before{
+  content: '已有';
+  color: #101010;
+}
+.content-number{
+  color: red;
+}
+.content-number::after{
+  content: '件';
+  color: #101010;
+}
+.content-number::before{
+  content: '商品共销售';
+  color: #101010;
+}

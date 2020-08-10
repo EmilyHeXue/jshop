@@ -1,0 +1,14 @@
+<!--对商品进行评价-->
+<view class='{{page ? "page":""}}'>
+  <post></post>
+  <goodsItem 
+    data='{{data}}' 
+    bind:operation='operation'
+    bind:img='img'
+    bind:delImg='delImg'
+  ></goodsItem>
+
+  <button bindtap='post' class='post-btn' style='background: {{background}}'>提交</button>
+</view>
+
+<footer bindshow='footerFlag'></footer>

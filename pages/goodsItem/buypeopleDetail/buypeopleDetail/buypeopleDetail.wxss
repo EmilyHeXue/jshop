@@ -1,0 +1,10 @@
+page{
+  min-height: 100vh;
+  padding: 20rpx 20rpx 50rpx 20rpx;
+  box-sizing: border-box;
+}
+.buypropleDetail{
+  background: #ffffff;
+  height: auto;
+  border-radius: 24rpx;
+}

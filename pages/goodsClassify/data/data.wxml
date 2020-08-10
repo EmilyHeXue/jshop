@@ -1,0 +1,104 @@
+<!--分类商品信息-->
+<view class="classify-f">
+  <scroll-view class="scroll">
+    <view 
+      class="scroll-item {{active == item.id ? 'bind' : ''}}" 
+      wx:for='{{classifyData}}' 
+      catchtap="change"
+      data-id='{{item.id}}'
+      wx:key='id'>
+      {{item.name}}
+    </view>
+  </scroll-view>
+  <view class='classify' wx:if='{{data.length != 0}}'>
+    <block wx:for='{{data}}' wx:key='id'>
+      <view class='classify-item' bindtap='togoodsItem' data-id='{{item.id}}'>
+        <image lazy-load class='classify-img' src='{{item.pic_urls[0]}}'/>
+        <view class="classify-content">
+          <view class='classify-name'>{{item.name}}</view>
+          <view class='classify-short-name'>{{item.short_name}}</view>
+          <view class='classify-line'>
+            <image lazy-load wx:for='{{item.avatar}}' wx:key='item' wx:if='{{index < 3}}' src='{{item}}' class="classify-avatar"></image>
+            <view class='classify-number'>已抢购{{item.sold}}件</view>
+          </view>
+          <view catchtap class="classify-footer">
+            <view class="footer-left">
+              <view class='classify-price'>{{item.price}}</view>
+              <view class='classify-line_price'>￥{{item.line_price}}</view>
+            </view>
+            <view class="footer-right" wx:if='{{item.stock.length == 1}}'>
+              <view 
+                wx:if='{{cartData[item.stock[0].id]}}' 
+                catchtap="reduceShopCart" 
+                data-index='{{0}}'
+                data-item='{{item}}' 
+                class='btn'>-</view>
+              <view 
+                wx:if='{{cartData[item.stock[0].id]}}' 
+                class='classify-cartnumber'>
+                {{cartData[item.stock[0].id]}}</view>
+              <view 
+                catchtap="addShopCart" 
+                data-item='{{item}}' 
+                data-index='{{0}}'
+                class='btn'>+</view>
+            </view>
+            <view wx:else>
+              <view 
+                class='choosStock'
+                catchtap="bindIndex"
+                data-index='{{index}}' 
+                data-item='{{item}}'>选规格</view>
+            </view>
+          </view>
+          
+        </view>
+      </view>
+    </block>
+  </view>
+  <view wx:else class='noData'>
+    <image lazy-load style="width: 300rpx;" mode="widthFix" src="https://imgs.juanpao.com/ui/gouwuche.png"></image>
+    暂无商品
+  </view>
+</view>
+
+<view wx:if='{{layerFlag}}' class="mask" catchtap="show">
+  <view class="layer" catchtap>
+    <view class="layer-title">商品属性</view>
+    <view class="layer-content">
+      <view 
+        class="stocks" 
+        wx:for='{{layerData.stock}}' 
+        style='border-color: {{index == propertyindex ? background : "#595959"}}; color: {{index == propertyindex ? background : "#595959"}};'
+        catchtap="changeindex"
+        data-index='{{index}}'
+        wx:key='id'>
+        {{item.property1_name}}{{item.property2_name ? ",":""}}{{item.property2_name}}</view>
+    </view>
+    <view class="layer-footer">
+      <view class="layer-footer-price">￥{{layerData.stock[propertyindex].price}}</view>
+      <view class="layer-footer-right">
+        <view 
+          wx:if='{{cartData[layerData.stock[propertyindex].id]}}' 
+          catchtap="reduceShopCart" 
+          data-index='{{propertyindex}}'
+          data-item='{{layerData}}' 
+          class='btn'>-</view>
+        <view 
+          wx:if='{{cartData[layerData.stock[propertyindex].id]}}'
+          class='classify-cartnumber'>
+          {{cartData[layerData.stock[propertyindex].id]}}</view>
+        <view 
+          catchtap="addShopCart" 
+          data-item='{{layerData}}' 
+          data-index='{{propertyindex}}'
+          class='btn'>+</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<navigator url='/pages/shopCart/shopCart/shopCart' class="fixed">
+  <view style='background: {{ background }};'>{{nums}}</view>
+  <image lazy-load mode='widthFix' src='/images/goodsItem/image/gouwuche.png'></image>
+</navigator>

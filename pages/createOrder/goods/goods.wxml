@@ -1,0 +1,37 @@
+<!--生成订单页商品信息-->
+<view class='goods'>
+  <block wx:for='{{goodsData}}' wx:for-item='shop' wx:key='supplier_id'>
+    <view class='item'>
+      <view class='item-title'>
+        <image lazy-load class='item-title-icon' mode="widthFix" src='/images/createdorder/shop.png'></image>
+        <view class='item-title-name'>{{shop.supplier_name}}</view>
+        <view wx:if='{{shop.supplier_id == 0}}' class='item-title-lable'>自营</view>
+      </view>
+      <block wx:for='{{shop.list}}' wx:key='goods_name'>
+        <view class='goods-item'>
+          <image lazy-load class='goods-item-img' src='{{item.pic_url}}' />
+          <view class='goods-item-content'>
+            <view class='goods-item-name'>{{item.goods_name}}</view>
+            <view class='goods-item-property'>{{item.property1_name}}{{item.property2_name ? "," : ""}}{{item.property2_name}}</view>
+            <view class='goods-item-data'>
+              <view class='goods-item-price'>￥{{item.price}}</view>
+              <view class='goods-item-number'>x{{item.number}}</view>
+            </view>
+          </view>
+        </view>
+      </block>
+      <coupons 
+        goodsData='{{shop.list}}'
+        shopindex='{{index}}'
+        user_contact_id='{{user_contact_id}}'
+        supplier_id='{{shop.supplier_id}}'
+        ajaxshow='{{show}}'
+        bind:setVoucher_id='setVoucher_id'
+        bind:setYoufei='setYoufei'
+        bind:remark='remark'
+        bind:setManjian='setManjian'
+        bind:initShopData='initShopData'/>
+    </view>
+  </block>
+    
+</view>

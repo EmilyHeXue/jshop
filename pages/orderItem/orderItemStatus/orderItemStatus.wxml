@@ -1,0 +1,42 @@
+<!--pages/orderItem/orderItemStatus/orderItemStatus.wxml-->
+<view wx:if='{{status != 4 && status !=5}}' class='orderItemStatus' style='background-color: {{background}}; color: {{fontColor}}'>
+
+  <!--待付款-->
+  <view wx:if='{{status == 0}}' class='orderItemStatus-item'>
+    <view class='orderItemStatus-item-status'>
+      <view class='orderItemStatus-item-status-text'>等待买家付款</view>
+      <view class='orderItemStatus-item-status-time'>剩{{time}}小时{{minute}}分自动关闭</view>
+    </view>
+    <image src='/images/order/orderStatus/pay.png' class='orderItemStatus-item-img'></image>
+  </view>
+
+  <!--待发货-->
+  <view wx:if='{{status == 1}}' class='orderItemStatus-item'>
+    <view class='orderItemStatus-item-status'>买家已付款 </view>
+    <image src='/images/order/orderStatus/delivery.png' class='orderItemStatus-item-img'></image>
+  </view>
+
+  <!--已取消-->
+  <view wx:if='{{status == 2}}' class='orderItemStatus-item'>
+    <view class='orderItemStatus-item-status'>订单已超时 </view>
+    <image src='/images/order/orderStatus/reimburse.png' class='orderItemStatus-item-img'></image>
+  </view>
+
+  <!--待收货-->
+  <view wx:if='{{status == 3}}' class='orderItemStatus-item'>
+    <view class='orderItemStatus-item-status'>卖家已发货</view>
+    <image src='/images/order/orderStatus/get.png' class='orderItemStatus-item-img'></image>
+  </view>
+
+  <!--评价-->
+  <view wx:if='{{status == 6}}' class='orderItemStatus-item'>
+    <view class='orderItemStatus-item-status'>评价订单</view>
+    <image src='/images/order/orderStatus/evaluation.png' class='orderItemStatus-item-img'></image>
+  </view>
+
+  <!--评价成功-->
+  <view wx:if='{{status == 7}}' class='orderItemStatus-item'>
+    <view class='orderItemStatus-item-status'>订单已完成</view>
+    <image src='/images/order/orderStatus/complete.png' class='orderItemStatus-item-img'></image>
+  </view>
+</view>

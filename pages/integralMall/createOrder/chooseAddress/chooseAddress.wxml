@@ -1,0 +1,31 @@
+<view class='address'>
+  <image lazy-load class='address-icon' src='/images/address/address.png'></image>
+  <view class='center'>
+    <view class='center-top'>
+      <view class='user-name'>{{data.name}}</view>
+      <view class='user-phone'>{{data.phone}}</view>
+    </view>
+    <view class='user-address'>{{data.province}}{{data.city}}{{data.area}}{{data.street}}{{data.address}}</view>
+  </view>
+  <view class='choose' catchtap='changeAddress'>选择</view>
+</view>
+
+<layer catchtap='changeAddress' wx:if='{{layerFlag}}'>
+  <content catchtap='{{false}}'>
+    <scroll-view scroll-y class='scroll'>
+      <block wx:for='{{list}}'  >
+        <view class='address' catchtap="chooseThis" data-index='{{index}}'>
+          <image lazy-load class='address-icon' src='/images/address/address.png'></image>
+          <view class='center'>
+            <view class='center-top'>
+              <view class='user-name'>{{item.name}}</view>
+              <view class='user-phone'>{{item.phone}}</view>
+            </view>
+            <view class='user-address'>{{item.province}}{{item.city}}{{item.area}}{{item.street}}{{item.address}}</view>
+          </view>
+          <view class='choose'>选择</view>
+        </view>
+      </block>
+    </scroll-view>
+  </content>
+</layer>

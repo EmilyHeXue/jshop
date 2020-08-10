@@ -1,0 +1,44 @@
+<!--首页红包-->
+  <scroll-view wx:if='{{data.details.style == 2}}' class='scroll' scroll-x >
+    <block wx:for='{{data.details.imgs}}' wx:key='index' >
+      <image lazy-load class='coupons-img' mode='widthFix' src='{{item.src}}' data-id='{{item.link}}' catchtap='getcoupons'></image>
+    </block>
+  </scroll-view>
+
+<scroll-view wx:if='{{data.details.style == 1}}' class='scroll' scroll-x >
+  <block wx:for='{{data.details.imgs}}' wx:key='index' >
+    <view class='coupons-item' data-id='{{item.link}}' catchtap='getcoupons'>
+      <view class='flex' >
+        <view class='coupons-item-left' >
+          <view class="top-rice" style='background: {{bg}}'></view>
+          <view class="bottom-rice" style='background: {{bg}}'></view>
+          <view class='coupons-item-price'>
+            {{item.price}}
+          </view>
+          <view class='coupons-item-conditions'>
+              满{{item.full_price}}元可用
+          </view>
+        </view>
+        <view class="coupons-item-right">领取</view>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+
+
+<!--<scroll-view wx:eles class='scroll' scroll-x >
+  <block wx:for='{{data.details.imgs}}' wx:key='index' >
+    <view class='coupons-item' style='background:linear-gradient({{color[index%3]}})' data-id='{{item.id}}' catchtap='getcoupons'>
+      <view class='flex' >
+        <view class='coupons-item-left' >
+          <view class='coupons-item-price'>
+            {{item.price}}
+          </view>
+          <view class='coupons-item-conditions'>
+              满{{item.full_price}}元可用
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</scroll-view> -->

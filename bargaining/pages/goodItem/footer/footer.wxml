@@ -1,0 +1,29 @@
+<!--pages/goodsItem/footer/footer.wxml-->
+<view class='footer'>
+  <view class='footer-menu' bindtap='goIndex'>
+    <image class='footer-menu-img' src='/images/goodsItem/footer/shop.png'/>
+    <view class='footer-menu-text'>店铺</view>
+  </view>
+  <navigator open-type="navigate" url='/pages/shopCart/shopCart/shopCart' class='footer-menu'>
+    <image class='footer-menu-img' src='/images/goodsItem/footer/shopcart.png'/>
+    <view class='footer-menu-text'>购物车</view>
+  </navigator>
+  <button open-type="contact" class='footer-menu'>
+    <image class='footer-menu-img' src='/images/goodsItem/footer/kefu.png'/>
+    <view class='footer-menu-text'>客服</view>
+  </button>
+  <view class='footer-button'>
+    <view wx:if='{{data.is_buy_alone == 1}}' class='footer-button-left group-btn' bindtap='toBuy' data-flag='{{true}}'>
+      <view>{{price}}</view>
+      <view>单独购买</view>
+    </view>
+    <view class='footer-button-right group-btn' wx:if='{{timeout}}' bindtap='toBuy' data-flag='{{false}}'>
+      <view>{{group_price}}</view>
+      <view>发起砍价</view>
+    </view>
+    <view class='footer-button-right group-btn' wx:else>
+      <view>{{group_price}}</view>
+      <view>活动结束</view>
+    </view>
+  </view>
+</view>

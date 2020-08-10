@@ -1,0 +1,62 @@
+<!--pages/createOrder/address/address.wxml-->
+<view class='address'>
+  <view wx:if='{{data.name}}' catchtap='showlayer' class='address-data'>
+    <image lazy-load class='address-data-surnames' src='/images/address/address.png'></image>
+    <view class='address-data-item'>
+      <view class='address-data-content'>
+        <view class='address-data-name'>{{data.name}}</view>
+        <view class='address-data-phone'>{{data.phone}}</view>
+      </view>
+      <view class='address-data-address'>
+        收货地址:{{data.loction_address}} {{data.loction_name}} {{data.address}}
+      </view>
+    </view>
+    <form bindsubmit='showlayer' report-submit>
+      <image lazy-load class='icon' src='/images/my/menu/right.png'></image>
+    </form>
+  </view>
+  <view wx:else catchtap='showlayer' class='address-data'>
+    <image lazy-load class='address-data-surnames' src='/images/address/address.png'></image>
+    <view class='address-data-item'>
+      <view class='address-data-content'>
+        <view class='address-data-name'>{{data.name}}</view>
+        <view class='address-data-phone'>{{data.phone}}</view>
+      </view>
+      <view class='address-data-address'>
+        未找到收货地址,请点击添加收货地址
+      </view>
+    </view>
+    <form bindsubmit='showlayer' report-submit>
+      <image lazy-load class='icon' src='/images/my/menu/right.png'></image>
+    </form>
+  </view>
+  <view wx:if='{{layerFlag}}' class='layer' touchmove='false' touchstart='false'>
+    <view class='layer-content'>
+      <view class='content-title'>收货地址<image lazy-load catchtap="goCreatedAddress" src='/images/createdorder/add.png'></image></view>
+      <scroll-view scroll-y class='layer-scroll'>
+        <block wx:for='{{dataList}}' wx:key='id'>
+          <view data-index='{{index}}' catchtap='willChoose' class='layer-items'>
+            <radio checked='{{item.id === willData.id}}'></radio>
+            <view class='layer-item'>
+              <view class='layer-item-content'>
+                <view class='layer-item-name'>{{item.name}}</view>
+                <view class='layer-item-phone'>{{item.phone}}</view>
+              </view>
+              <view class='layer-item-address'>
+                {{item.province}} 
+                {{item.city}} 
+                {{item.area}} 
+                {{item.street}} 
+                {{item.address}}
+              </view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+      <view class='content-footer'>
+        <view class='footer-btn' bindtap="close">取消</view>
+        <view catchtap="chooseAddress" class='footer-btn'>确定</view>
+      </view>
+    </view>
+  </view>
+</view>

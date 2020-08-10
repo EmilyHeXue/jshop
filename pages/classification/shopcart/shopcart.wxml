@@ -1,0 +1,6 @@
+<view class='shopcart'>
+  <image lazy-load catchtap="goshopcart" src='/images/classification/cart.png' class='icon'></image>
+  <view class='nums' style="background: {{background}}">{{nums}}</view>
+  <view class='center'>{{allPrice}}</view>
+  <view catchtap="goshopcart" class='right' style="background: {{background}}">去结算</view>
+</view>

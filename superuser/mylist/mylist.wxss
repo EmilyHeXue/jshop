@@ -1,0 +1,50 @@
+.mylist{
+  border-top: 1px solid #eee;
+  padding: 0 27rpx;
+}
+.item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28rpx 0 18rpx 0;
+  border-bottom: 1px solid #eee;
+}
+.item-avatar{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 12rpx;
+  background: pink;
+  border-radius: 50%;
+}
+.item-content{
+  flex: 1;
+}
+.item-name{
+  font-size: 28rpx;
+}
+.item-price{
+  font-size: 20rpx;
+  color: #aaaaaa;
+}
+.item-date{
+  color: #B9B9B9;
+  font-size: 20rpx;
+}
+.item-right{
+
+}
+.item-level{
+  width: 108rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 20rpx;
+  text-align: center;
+  background: #E1E1E1;
+  border-radius: 50rpx;
+  margin-bottom: 26rpx;
+}
+.item-order{
+  font-size: 20rpx;
+  text-align: right;
+  margin-right: 10rpx;
+}

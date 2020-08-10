@@ -1,0 +1,31 @@
+.ItsGroupCard{
+  padding: 0 30rpx;
+}
+.groupCard-card2{
+  width:690rpx;
+  position: relative;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 30rpx;
+  margin-top: 20rpx;
+}
+.groupCard-card2-bg{
+  width:690rpx;
+  height:170rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.groupCard-card2-btns{
+  display: flex;
+  margin-top: 15rpx;
+}
+.groupCard-btn{
+  border:#fff 1px solid;
+  color:#fff;
+  padding:12rpx 30rpx;
+  border-radius:60rpx;
+  font-size: 14px;
+  margin-right: 20rpx;
+}

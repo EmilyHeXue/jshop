@@ -1,0 +1,27 @@
+.nodata-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  position: fixed;
+  top: 90rpx;
+  width: 750rpx;
+}
+.nodata-item-img{ 
+  width:550rpx;
+  margin-bottom:40rpx;
+}
+
+.nodata-item-text{
+  color: #999;
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.nodata-item-btn{
+  color: red;
+  border-radius:50rpx;
+  border:1px solid red;
+  padding:15rpx 50rpx;
+  font-size:35rpx;
+}

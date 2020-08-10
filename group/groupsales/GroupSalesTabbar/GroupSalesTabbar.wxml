@@ -1,0 +1,21 @@
+<view>
+  <view class='GroupSalesTabbar-header' style='background: ; color: '>
+    <block wx:for='{{menu}}' wx:key='{{item.id}}'>
+      <view
+        class='GroupSalesTabbar-header-item {{index === selectIndex ? "select":""}}'
+        catchtap='changeIndex'
+        data-index='{{index}}'>
+        {{item.text}}
+        <text class='{{index === selectIndex ? "selectline":""}}'></text>
+      </view>
+    </block>
+  </view>
+  <view class='GroupSalesTabbar-tab'>
+    <view class='GroupSalesTabbar-tab-item {{0 == tabselect ? "tabselect":""}}' data-index='0' catchtap='changeTabSelect'>
+      按商品
+    </view>
+    <view class='GroupSalesTabbar-tab-item {{1 == tabselect ? "tabselect":""}}' data-index='1' catchtap='changeTabSelect'>
+      按用户
+    </view>
+  </view>
+</view>

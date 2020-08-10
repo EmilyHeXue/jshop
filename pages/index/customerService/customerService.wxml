@@ -1,0 +1,6 @@
+<button  
+  open-type="contact"
+  class="customerService" 
+  style="right:{{data.details.positionRight}}vw;bottom:{{data.details.positionBottom}}vh;opacity:{{data.details.opacity}}">
+    <image lazy-load class='icon' data-url='/pages/webview/webview' catchtap='go' src="{{data.details.imgs[0].src}}" mode="widthFix"></image>
+</button>

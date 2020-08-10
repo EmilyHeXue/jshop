@@ -1,0 +1,241 @@
+<view class='{{page ? "page":""}}'>
+  <!-- 头像区域 -->
+  <view class='my' style="background: {{background}}; margin-bottom: {{Vip_payment ? '200rpx':'120rpx'}}">
+    <view class='my-information'> 
+      <view class='my-information-top'>
+        <image lazy-load src='{{headlog || "/images/my/info/noLogin.png"}}' class='my-information-headlog'/>
+        <view class='top-right'>
+          <view class='top-right-top'>
+            <view wx:if='{{nickName}}' style='color: {{nabigationFontColor}}'>{{nickName}}</view>
+            <navigator url='/pages/login2/login2' wx:else style='color: {{nabigationFontColor}}'>点击登录</navigator>
+            <view style='color: {{nabigationFontColor}}' catchtap='go' class='address' data-url='../address/address'>地址</view>
+          </view>
+          <view wx:if='{{Vip_integral}}' class='top-right-bottom'>{{ vip_name || '普通会员'}}</view>
+        </view>
+      </view>
+
+      <view class='my-information-center'>
+        <view class='my-information-center-item' catchtap="go" data-url='{{user_vip != 0 ? "/pages/home/level/level" : ""}}'>
+          <view class='center-item-top' >{{score}}</view>
+          <view class='center-item-bottom'>积分</view>
+        </view>
+        <view wx:if='{{balance_pay}}' class='my-information-center-item'>
+          <view class='center-item-top' catchtap="go" data-url='/pages/home/topup/topup'>{{recharge_balance}}</view>
+          <view class='center-item-bottom'>余额</view>
+        </view>
+        <view wx:else class='my-information-center-item'>
+          <view class='center-item-top'>{{recharge_balance}}</view>
+          <view class='center-item-bottom'>余额</view>
+        </view>
+        <view class='my-information-center-item' catchtap="showQrCode">
+          <image lazy-load src='/images/my/info/qrcode.png' class='goods-code'></image>
+          <view class='center-item-bottom'>提货码</view>
+        </view>
+      </view>
+
+      <view 
+        wx:if='{{Vip_payment}}' 
+        class='my-information-bottom' 
+        catchtap='go' 
+        data-url='/pages/home/memberCard/memberCard/memberCard'>
+        <view class='bottom-left'>
+          <image lazy-load src='/images/my/info/card.png' class='bottom-left-icon'></image>
+          <view>{{vip_name || '普通会员'}}</view>
+        </view>
+        <view class='bottom-right'>
+          <view wx:if='{{vip_name == ""}}'>购买会员可享优惠</view>
+          <view wx:if='{{vip_name != ""}}'>购物可享{{discount_ratio}}折</view>
+          <image lazy-load class='order-header-right-img' src='/images/my/info/right.png'/>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--横向排列订单  /images/my/menu/order.png-->
+  <view class='order'>
+    <view class='order-header' catchtap='goOrder' data-url='/pages/order/order/order' data-id='8'>
+      <view class='order-header-left'>我的订单</view>
+      <view class='order-header-right'>
+
+        <view class='order-header-right-text'>查看全部订单</view>
+        <image lazy-load class='order-header-right-img' src='/images/my/menu/right.png'/>
+      </view>
+    </view>
+    <view class='order-menu'>
+      <block wx:for='{{orderMenus}}' wx:key='id'>
+        <view class='order-item' catchtap='goOrder' data-url='{{item.url}}' data-id='{{item.id}}'>
+          <image lazy-load src='{{item.src}}' class='order-item-img'></image>
+          <view class='order-item-name' >{{item.name}}</view>
+          <view class='badge' style='background: {{background}}' wx:if='{{item.name == "待付款" && a != 0}}'>{{a}}</view>
+          <view class='badge' style='background: {{background}}' wx:if='{{item.name == "待发货" && b != 0}}'>{{b}}</view>
+          <view class='badge' style='background: {{background}}' wx:if='{{item.name == "待收货" && c != 0}}'>{{c}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  
+
+  <!-- 菜单区域 -->
+  <view class='menus'>
+    <block wx:for='{{menus}}' wx:key='index'>
+      <view class='menu' bindtap='go' data-url='{{item.url}}'>
+        <view class='menu-left' >
+          <image lazy-load class='menu-img' src='{{item.imgUrl}}'/>
+          <view class='menu-text'>{{item.name}}</view>
+        </view>
+        <view class='menu-right'>
+          <image lazy-load class='menu-go' src='/images/my/menu/right.png'/>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 菜单区域 -->
+  <view class='menus'>
+    <view wx:if='{{store_payment}}' class='menu' catchtap='tomendian'>
+      <view class='menu-left'>
+        <image lazy-load class='menu-img' src='/images/my/menu/blancepay.png'/>
+        <view class='menu-text'>到店付</view>
+      </view>
+      <view class='menu-right'>
+        <image lazy-load class='menu-go' src='/images/my/menu/right.png'/>
+      </view>
+    </view>
+    <view class='menu' catchtap='changeLayerFlag'>
+      <view class='menu-left'>
+        <image lazy-load class='menu-img' src='/images/my/menu/Customer.png'/>
+        <view class='menu-text'>联系客服</view>
+      </view>
+      <view class='menu-right'>
+        <image lazy-load class='menu-go' src='/images/my/menu/right.png'/>
+      </view>
+    </view>
+    <view wx:if='{{sign_in}}' class='menu' catchtap='Toqiandao'>
+      <view class='menu-left'>
+        <image lazy-load class='menu-img' src='/images/my/menu/clockIn.png'/>
+        <view class='menu-text'>签到</view>
+      </view>
+      <view class='menu-right'>
+        <image lazy-load class='menu-go' src='/images/my/menu/right.png'/>
+      </view>
+    </view>
+    <view wx:if='{{score_shop}}' class='menu' catchtap='goIntegralMall'>
+      <view class='menu-left'>
+        <image lazy-load class='menu-img' src='/images/my/menu/IntegralMall.png'/>
+        <view class='menu-text'>积分商城</view>
+      </view>
+      <view class='menu-right'>
+        <image lazy-load class='menu-go' src='/images/my/menu/right.png'/>
+      </view>
+    </view>
+    <navigator class='menu' url='/pages/spellGroup/groupOrderList/groupOrderList'>
+      <view class='menu-left'>
+        <image lazy-load class='menu-img' src='/images/my/menu/group.png'/>
+        <view class='menu-text'>我的拼团</view>
+      </view>
+      <view class='menu-right'>
+        <image lazy-load class='menu-go' src='/images/my/menu/right.png'/>
+      </view>
+    </navigator>
+    <navigator wx:if='{{store_is_open}}' class='menu' url='/pages/supplier/groupbrochure/groupbrochure'>
+      <view class='menu-left'>
+        <image lazy-load class='menu-img' src='/images/my/menu/mendian.png'/>
+        <view class='menu-text'>门店申请</view>
+      </view>
+      <view class='menu-right'>
+        <image lazy-load class='menu-go' src='/images/my/menu/right.png'/>
+      </view>
+    </navigator>
+  </view>
+
+  <!-- 菜单区域 -->
+  <view class='menus'>
+    <view class='menu' catchtap="go" data-url='../qualification/qualification'>
+      <view class='menu-left'>
+        <image lazy-load class='menu-img' src='/images/my/menu/zizhiguize.png'/>
+        <view class='menu-text'>资质规则</view>
+      </view>
+      <view class='menu-right'>
+        <image lazy-load class='menu-go' src='/images/my/menu/right.png'/>
+      </view>
+    </view>
+    <view class='menu' catchtap="go" data-url='/pages/home/help/help'>
+      <view class='menu-left'>
+        <image lazy-load class='menu-img' src='/images/my/menu/help.png'/>
+        <view class='menu-text'>帮助中心</view>
+      </view>
+      <view class='menu-right'>
+        <image lazy-load class='menu-go' src='/images/my/menu/right.png'/>
+      </view>
+    </view>
+    <view class='menu' wx:if='{{level == 1 || level == 2 || level == 3}}' catchtap="go" data-url='/superuser/userinfo/userinfo/userinfo'>
+      <view class='menu-left'>
+        <image lazy-load class='menu-img' src='/images/my/menu/superuser.png'/>
+        <view class='menu-text'>我的收益</view>
+      </view>
+      <view class='menu-right'>
+        <image lazy-load class='menu-go' src='/images/my/menu/right.png'/>
+      </view>
+    </view>
+  </view>
+
+  <!-- 团长 -->
+  <view class='menus' wx:if='{{group_buying}}'>
+    <view class='menu' catchtap='ToTuanzhang' wx:if='{{is_leader}}'>
+      <view class='menu-left'>
+        <image lazy-load class='menu-img' src='/images/my/menu/group.png'/>
+        <view class='menu-text'>{{leader_name}}中心</view>
+      </view>
+      <view class='menu-right'>
+        <image lazy-load class='menu-go' src='/images/my/menu/right.png'/>
+      </view>
+    </view>
+    <view class='menu' catchtap='creategroup' wx:else>
+      <view class='menu-left'>
+        <image lazy-load class='menu-img' src='/images/my/menu/group.png'/>
+        <view class='menu-text'>申请{{leader_name}}</view>
+      </view>
+      <view class='menu-right'>
+        <image lazy-load class='menu-go' src='/images/my/menu/right.png'/>
+      </view>
+    </view>
+  </view>
+
+  <view class='copyright'>
+    <image lazy-load mode="widthFix" class='copyright-item' src='{{copyright.bottom_url}}'></image>
+    <view>{{copyright.mini_name}}</view>
+  </view>
+  <view class="layer" wx:if='{{qrCodeFlag}}' catchtap="showQrCode">
+    <view class='content' catchtap=" ">
+      <image lazy-load class='content-bg' src='/images/my/layer.png'></image>
+      <view></view>
+      <view>
+        <view class='layer-header'>您的提货码</view>
+        <view class='layer-bottom'>
+          <image lazy-load class='qrcode' src='{{qrcode}}'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <official-account style='width:300px; height:100px;'></official-account>
+  <view class="version">V {{version}}</view>
+</view>
+<!--登录-->
+<login bind:myevent='getjwt' show='{{show}}'></login>
+
+<layer bind:show='changeLayerFlag' show='{{layerFlag}}'>
+  <view catchtap class='layer-content' slot='layer-content'>
+    <image lazy-load catchtap='changeLayerFlag' src='/images/goodsItem/image/close.png' class='close'></image>
+    <view class='layer-item'>
+      <button open-type="contact" class='share-item'>
+        <image lazy-load src='https://imgs.juanpao.com/ui/1.png' class='share-item-icon'></image>
+        <view>在线客服</view>
+      </button>
+      <view catchtap='callPhone' class='share-item'>
+        <image lazy-load src='https://imgs.juanpao.com/ui/2.png' class='share-item-icon'></image>   
+        <view>联系电话</view>
+      </view>
+    </view>
+  </view>
+</layer>
+<footer title='{{title}}' bindbackground='setbackground' bindshow='footerFlag'></footer>

@@ -1,0 +1,5 @@
+.jobs{
+  padding: 10px;
+  line-height: 24px;
+  padding-top: 0;
+}

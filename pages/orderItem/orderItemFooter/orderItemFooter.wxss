@@ -1,0 +1,48 @@
+.orderItemFooter{
+  position:fixed;
+  bottom:0vw;
+  left:0vw;
+  width:100vw;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  border-top:1px solid #eee;
+  background:#fff;
+  height: 50px;
+}
+.btn{
+  padding:2vw 4vw;
+  border-radius:5vw;
+  font-size:3vw;
+  margin:2vw;
+  border:1px solid #bbb;
+  color:#555;
+}
+
+
+.mask{
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  width: 750rpx;
+  height: 100vh;
+  background: rgba( 0, 0, 0, .5 );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layer{
+  width: 600rpx;
+  height: 600rpx;
+  background: #fff;
+}
+.qrcode{
+  width: 600rpx;
+  height: 600rpx;
+}
+.layer-header{
+  text-align: center;
+  font-size: 30rpx;
+  padding-top: 40rpx;
+}

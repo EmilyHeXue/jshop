@@ -1,0 +1,5 @@
+<mask wx:if='{{show}}' catchtap='changeshow' >
+  <view catchtap='' >
+    <slot catchtap='' class='layer' name='layer-content'></slot>
+  </view>
+</mask>

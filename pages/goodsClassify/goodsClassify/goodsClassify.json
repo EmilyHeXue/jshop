@@ -1,0 +1,6 @@
+{
+  "usingComponents":{
+    "data": "/pages/goodsClassify/data/data",
+    "footer": "/pages/footer/footer"
+  }
+}

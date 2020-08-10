@@ -1,0 +1,16 @@
+<!--pages/applicationForDrawback/goodsItem/goodsItem.wxml-->
+<view class='goods'>
+  <block wx:for='{{list}}' wx:key='{{index}}'>
+    <view class='goods-item'>
+      <image lazy-load class='goods-img' src='{{item.pic_url}}'/>
+      <view class='goods-item-text'>
+        <view class='goods-name'>{{item.name}}</view>
+        <view class='goods-property'>{{item.property1_name}},{{item.property2_name}}</view>
+      </view>
+      <view class='goods-item-number'>
+        <view class='goods-price'>￥{{item.price}}</view>
+        <view class='goods-number'>x{{item.number}}</view>
+      </view>
+    </view>
+  </block>
+</view>

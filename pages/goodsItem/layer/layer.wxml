@@ -1,0 +1,93 @@
+<!--pages/goodsItem/layer/layer.wxml-->
+<view wx:if='{{show}}' class='layer' catchtap='closeLayer'>
+  <view class='layer-content' catchtap='click'>
+    <!--关闭按钮-->
+    <image lazy-load class='layer-content-img' src='/images/png/close.png' catchtap='closeLayer' />
+    
+    
+    <!--参数展示,有图片,价格,库存,样式-->
+    <view class='layer-goods'>
+      <image lazy-load class='layer-goods-img' src='{{pic_url.length == 0 ? fpic_url:pic_url}}' />
+      <view class='layer-goods-content'>
+        <view class='layer-goods-price'>￥{{price}}</view>
+        <view wx:if='{{is_open}}' class='layer-goods-sale'>库存{{sales}}件</view>
+        <view class='layer-goods-choose'>已选: "{{property1.data[property1.flag]}}{{property2.data[property2.flag] ? ",":""}}{{property2.data[property2.flag] || ""}}"</view>
+      </view>
+    </view>
+    
+    <!--分类参数及购买数量-->
+    <view class='layer-classification'>
+      <scroll-view scroll-y class='layer-classification-scroll'>
+        <!--第一条参数-->
+        <view class='layer-classification-item'>
+          <view class='layer-classification-name'>{{property1.key}}</view>
+          <view class='layer-classification-key'>
+            <block wx:for='{{property1.data}}' wx:key='index'>
+              <view data-index='{{index}}' data-name='{{item}}' catchtap='getProperty2' class='layer-classification-key-item {{ index == property1.flag == 1 ? "select":""}}'>{{item}}</view>
+            </block>
+          </view>
+        </view>
+        
+        <!--第二条参数-->
+        <view wx:if='{{property2.key}}'  class='layer-classification-item'>
+          <view class='layer-classification-name'>{{property2.key}}</view>
+          <view class='layer-classification-key'>
+            <block wx:for='{{property2.data}}' wx:key='index'>
+              <view data-name='{{item}}' data-index='{{index}}' catchtap='merchantGoodsStock' class='layer-classification-key-item {{index == property2.flag ? "select":""}}'>{{item}}</view>
+            </block>
+          </view>
+        </view>
+        
+        <!--购买数量-->
+        <view class='tabbar'>
+          <view class='tabbar-text'>购买数量</view>
+          <view class='tabbar-item'>
+            <view catchtap='subtract' class='tabbar-btn'>-</view>
+            <view class='tabbar-nums'>{{num}}</view>
+            <view catchtap='add' class='tabbar-btn'>+</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="post" wx:if='{{sales == 0}}'>
+      <button 
+        class='post-btn' 
+        style='background: gray' 
+        >已售磐, 请选择其他规格</button>
+    </view>
+    <view class='post' wx:else>
+        <form wx:if='{{btnStatus != "buy"}}' report-submit bindsubmit='addShopCart'>
+          <button 
+            class='post-btn' 
+            style='background: {{background}}' 
+            wx:if='{{btnStatus != "buy"}}'
+            form-type='submit'>加入购物车</button>
+        </form>
+        <form wx:if='{{btnStatus != "add"}}' report-submit bindsubmit='postSubscribeMessage'>
+          <button 
+            class='post-btn' 
+            style='background: {{background}}' 
+            wx:if='{{btnStatus != "add"}}'
+            form-type='submit'>立即购买</button>
+        </form>
+    </view>
+  </view>
+</view>
+
+
+<view wx:if='{{advacneFlag}}' catchtap="changeadvacneFlag" class="mask">
+  <view class="advance-layer">
+    <view class="advance-layer-title">预售协议</view>
+    <view class="advance-layer-content">
+      <view class="advance-layer-text">
+            预售商品交易由“立刻付定金”和“预售结束后支付尾款”两部分组成，非商家原因，支付的定金均不退还，由于商家原因造成无法支付尾款的，商家应退还定金。
+      支付尾款后，预售商品订单进入正常订单，售后等同常规订单。
+      预售商品不支持店内其他优惠方式
+      请准时在详情表示说明的付尾款时间内支付尾款</view>
+      <view class="advance-layer-date">支付尾款时间: {{start_advance_time}}-{{end_advance_time}}</view>
+    </view>
+    <view class="advance-layer-bottom">
+      <button catchtap="go" class="advance-layer-button" style='background: {{background}}'>同意协议并立即付定金</button>
+    </view>
+  </view>
+</view>

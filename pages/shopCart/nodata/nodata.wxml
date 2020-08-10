@@ -1,0 +1,8 @@
+<!--pages/shopCart/nodata/nodata.wxml-->
+<view wx:if='{{nodataFlag}}'>
+  <view class='nodata-item'>
+    <image lazy-load class='nodata-item-img' mode="widthFix" src='https://imgs.juanpao.com/ui/gouwuche.png'></image>
+    <view class='nodata-item-text'>您的购物车空空如也</view>
+    <view class='nodata-item-btn' catchtap='goIndex'>去首页逛逛吧</view>
+  </view>
+</view>

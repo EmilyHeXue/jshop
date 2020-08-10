@@ -1,0 +1,16 @@
+<!--查看物流-->
+
+<!--物流头部-->
+<view class='{{page ? "page":""}}'>
+  <logisticsInformationHeader
+    orderNum='{{orderNum}}'
+    name='{{name}}'>
+  </logisticsInformationHeader>
+
+  <!--物流信息-->
+  <logisticsInformationList
+    List='{{List}}'>
+  </logisticsInformationList>
+</view>
+
+<footer bindshow='footerFlag'></footer>

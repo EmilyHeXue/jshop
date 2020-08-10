@@ -1,0 +1,12 @@
+<view class="announcement" style="background-color:{{data.details.color2}};color:{{data.details.color1}}">
+  <swiper vertical autoplay interval='{{2000}}' duration="{{500}}" class='swiper'>
+    <block wx:for='{{data.details.imgs}}' wx:key="item">
+      <swiper-item class='announcement-item'>
+        <image lazy-load src="{{item.src}}" class="icon"></image>
+        <view class="item">
+          {{item.text}}
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

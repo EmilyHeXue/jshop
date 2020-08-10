@@ -1,0 +1,9 @@
+<scroll-view class='scroll' scroll-x >
+  <block wx:for='{{list}}' wx:key='id'>
+    <view class='item' catchtap="go" data-name='{{item.name}}' data-merchant_id='{{item.merchant_id}}' data-id='{{item.id}}'>
+      <image lazy-load class='classify-img' src='{{item.pic_url}}'></image>
+      <text>{{item.name}}</text>
+    </view>
+  </block>
+  
+</scroll-view>

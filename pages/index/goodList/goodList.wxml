@@ -1,0 +1,78 @@
+<!--拼团-->
+<view class='seckill' wx:if='{{data.details.style == 1}}'>
+  <view class='seckill-title'>
+    <view class='title'>今日必拼</view>
+    <view class="title-center-f">
+      <view class='title-center {{animation}}' wx:if='{{avatar != 0}}'>
+        <image lazy-load class='avatar' src='{{avatar}}'></image>
+        <view class='buyinfo'>{{name[0]}}***刚刚拼团成功</view>
+      </view>
+    </view>
+    <view bindtap="go" class='top-right' data-url='/assemble/list/list'>更多<image lazy-load src='/images/my/menu/right.png' class='icon'></image></view>
+  </view>
+  <scroll-view scroll-x class='scroll'>
+    <block wx:for='{{gooddata}}' wx:key='id'>
+      <view class='item'>
+        <image lazy-load bindtap='go' data-url='/pages/goodsItem/goodsItem/goodsItem?id={{item.id}}' class='goodimg' src='{{item.pic_urls[0]}}'></image>
+        <view class='goodname'>{{item.name}}</view>
+        <view class='good-bottom'>
+          <view class='goodprice'>{{item.stock[0].assemble_price}}</view>
+          <view class='goodline-price' wx:if='{{item.line_price == "0.00"}}'>{{item.line_price}}</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+<!--秒杀-->
+<view class='seckill' wx:if='{{data.details.style == 2}}'>
+  <view class='seckill-title'>
+    <image lazy-load class='title-left' src='/images/index/seckill/title.png'></image>
+    <view class="title-center-f">
+      <view class='title-center'>
+        <view class="seckill-time">
+          <view  class="first-time">{{first_time}}</view>
+          <view class="last-time">{{last_time}}</view>
+        </view>
+      </view>
+    </view>
+    <view bindtap="go" data-url='/pages/seckill/seckill/seckill' class='top-right'>更多<image lazy-load src='/images/my/menu/right.png' class='icon'></image></view>
+  </view>
+  <scroll-view scroll-x class='scroll'>
+    <block wx:for='{{gooddata}}' wx:key='id'>
+      <view class='item'>
+        <image lazy-load bindtap='go' data-url='/pages/goodsItem/goodsItem/goodsItem?id={{item.goods_id}}' class='goodimg' src='{{item.pic_urls}}'></image>
+        <view class='goodname'>{{item.name}}</view>
+        <view class='good-bottom'>
+          <view class='goodprice'>{{item.price}}</view>
+          <view class='goodline-price' wx:if='{{item.line_price != "0.00"}}'>{{item.line_price}}</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+<!--新人专享-->
+<view class='seckill' wx:if='{{data.details.style == 3}}'>
+  <view class='seckill-title'>
+    <view style='flex: 1;'> </view>
+    <view class="title-center-f">
+      <view class='title-center'>
+        <view class="title">新人专享</view>
+      </view>
+    </view>
+    <view bindtap="go" class='top-right' data-url='/newUser/list/list'>更多<image lazy-load src='/images/my/menu/right.png' class='icon'></image></view>
+  </view>
+  <scroll-view scroll-x class='scroll'>
+    <block wx:for='{{gooddata}}' wx:key='id'>
+      <view class='item'>
+        <image lazy-load bindtap='go' data-url='/pages/goodsItem/goodsItem/goodsItem?id={{item.id}}' class='goodimg' src='{{item.pic_urls[0]}}'></image>
+        <view class='goodname'>{{item.name}}</view>
+        <view class='good-bottom'>
+          <view class='goodprice'>{{item.price}}</view>
+          <view class='goodline-price' wx:if='{{item.line_price != "0.00"}}'>{{item.line_price}}</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

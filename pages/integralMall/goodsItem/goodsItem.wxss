@@ -1,0 +1,70 @@
+page{
+  background: #fbfbfb;
+}
+
+.top{
+
+}
+.top-img, .swiper{
+  width: 750rpx;
+  height: 750rpx;
+}
+
+
+.top-card{
+  margin: 28rpx 20rpx 0;
+  background: #ffffff;
+  box-sizing: border-box;
+  padding: 24rpx 26rpx;
+  border-radius: 20rpx;
+}
+.card-top{
+  font-size: 28rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-center{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 14rpx;
+}
+.card-price{
+  font-size: 48rpx;
+  color: red;
+  line-height: 48rpx;
+  display: flex;
+  align-items: center;
+}
+.card-price::after{
+  content: '积分';
+  font-size: 24rpx;
+  color: #101010;
+  font-weight: 600;
+  margin-left: 5rpx;
+}
+.card-sold{
+  font-size: 24rpx;
+}
+.card-btn{
+  width: 328rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  font-size: 28rpx;
+  color: #fff;
+  border-radius: 50rpx;
+  background: red;
+  margin-top: 18rpx;
+}
+
+.info{
+
+}
+.info-header{
+  padding: 28rpx;
+  font-size: 28rpx;
+  width: 750rpx;
+  box-sizing: border-box;
+  text-align: center;
+}

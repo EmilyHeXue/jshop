@@ -1,0 +1,55 @@
+.GroupMenbersOrderHeader{
+  display: flex;
+  background: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+}
+.GroupMenbersOrderHeader-item{
+  flex:1;
+  text-align: center;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 14px;
+}
+
+.select{
+  color: #ff7c13;
+}
+.selectline{
+  position: absolute;
+  background: #ff7c13;
+  width: 100%;
+  height: 4rpx;
+  bottom: 0;
+  left: 10rpx;
+  animation: show 1s;
+}
+
+@keyframes show{
+  from{opacity: 0}
+  to{opacity: 1}
+}
+
+.search{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100rpx;
+  padding: 0 30rpx;
+  background: #ffffff;
+  margin-top: 20rpx;
+}
+.search-icon{
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.search-input{
+  flex:1;
+  height:80rpx;
+  padding:0 10rpx;
+  font-size:26rpx;
+}

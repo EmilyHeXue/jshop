@@ -1,0 +1,9 @@
+/* pages/goodsItem/advanceInfo/advanceInfo.wxss */
+.advanceInfo{
+  margin: 20rpx;
+  padding: 20rpx;
+  background: #ffebe4;
+  color: #ff4400;
+  text-align: center;
+  font-size: 28rpx;
+}

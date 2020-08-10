@@ -1,0 +1,6 @@
+<!--pages/shopCart/header/header.wxml-->
+<view class='header'>
+  <view class='title'>购物车</view>
+  <view class='edit' bindtap='showDel' wx:if='{{show}}'>编辑</view>
+  <view class='edit' bindtap='closeDel' wx:if='{{!show}}'>完成</view>
+</view>

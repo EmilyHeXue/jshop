@@ -1,0 +1,30 @@
+<form report-submit bindsubmit='sub' class="view-message" >
+  <view class="list" style="background-color:{{data.details.color2}}">
+      <textarea 
+        class="textarea" 
+        placeholder="感谢提出建议" 
+        value="" 
+        placeholder-class="phColor" />
+    <view class="con">
+      <view class="item">
+        <text class="tt">姓名</text>
+        <input 
+          placeholder="请输入姓名（可选）" 
+          class="input" 
+          value="" 
+          placeholder-class="phColor"/>
+      </view>
+      <view class="item">
+        <text class="tt">手机</text>
+        <input 
+          placeholder="请输入手机（可选）" 
+          class="input" 
+          value=""
+          placeholder-class="phColor"/>
+      </view>
+    </view>
+    <view class="operate">
+      <button form-type='submit' class="btn btn-white">提交</button>
+    </view>
+  </view>
+</form>

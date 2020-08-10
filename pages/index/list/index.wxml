@@ -1,0 +1,10 @@
+<view class="page-list">
+	<view class="list-item"><navigator url="/pages/page01/index">01-登录</navigator></view>
+
+
+
+
+
+	<view class="tip">底部菜单跳转：点击无法跳转，则页面被设置为底部菜单，采用如下方式跳转</view>
+	<view class="list-item"><button class="" bindtap="btnGoTab" data-url="/pages/page02/index">跳转底部菜单页面</button></view>
+</view>

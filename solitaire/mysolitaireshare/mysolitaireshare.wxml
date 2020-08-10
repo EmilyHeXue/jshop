@@ -1,0 +1,26 @@
+<view class="uc-wrap uc-helpShareList">
+	<view class="panel" style="background: {{background}};">
+		<view class="face-box"><image src="{{my_avatar}}"></image></view>
+		<view class="name">我已付款{{price}}元啦！</view>
+	</view>
+	<view class="box">
+		<view class="title">
+			<text class="uc-b">{{name}}</text>
+			<!--<view class="price">
+				￥ <text class="big">9.9</text> 起
+			</view>-->
+		</view>
+		<view class="list">
+			<view class="item" wx:for='{{list}}' wx:key='{{item}}'>
+				<view class="num">{{list.length - index}}</view>
+				<view class="face-box"><image src="{{item.avatar}}"></image></view>
+				<view class="name">{{item.nickname}}</view>
+				<view class="time">{{item.format_create_time}}</view>
+				<view class="number">已接龙+{{item.num}}</view>
+			</view>
+			<navigator url='/solitaire/activity/activity?id={{id}}'>
+				<button class="uc-btn" hover-class="none" style="background: {{background}};">我也要接龙</button>
+			</navigator>
+		</view>
+	</view>
+</view>

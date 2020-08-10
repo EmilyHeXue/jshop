@@ -1,0 +1,277 @@
+<view>
+<view class='header' wx:if='{{data.details.show}}' style='border-bottom:1px solid {{background}}'>
+  <view class='header-left'>
+    <tab 
+      class='header-left-on' 
+      catchtap='changeHeader' 
+      data-type='1' 
+      style='z-index: {{headerFlag == 1 ? 9:1}}; background: {{headerFlag == 1 ? background :"#eeeeee"}}; color: {{headerFlag == 1 ? "#ffffff" : "#595959"}}'>
+      正在抢购 
+      <view class='header-left-on-triangle' style='border-color: transparent transparent {{headerFlag == 1 ? background :"#eeeeee"}};'></view>
+    </tab>
+    <tab class='header-left-will' catchtap='changeHeader' data-type='2' style='z-index: {{headerFlag == 2 ? 9:1}}; background: {{headerFlag == 2 ? background :"#eeeeee"}}; color: {{headerFlag == 2 ? "#ffffff" : "#595959"}}'>
+      即将开始
+      <view class='header-left-will-triangle' style=' border-color: transparent transparent {{headerFlag == 2 ? background :"#eeeeee"}};'></view>
+    </tab>
+  </view>
+  <view class='header-right'>
+    <view class='time-on' wx:if='{{headerFlag == 1}}'>仅剩<view class='hour'>{{ontime.hour || '00'}}</view>:<view class='minute'>{{ontime.minute || '00'}}</view>:<view class='second'>{{ontime.second || '00'}}</view></view>
+    <view class='time-on' wx:if='{{headerFlag == 2}}'>仅剩<view class='hour'>{{willtime.hour || '00'}}</view>:<view class='minute'>{{willtime.minute || '00'}}</view>:<view class='second'>{{willtime.second || '00'}}</view></view>
+  </view>
+</view>
+
+<scroll-view class='scroll' scroll-x>
+  <view class='scroll-item'>
+    <view class='content' catchtap='change' data-index='-1' data-id='0'>
+      <view class='className {{-1 == chooseindex ? "select" : ""}}'>全部</view>
+      <view wx:if='{{-1 == chooseindex}}' class='line'></view>
+    </view>
+  </view>
+  <block wx:for='{{menuList}}' wx:key='id'>
+    <view class='scroll-item'>
+      <view class='content' catchtap='change' data-index='{{index}}' data-id='{{item.id}}'>
+        <view class='className {{index == chooseindex ? "select" : ""}}'>{{item.name}}</view>
+        <view wx:if='{{index == chooseindex}}' class='line'></view>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+
+<!--样式1-->
+<block wx:if='{{data.details.style == 1}}'>
+  <view class='classgoods style1' wx:if='{{menuData.length != 0}}'>
+    <block wx:for='{{menuData}}' wx:key='id'>
+      <view class='style1-item'>
+        <view  class='item' data-id='{{item.id}}' data-is_bargain='{{item.is_bargain == 1}}' catchtap='go'>
+          <image lazy-load class='img' src='{{item.pic_urls[0]}}'></image>
+          <view wx:if='{{item.time_icon.length != 0}}' class="time_icon1">{{item.time_icon}}</view>
+          <view wx:if='{{item.is_open_assemble == 1}}' class='label'>拼团</view>
+          <view class='info'>
+            <view class='name'>{{item.name}}</view>
+            <view class='shortName'>{{item.short_name}}</view>
+            <view class='buyPeople' wx:if='{{item.avatar.length != 0}}'>
+              <block wx:for='{{item.avatar}}' wx:key='item'>
+                <image lazy-load wx:if='{{index < 3}}' class='avatar' lazy-load src='{{item}}'></image>
+              </block>
+              <view>已抢购{{item.sold || 0}}件</view>
+            </view>
+            <view wx:if='{{item.is_open_assemble == 1 || item.is_flash_sale === 1 || item.is_bargain == 1 || item.is_limit == 1}}' style='display: flex; width: 100%; position: relative; height: 60rpx; align-items: center;'>
+              <view class='goods-label-btn pintuan' wx:if='{{item.is_open_assemble == 1}}'>拼团</view>
+              <view class='goods-label-btn miaosha' wx:if='{{item.is_flash_sale == 1}}'>秒杀</view>
+              <view class='goods-label-btn kanjia' wx:if='{{item.is_bargain == 1}}'>砍价</view>
+              <view class='goods-label-btn xiangou' wx:if='{{item.is_limit == 1}}'>每人限购{{item.limit_number}}件</view>
+            </view>
+            
+            <view class='style1-right-footer'>
+              <view class='price'>{{item.min_group_price || item.price}}
+                <text class='line_price'>￥{{item.line_price}}</text>
+              </view>
+              <view wx:if='{{item.is_open_assemble == 0}}' class='right cart-view'>
+                <image lazy-load 
+                  catchtap="changeCart" 
+                  lazy-load
+                  data-type='reduce'
+                  data-goods_id="{{item.id}}"
+                  data-stock_id='{{item.stock[0].id}}'
+                  wx:if='{{cartList[item.stock[0].id]}}'
+                  src='/images/index/classgood/reduce.png'
+                  class='cart-icon'></image>
+                <view wx:if='{{cartList[item.stock[0].id]}}' class='cart-nums'>{{cartList[item.stock[0].id]}}</view>
+                <image lazy-load
+                  catchtap="changeCart"
+                  data-type='add'
+                  lazy-load
+                  data-goods_id="{{item.id}}"
+                  data-stock_id='{{item.stock[0].id}}'
+                  src='{{cartList[item.stock[0].id] ? "/images/index/classgood/add.png":"/images/index/classgood/cart.png"}}'
+                  class='cart-icon'></image>
+              </view>
+              <view wx:else class='right' style='color: {{background}}; border: 1px solid {{background}};'>去拼团</view>
+            </view>
+          </view>
+        </view>
+        <view class='style1-footer footer' wx:if='{{item.format_start_time1 && item.format_end_time1 && item.format_take_goods_time && item.start_time != 0}}'>
+          <view>
+            <image lazy-load src='/images/index/classgood/time.png'></image>
+            销售时间: {{item.format_start_time1}}至{{item.format_end_time1}}
+          </view>
+          <view>
+            <image lazy-load src='/images/index/classgood/bus.png'></image>
+            提货时间: {{item.format_take_goods_time}}
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</block>
+
+
+<!--样式2-->
+<block wx:if='{{data.details.style == 2}}'>
+  <view class='classgoods style2' wx:if='{{menuData.length != 0}}'>
+    <block wx:for='{{menuData}}' wx:key='id'>
+      <view  data-id='{{item.id}}' catchtap='go' data-is_bargain='{{item.is_bargain == 1}}' class='item'>
+        <view class='item-image'>
+          <block wx:for='{{item.pic_urls}}' wx:key='pic_urls'>
+            <image lazy-load wx:if='{{index < 3}}' class='image-item' src='{{item}}'></image>
+          </block>
+          <view wx:if='{{item.time_icon.length != 0}}' class="time_icon1">{{item.time_icon}}</view>
+          <view wx:if='{{item.is_open_assemble == 1}}' class='label'>拼团</view>
+        </view>
+        <view class='item-name'>{{item.name}}</view>
+        <view class='item-info'>{{item.simple_info}}</view>
+        <view class='buyPeople' wx:if='{{item.avatar.length != 0}}'>
+          <block wx:for='{{item.avatar}}' wx:key='item'>
+            <image lazy-load wx:if='{{index < 3}}' class='avatar' lazy-load src='{{item}}'></image>
+          </block>
+          <view>已抢购{{item.sold || 0}}件</view>
+        </view>
+        <view class='content'>
+          <view class='left'>
+            <view class='left-price'>{{item.min_group_price || item.price}}</view>
+          </view>
+          <view wx:if='{{item.is_open_assemble == 0}}' class='right cart-view'>
+            <image lazy-load 
+              catchtap="changeCart" 
+              data-type='reduce'
+              data-goods_id="{{item.id}}"
+              lazy-load
+              data-stock_id='{{item.stock[0].id}}'
+              wx:if='{{cartList[item.stock[0].id]}}'
+              src='/images/index/classgood/reduce.png'
+              class='cart-icon'></image>
+            <view wx:if='{{cartList[item.stock[0].id]}}' class='cart-nums'>{{cartList[item.stock[0].id]}}</view>
+            <image lazy-load
+              catchtap="changeCart"
+              data-type='add'
+              lazy-load
+              data-goods_id="{{item.id}}"
+              data-stock_id='{{item.stock[0].id}}'
+              src='{{cartList[item.stock[0].id] ? "/images/index/classgood/add.png":"/images/index/classgood/cart.png"}}'
+              class='cart-icon'></image>
+          </view>
+          <view wx:else class='right' style='color: {{background}}; border: 1px solid {{background}};'>去拼团</view>
+        </view>
+        <view class='footer' wx:if='{{item.format_start_time1 && item.format_end_time1 && item.format_take_goods_time && item.start_time != 0}}'>
+          <view>
+            <image lazy-load src='/images/index/classgood/time.png'></image>
+            销售时间: {{item.format_start_time1}}至{{item.format_end_time1}}
+          </view>
+          <view>
+            <image lazy-load src='/images/index/classgood/bus.png'></image>
+            提货时间: {{item.format_take_goods_time}}
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</block>
+
+
+<!--样式3-->
+<block wx:if='{{data.details.style == 3}}'>
+  <view class='classgoods style3' wx:if='{{menuData.length != 0}}'>
+    <block wx:for='{{menuData}}' wx:key='id'>
+      <view  data-id='{{item.id}}' data-is_bargain='{{item.is_bargain == 1}}' catchtap='go' class='item'>
+        <view class='item-image'>
+          <image lazy-load mode='widthFix' class='image-item' src='{{item.pic_urls[0]}}'></image>
+          <view wx:if='{{item.is_open_assemble == 1}}' class='label'>拼团</view>
+          <view wx:if='{{item.time_icon.length != 0}}' class="time_icon1">{{item.time_icon}}</view>
+        </view>
+        <view class='item-name'>{{item.name}}</view>
+        <view class='item-info'>{{item.simple_info}}</view>
+        <view class='buyPeople' wx:if='{{item.avatar.length != 0}}'>
+          <block wx:for='{{item.avatar}}' wx:key='item'>
+            <image lazy-load wx:if='{{index < 3}}' class='avatar' lazy-load src='{{item}}'></image>
+          </block>
+          <view>已抢购{{item.sold || 0}}件</view>
+        </view>
+        <view class='content'>
+          <view class='left'>
+            <view class='left-price'>{{item.min_group_price || item.price}}</view>
+            <!--<view class='left-line_price'>{{item.line_price}}</view>-->
+          </view>
+          <view wx:if='{{item.is_open_assemble == 0}}' class='right cart-view'>
+            <image lazy-load 
+              catchtap="changeCart" 
+              data-type='reduce'
+              lazy-load
+              data-goods_id="{{item.id}}"
+              data-stock_id='{{item.stock[0].id}}'
+              wx:if='{{cartList[item.stock[0].id]}}'
+              src='/images/index/classgood/reduce.png'
+              class='cart-icon'></image>
+            <view wx:if='{{cartList[item.stock[0].id]}}' class='cart-nums'>{{cartList[item.stock[0].id]}}</view>
+            <image lazy-load
+              catchtap="changeCart"
+              data-type='add'
+              lazy-load
+              data-goods_id="{{item.id}}"
+              data-stock_id='{{item.stock[0].id}}'
+              src='{{cartList[item.stock[0].id] ? "/images/index/classgood/add.png":"/images/index/classgood/cart.png"}}'
+              class='cart-icon'></image>
+          </view>
+          <view wx:else class='right' style='color: {{background}}; border: 1px solid {{background}};'>去拼团</view>
+        </view>
+        <view class='footer' wx:if='{{item.format_start_time1 && item.format_end_time1 && item.format_take_goods_time && item.start_time != 0}}'>
+          <view>
+            <image lazy-load src='/images/index/classgood/time.png'></image>
+            销售时间: {{item.format_start_time1}}至{{item.format_end_time1}}
+          </view>
+          <view>
+            <image lazy-load src='/images/index/classgood/bus.png'></image>
+            提货时间: {{item.format_take_goods_time}}
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</block>
+
+<!--样式4-->
+<block wx:if='{{data.details.style == 4}}'>
+  <view class='classgoods style4' wx:if='{{menuData.length != 0}}'>
+    <block wx:for='{{menuData}}' wx:key='id'>
+      <view  data-id='{{item.id}}' data-is_bargain='{{item.is_bargain == 1}}' catchtap='go' class='item'>
+        <view class='item-image'>
+          <image lazy-load class='image-item' src='{{item.pic_urls[0]}}'></image>
+          <view wx:if='{{item.is_open_assemble == 1}}' class='label'>拼团</view>
+          <view wx:if='{{item.time_icon.length != 0}}' class="time_icon1">{{item.time_icon}}</view>
+        </view>
+        <view class='item-name'>{{item.name}}</view>
+        <view class='content'>
+          <view class='left'>
+            <view class='left-price'>{{item.min_group_price || item.price}}</view>
+          </view>
+          <view wx:if='{{item.is_open_assemble == 0}}' class='right cart-view'>
+            <image lazy-load 
+              catchtap="changeCart" 
+              data-type='reduce'
+              lazy-load
+              data-goods_id="{{item.id}}"
+              data-stock_id='{{item.stock[0].id}}'
+              wx:if='{{cartList[item.stock[0].id]}}'
+              src='/images/index/classgood/reduce.png'
+              class='cart-icon'></image>
+            <view wx:if='{{cartList[item.stock[0].id]}}' class='cart-nums'>{{cartList[item.stock[0].id]}}</view>
+            <image lazy-load
+              catchtap="changeCart"
+              data-type='add'
+              lazy-load
+              data-goods_id="{{item.id}}"
+              data-stock_id='{{item.stock[0].id}}'
+              src='{{cartList[item.stock[0].id] ? "/images/index/classgood/add.png":"/images/index/classgood/cart.png"}}'
+              class='cart-icon'></image>
+          </view>
+          <view wx:else class='right' style='color: {{background}}; border: 1px solid {{background}};'>去拼团</view>
+        </view>
+        <view class='footer' wx:if='{{item.format_take_goods_time}}'>
+          <image lazy-load src='/images/index/classgood/bus.png'></image>
+          <view>提货时间: {{item.format_take_goods_time}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</block>
+
+</view>

@@ -1,0 +1,62 @@
+<!--pages/goodsItem/image/image.wxml-->
+<view>
+  <image lazy-load bindtap='goCart' src='/images/goodsItem/image/gouwuche.png' class='cart'></image>
+  <image wx:if='{{data.time_icon.length != 0}}' mode="widthFix" lazy-load src='/images/goodsItem/image/time_icon.png' class='time_icon'></image>
+  <view wx:if='{{data.time_icon.length != 0}}' class="time_icon_text">{{data.time_icon}}</view>
+  <swiper 
+    class='swiper' 
+    indicator-dots="true" 
+    indicator-color='{{swiper_color}}' 
+    indicator-active-color="{{swiper_activecolor}}" 
+    autoplay='{{autoplay}}'
+  >
+    <swiper-item  wx:if='{{data.video_status == 1}}'>
+        <video bindplay='changeswiper' enable-progress-gesture='{{false}}'  poster="{{data.pic_urls[0]}}" src='{{data.video_url}}'></video>
+      </swiper-item>
+    <block wx:for="{{data.pic_urls}}" wx:key="{{index}}" wx:key='id'>
+      <swiper-item>
+        <image lazy-load src="{{item}}" data-id='{{item.id}}' class='swiper-item' bindtap='go' />
+        <view wx:if='{{data.stocks == 0}}' class='absloute'>
+          <view class='content'>已售完</view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='tabbar'>
+  <view class="left">
+    <view wx:if='{{data.is_open_assemble == 1}}' class="left-label">拼团价</view>
+    <view wx:elif='{{data.is_flash_sale == 1}}' class="left-label">限时秒杀</view>
+    <view wx:elif='{{data.is_advance_sale == 1}}' class="left-label">预售价</view>
+    <view wx:elif='{{data.is_recruits == 1}}' class="left-label">新人专享</view>
+    <view wx:else class="left-label">抢购价</view>
+    <view class="left-content flex">
+      <view wx:if='{{data.is_advance_sale == 0}}' class='price'>{{data.min_price || data.price}}{{data.min_price == data.max_price ? '' : '-'}}{{data.min_price == data.max_price ? '' : data.max_price}}</view>
+      <view wx:else class='price'>{{data.advance_info.goods_info.price}}</view>
+      <view class='line_price'>￥{{data.line_price}}</view>
+    </view>
+  </view>
+  <view class="right">
+    <view class="right-content flex">
+      <image class='right-icon' mode="widthFix" src='/images/supplier/fire.png'></image>
+      <view class="right-monthSale" class='monthSale'>已售{{data.monthSale || 0}}{{data.unit}}</view>
+    </view>
+    <view wx:if='{{data.is_flash_sale == 1}}' class="countdown">仅剩{{countdown}}</view>
+  </view>
+</view>
+
+<view class="info">
+  <view class="info-name">{{data.name}}</view>
+  <view class="info-content">
+    <view class="info-label" wx:if='{{data.is_open_assemble == 1}}'>拼团价</view>
+    <view class="info-label" wx:elif='{{data.is_flash_sale == 1}}'>限时秒杀</view>
+    <view class="info-label" wx:elif='{{data.is_advance_sale == 1}}'>预售商品</view>
+    <view class="info-label" wx:elif='{{data.group == 1 && data.group.older_with_newer == 1}}'>老带新</view>
+    <view class="info-label" wx:if='{{data.is_open_assemble == 1}}'>{{data.group.number}}人团</view>
+    <view class="info-label" wx:if='{{data.regimental_only == 1}}'>团长专属</view>
+    <view class="info-label" wx:if='{{data.is_recruits == 1}}'>新人专享</view>
+    <view class="info-label" wx:for='{{data.label_name}}' wx:key='item'>{{item}}</view>
+  </view>
+  <view wx:if='{{data.simple_info.length != 0}}' class="info-simple_info">{{data.simple_info}}</view>
+  <view class="friend" bindtap="showShare">邀请好友</view>
+</view>

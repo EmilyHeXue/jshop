@@ -1,0 +1,4 @@
+<view class='rules'>
+  <image lazy-load class='banner' src='https://imgs.juanpao.com/ui/guize.jpg' mode='widthFix'></image>
+  <view class='timeinterval'>{{s_time}} 至 {{e_time}}</view>
+</view>

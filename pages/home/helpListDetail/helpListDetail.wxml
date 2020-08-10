@@ -1,0 +1,1 @@
+<rich-text nodes='{{data.content}}'></rich-text>

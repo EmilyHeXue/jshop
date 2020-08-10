@@ -1,0 +1,9 @@
+<view wx:if='{{data.avatar.length != 0}}' class='buyPeople'>
+  <view class='avatar'>
+    <block wx:for='{{data.avatar}}'>
+      <image lazy-load wx:if='{{index < 7}}' src='{{item.avatar}}' class='avatar-item'></image>
+    </block>
+  </view>
+  <view wx:if='{{data.avatar < 7}}'>...</view>
+  <view class='content'>等{{data.fictitious_initiate_bargain * 1 + data.totalSale.num * 1}}人参与了砍价</view>
+</view>

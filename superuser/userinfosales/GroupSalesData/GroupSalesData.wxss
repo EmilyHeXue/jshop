@@ -1,0 +1,65 @@
+.GroupSalesData{
+  background: #ffffff;
+  padding: 30rpx;
+}
+.GroupSalesData-card{
+  background: linear-gradient(to right, #fec11b 0%, #ff983b 100%);
+  color: #ffffff;
+  text-align: center;
+  padding:20rpx 30rpx 30rpx;
+  border-radius: 10rpx;
+}
+.card-date{
+  font-size:20rpx;
+  text-align:center;
+  margin-bottom:20rpx;
+}
+.card-flex{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.card-item{
+  flex: 1;
+  height:110rpx;
+}
+.card-item:first-child{
+  border-right: #febd53 1px solid;
+}
+.card-price, .card-number{
+  font-size:46rpx;
+  font-weight: 500;
+}
+.card-price::after{
+  content: '元';
+  font-size: 12px;
+}
+.card-number::after{
+  content: '份';
+  font-size: 12px;
+}
+.card-text{
+  font-size: 25rpx;
+}
+
+.list{
+  
+}
+
+.list-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding: 30rpx 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.list-left{
+
+}
+
+.list-right{
+  font-size: 12px;
+}

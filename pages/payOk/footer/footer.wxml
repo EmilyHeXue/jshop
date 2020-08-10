@@ -1,0 +1,9 @@
+<!--pages/footer/footer.wxml-->
+<view wx:if='{{show}}' class='menu'>
+  <block wx:for='{{menu}}' wx:key='{{item.name}}'>
+    <view class='menu-item' catchtap='go' data-url='{{item.choice_page_url}}'>
+      <image lazy-load class='menu-item-img' src='{{item.filePut}}'></image>
+      <view class='menu-item-name' style='color: {{bottom_text}}'>{{item.name}}</view>
+    </view>
+  </block>
+</view>

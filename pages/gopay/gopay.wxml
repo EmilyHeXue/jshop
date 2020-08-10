@@ -1,0 +1,23 @@
+<!--<view class="title">确认订单信息</view>-->
+<view class='content'>
+  <view class="content-title">订单金额</view>
+  <view class="content-price">{{order_price}}</view>
+  <view class="content-footer">订单提交成功, 请尽快完成支付</view>
+</view>
+<view>
+  <radio-group class='pay_type' bindchange='change_pay_type'>
+    <view class='pay_type_item'>
+      <radio value="2" checked="{{pay_type == 2}}">微信支付</radio>
+    </view>
+    <view style='opacity: {{balance_pay_is_open ? 1 : 0}}' class='pay_type_item'>
+      <radio disabled="{{!balance_pay_is_open}}" value="3" checked="{{pay_type == 3}}">
+        余额
+        <text style='color: red;'>{{recharge_balance}}</text>
+        元
+      </radio>
+    </view>
+  </radio-group>
+</view>
+<view>
+  <button class='topay-button' style='background: {{bg}}' bindtap="subscribeMessage">确认支付</button>
+</view>

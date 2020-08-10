@@ -1,0 +1,27 @@
+<view class='groupPlayer'>
+  <view class='groupPlayer-header'>
+    <view class='groupPlayer-header-item'>砍价流程</view>
+    <navigator url='/bargaining/pages/rules/rules?s_time={{data.format_bargain_start_time}}&e_time={{data.format_bargain_end_time}}' class='groupPlayer-header-more'>
+      <view class='groupPlayer-header-more-text'>查看规则</view>
+      <image lazy-load class='groupPlayer-header-more-icon' src="/images/goodsItem/group/right.png"></image>
+    </navigator>
+  </view>
+  <view class='groupPlayer-content'>
+    <view class='groupPlayer-content-item'>
+      <image lazy-load class='item-icon' src="/images/goodsItem/group/bind.png"></image>
+      <view class='item-text'>点击砍价</view>
+    </view>
+    <view class='groupPlayer-content-item'>
+      <image lazy-load class='item-icon' src="/images/goodsItem/group/ok.png"></image>
+      <view class='item-text'>找人帮砍</view>
+    </view>
+    <view class='groupPlayer-content-item'>
+      <image lazy-load class='item-icon' src="/images/goodsItem/group/ok.png"></image>
+      <view class='item-text'>价格合适</view>
+    </view>
+    <view class='groupPlayer-content-item'>
+      <image lazy-load class='item-icon' src="/images/goodsItem/group/ok.png"></image>
+      <view class='item-text'>下单付款</view>
+    </view>
+  </view>
+</view>

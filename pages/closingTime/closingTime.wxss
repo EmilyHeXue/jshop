@@ -1,0 +1,60 @@
+page{
+  background: #f2f2f2;
+}
+.closingTime{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.closingTime-img{
+  width: 210rpx;
+  height: 194rpx;
+  margin-top: 87px;
+}
+.closingTime-status{
+  font-size: 28rpx;
+  margin-top: 15px;
+}
+.closingTime-item{
+  margin-top: 50px;
+}
+.closingTime-btn{
+  font-size: 28rpx;
+  height: 70rpx;
+  width: 400rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #1AAD19;
+  color: #1AAD19;
+  border-radius: 10rpx;
+}
+.closingTime-bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1AAD19;
+  margin-top: 15px;
+}
+.closingTime-icon{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+}
+.closingTime-text{
+  font-size: 28rpx;
+}
+
+.banquan{
+  position: absolute;
+  width: 750rpx;
+  text-align: center;
+  bottom: 30vh;
+  font-size: 28rpx;
+  color: gray;
+}
+.banquan::before{
+  content: '卷泡';
+  color: #1AAD19;
+}

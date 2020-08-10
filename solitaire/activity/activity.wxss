@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@import '../utill/style/main.wxss';
+
+
+
+
+
+.mask{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 750rpx;
+  height: 100vh;
+  background: rgba(0, 0, 0, .8);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.layer{
+  width: 600rpx;
+  background: #ffffff;
+  margin-top: 10vh;
+  padding: 36rpx;
+}
+.title{
+  font-size: 36rpx;
+  text-align: center;
+}
+.content{}
+.comment{
+  border: 1px dotted #F4F4F4;
+  height: 272rpx;
+  padding: 22rpx;
+}
+.imageList{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 25rpx;
+  margin-top: 40rpx;
+}
+.imageList image{
+  width: 160rpx;
+  height: 160rpx;
+}
+.imageList view{
+  width: 160rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  text-align: center;
+  background: #f4f4f4;
+  font-size: 48rpx;
+  color: #9f9f9f;
+}
+.btn{
+  margin-top: 40rpx;
+  font-size: 36rpx;
+  border-radius: 50rpx;
+  color: #ffffff;
+  padding: 22rpx;
+}
+
+
+.commentmore{
+  position: absolute; 
+  bottom: 15rpx; 
+  right: 30rpx; 
+  color: #7f7f7f;
+}

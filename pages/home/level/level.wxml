@@ -1,0 +1,41 @@
+<view>
+  <!--名片区域-->
+  <view class='card'>
+    <image lazy-load src='/images/group/grouplevel/card.png' class='card-bg'></image>
+    <view class='card-info'>
+      <!--头部-->
+      <view class='card-user-info'>
+        <image lazy-load src='{{avatar}}' class='card-user-avatar'></image>
+        <view class='card-user-right'>
+          <view class='card-user-name'>{{nickname}}</view>
+        </view>
+      </view>
+      <!--等级区域-->
+      <view class='card-center'>
+        <view class='card-center-text'>等级: {{level_name}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='level'>
+    <view class='level-left'>
+      <view class='level-left-text'>下一等级</view>
+      <view class='level-left-nextlevel'>{{nextLevel}}</view>
+    </view>
+    <view class='level-center'>
+      <view class='level-center-top'>{{in_score}}</view>
+      <view class='level-center-center'>
+        <view style='width: {{percentage}}%;' class='level-center-center-current'></view>
+      </view>
+      <view class='level-center-bottom'>{{will_score}}</view>
+    </view>
+    <view class='level-right'>
+      <view class='level-right-percent'>{{percentage}}%</view>
+    </view>
+  </view>
+
+  <view class='equities'>
+    <view class='equities-header'>我的权益</view>
+    <view class='equities-content'>购物可享{{discount_ratio}}折</view>
+  </view>
+</view>

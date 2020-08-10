@@ -1,0 +1,43 @@
+/* promoter/promoterUser/promoterUser.wxss */
+.header{
+  font-size: 36rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 47rpx 24rpx 47rpx;
+  color: #404040;
+  border-bottom: 1px solid #f2f2f2;
+}
+.avatar{
+  margin-right: 48rpx;
+}
+.nickname{
+  flex: 1;
+}
+.price{}
+.content{
+  padding: 0 47rpx;
+}
+.item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 24rpx 0;
+}
+.item-avatar{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background: #8BC34A;
+  margin-right: 48rpx;
+}
+.item-nickname{
+  flex: 1;
+}
+.item-price{
+  width: 150rpx;
+  font-size: 28rpx;
+  color: #ff9800;
+  text-align: right;
+}

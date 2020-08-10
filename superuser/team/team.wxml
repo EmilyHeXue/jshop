@@ -1,0 +1,10 @@
+<view>
+  <view class="header">
+    <view  style="border-bottom:{{index == 1 ? '2px solid #E1B365' : ''}};" class="header-item">我的团队</view>
+  </view>
+  <view class="search">
+    <image lazy-load src='/images/search/search/search.png'></image>
+    <input bindblur="getData"></input>
+  </view>
+  <List data='{{data}}'/>
+</view>

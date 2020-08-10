@@ -1,0 +1,42 @@
+.groupRules-head{
+  text-align: center;
+  margin-top: 60rpx;
+}
+.groupRules-title{
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.groupRules-title::after{
+  content: '-';
+  margin-left: 20rpx;
+}
+.groupRules-title::before{
+  content: '-';
+  margin-right: 20rpx;
+}
+.column{
+  padding: 40rpx 78rpx;
+}
+.column-item{
+
+}
+.item-head{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 4rpx;
+}
+.item-icon{
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 14rpx;
+}
+.item-title{
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.item-content{
+  padding-left: 48rpx;
+  font-size: 24rpx;
+  margin-bottom: 36rpx;
+}

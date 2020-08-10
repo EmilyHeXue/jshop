@@ -1,0 +1,5 @@
+<!--pages/share/share.wxml-->
+<image lazy-load class='share-banner' mode="widthFix" src='{{img}}'></image>
+<view>
+  <button class='savbtn' style="background: {{background}};" catchtap='save'>保存到手机</button>
+</view>

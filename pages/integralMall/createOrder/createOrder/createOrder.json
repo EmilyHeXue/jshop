@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "ChooseAddress":"/pages/integralMall/createOrder/chooseAddress/chooseAddress",
+    "GoodData":"/pages/integralMall/createOrder/goodData/goodData",
+    "buyLayer":"/pages/integralMall/createOrder/layer/layer"
+  }
+}

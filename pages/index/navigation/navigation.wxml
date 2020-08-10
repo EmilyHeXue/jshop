@@ -1,0 +1,26 @@
+<swiper style='height: {{swiperHeight ? 187 : 95}}px; margin: 20rpx;' bindchange='calculateheight'>
+  <swiper-item class="view-grid" wx:for='{{menu}}' wx:key="item">
+    <view 
+      class="list type{{data.details.style}}" 
+      style="background-color:{{data.details.color2}};color:{{data.details.color1}};">
+      <block 
+        wx:for="{{item}}" 
+        wx:key="itemImg" 
+        wx:for-item="itemImg" 
+        wx:for-index="itemIndex">
+        <view 
+          data-link="{{itemImg.link}}" 
+          catchtap='go'
+          class="item" 
+          style="font-size:{{data.details.fontSize}}">
+          <image 
+            lazy-load
+            src="{{itemImg.src}}"  
+            class='navigator-img'
+            style="border-radius:50%"></image>
+          {{itemImg.text || '͏'}}
+        </view>
+      </block>
+    </view>
+  </swiper-item>
+</swiper>

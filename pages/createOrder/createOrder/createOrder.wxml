@@ -1,0 +1,53 @@
+<!--pages/createOrder/createOrder/createOrder.wxml-->
+<view class='{{page ? "page":""}}' v-if='{{tabFlag}}'>
+  <!--地址-->
+  <tab 
+    bind:changename='changename'
+    bind:changephone='changephone'
+    bind:tuanexpress='gettuanexpress' 
+    bind:changeAddress='changeAddress' 
+    bind:goodstype='goodstype' 
+    session='{{session}}'
+    user_phone='{{user_phone}}'
+    user_name='{{user_name}}'
+    show="{{tabFlag}}"></tab>
+  
+  <view class='yuan'>
+    <!--商品信息-->
+    <goods 
+      user_contact_id='{{user_contact_id}}' 
+      show="{{tabFlag}}" 
+      goodsData='{{goodsData}}' 
+      bind:update='update'></goods>
+  </view>
+
+  <!--预计送达时间-->
+  <aogTime is_estimated='{{is_estimated}}' bind:estimated_service_time='chooseEstimated'/>
+  <!--
+  <radio-group class='pay_type' bindchange='change_pay_type'>
+    <view class='pay_type_item'>
+      <radio value="2" checked="{{pay_type == 2}}">微信支付</radio>
+    </view>
+    <view style='opacity: {{balance_pay_is_open ? 1 : 0}}' class='pay_type_item'>
+      <radio disabled="{{!balance_pay_is_open}}" value="3" checked="{{pay_type == 3}}">余额支付</radio>
+      <view class='recharge_balance'>{{recharge_balance}}元</view>
+    </view>
+  </radio-group>-->
+
+
+  
+
+  <view class='footer'>
+    <view class='price'>￥{{allPrice}}</view>
+    <form report-submit bindsubmit='shopOrderPayXcx'>
+      <button form-type='submit' class='btn' style='background: {{background}}'>提交订单</button>
+    </form>
+  </view>
+</view>
+<model 
+  show='{{modelFlag}}'
+  data='{{modelData}}'
+  bind:error='error'
+  bind:ok='ok'
+></model>
+<footer bindshow='footerFlag'></footer>

@@ -1,0 +1,52 @@
+/* pages/applicationForDrawback/goodsItem/goodsItem.wxss */
+
+.goods{
+  background:#ffffff;
+  overflow: hidden;
+  padding:15rpx;
+  margin:15rpx 15rpx 0rpx 15rpx;
+  border-radius:15rpx;
+}
+
+.goods-item{
+  display:flex;
+  justify-content:flex-start;
+  align-items:flex-start;
+  margin-bottom:20rpx;
+}
+.goods-item:last-child{
+  margin-bottom:15rpx;
+}
+.goods-img{
+  width:180rpx;
+  height:180rpx;
+  margin-right:15rpx;
+}
+
+.goods-item-text{
+  flex:1;
+}
+.goods-name{
+  font-size:26.25rpx;
+}
+
+.goods-property{
+  font-size:22.5rpx;
+  color:#999999;
+  margin-top:7.5rpx;
+}
+
+.goods-item-number{
+  width:120rpx;
+  text-align:right;
+}
+
+.goods-price{
+  font-size:26.25rpx;
+}
+
+.goods-number{
+  font-size:22.5rpx;
+  color:#999999;
+  margin-top:7.5rpx;
+}

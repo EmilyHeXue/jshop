@@ -1,0 +1,16 @@
+<view>
+  <view class='header'>
+    <view class='text'>积分明细</view>
+    <view class='integral'>569</view>
+  </view>
+
+  <view>
+    <block wx:for='{{20}}'>
+      <view class='item'>
+        <view class='date'>2019.06.19 15:48</view>
+        <view class='way'>签到</view>
+        <view class='{{index % 2  == 1 ? "reduction" : "add"}}'>{{index % 2  == 1 ? "-" : "+"}}20</view>
+      </view>
+    </block>
+  </view>
+</view>

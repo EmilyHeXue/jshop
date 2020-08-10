@@ -1,0 +1,6 @@
+<Banner leave='{{leave}}' data='{{data}}'/>
+<BuyPeople data='{{data}}'/>
+<player data='{{data}}'/>
+<Html html='{{html}}'/>
+<footer data='{{data}}' bind:showLayer='showLayer'/>
+<layer isBuy='{{isBuy}}' layerFlag='{{layerflag}}' data='{{data}}' bind:hideLayer='showLayer'/>

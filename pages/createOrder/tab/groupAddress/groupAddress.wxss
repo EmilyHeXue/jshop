@@ -1,0 +1,61 @@
+.groupAdress{
+}
+.addInfo{
+
+}
+.addInfo-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30rpx;
+  height: 80rpx;
+  border-bottom: 1px solid #eee;
+}
+.label{
+  margin-left: 40rpx;
+}
+.input{
+  flex: 1;
+  padding: 20rpx;
+}
+.group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0rpx;
+  border-radius: 30rpx;
+}
+.avatar{
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+  background: red;
+  line-height: 70rpx;
+  text-align: center;
+  color: #ffffff;
+  font-size: 25rpx;
+}
+.right{
+  flex: 1;
+  font-size: 25rpx;
+}
+.top{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 10rpx;
+}
+.user{
+  font-size: 30rpx;
+  flex:1;
+}
+.change{
+  font-size: 25rpx;
+  line-height: 25rpx;
+}
+.icon{
+  width: 48rpx;
+  height: 48rpx;
+  background: #fff;
+}

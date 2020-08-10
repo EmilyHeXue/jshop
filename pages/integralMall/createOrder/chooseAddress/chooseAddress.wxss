@@ -1,0 +1,68 @@
+.address{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx;
+  padding-right: 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+.address-icon{
+  width: 100rpx;
+  height: 100rpx;
+}
+.center{
+  flex: 1;
+  overflow: hidden;
+  padding: 0 16rpx;
+}
+.center-top{
+  display: flex;
+  font-size: 28rpx;
+  line-height: 28rpx;
+}
+.user-name{
+  margin-right: 10rpx;
+  font-weight: 600;
+}
+.user-phone{
+  font-weight: 500;
+  font-size: 26rpx;
+}
+.user-address{
+  font-size: 24rpx;
+}
+.choose{
+  padding: 20rpx;
+  font-size: 28rpx;
+  border-left: 1px solid #bbb;
+}
+
+layer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100vh;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+content{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 750rpx;
+  height: auto;
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  background: #ffffff; 
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+content .address{
+  z-index: 9;
+}
+.scroll{
+  height: 500rpx;
+  overflow: hidden;
+}

@@ -1,0 +1,1 @@
+<view wx:if='{{data.is_advance_sale == 1}}' class='advanceInfo'>{{startTime}}-{{endTime}}支付尾款</view>

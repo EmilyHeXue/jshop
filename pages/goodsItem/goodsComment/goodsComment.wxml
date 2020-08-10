@@ -1,0 +1,19 @@
+<view class="margin" wx:if='{{data.length != 0}}'>
+  <view class="evaluation" >
+      <view class='evaluation-nums'>商品评价({{data ? data.length:0}})</view>
+      <view class='evaluation-more' catchtap='go'>
+        <view>查看全部</view>
+        <image lazy-load class='evaluation-more-img' src='/images/my/menu/right.png'></image>
+      </view>
+  </view>
+  <view wx:if='{{data && data.length != 0}}' class='evaluationDate'>
+    <view class='evaluationDate-people'>
+      <image lazy-load class='evaluationDate-headerimg' src='{{data[0].avatar}}'></image>
+      <view class='evaluationDate-name'>{{data[0].nickname}}</view>
+    </view>
+    <view class='evaluationDate-text'>{{data[0].content}}</view>
+    <!--<view class='evaluationDate-scroll' wx:if='{{data[0].pics_url != ""}}'>
+      <image lazy-load class='evaluationDate-img' src='{{data[0].pics_url[0]}}'></image>
+    </view>-->
+  </view>
+</view>

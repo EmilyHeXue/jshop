@@ -1,0 +1,22 @@
+<view class='orderItem {{page ? "page":""}}' wx:if='{{show}}'>
+  <orderItemStatus status='{{status}}' addressData='{{addressData}}' create_time='{{orderItem.create_time}}'></orderItemStatus>
+  <orderItemAddress 
+    addressData='{{addressData}}'
+    groupaddr='{{groupaddr}}'
+    groupphone='{{groupphone}}'
+    express_type='{{express_type}}'
+  ></orderItemAddress>
+  <orderItemGoods goodsData='{{goodsData}}'></orderItemGoods>
+  <orderItemOrder orderItem='{{orderItem}}'></orderItemOrder>
+  <orderItemFooter 
+    bind:getData='getData'
+    order_sn='{{order_sn}}' 
+    status='{{status}}'
+    goodsData='{{goodsData}}'
+    is_advance='{{is_advance}}'
+    express_type='{{express_type}}'
+  ></orderItemFooter>
+</view>
+
+<footer bindshow='footerFlag'></footer>
+ 

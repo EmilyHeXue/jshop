@@ -1,0 +1,4 @@
+<promoterContent></promoterContent>
+<promoterCard></promoterCard>
+
+<promoterCenter name='{{title}}'></promoterCenter>

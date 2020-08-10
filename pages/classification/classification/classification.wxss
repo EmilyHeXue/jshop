@@ -1,0 +1,418 @@
+.search {
+    position: fixed;
+    z-index: 999;
+    background: #fff;
+    padding: 15rpx 40rpx;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1rpx solid #f8f8f8;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+page{
+  background: #ffffff;
+}
+
+.search input {
+    flex: 1;
+    height: 70rpx;
+    border-radius: 50rpx;
+    font-size: 26rpx;
+    color: #a09e9e;
+    background: #f2f2f2;
+    padding: 0 30rpx 0 70rpx;
+}
+.link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  font-size: 26rpx;
+  color: #909090;
+  margin-left: 40rpx;
+}
+.icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.search .search-icon {
+    width: 42rpx;
+    height: 42rpx;
+    position: absolute;
+    top: 31rpx;
+    left: 92rpx;
+    z-index: 6;
+}
+
+.tab-btn {
+    width: 160rpx;
+    height: calc(100% - 55px);
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 105rpx;
+    background: #F7F8FA;
+    z-index: 9;
+}
+.tab-btn-icon{
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  margin: 0 5rpx;
+}
+.tab-btn view {
+  text-align: center;
+  padding: 30rpx 0;
+  color: #353535;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.tab-btn-name{
+  max-width: 100rpx;
+  padding: 0 !important;
+}
+
+.tab-btn view.on {
+    border-left: 4rpx solid #ff5903;
+    background: #ffffff;
+    color: #ff5903;
+}
+
+.tab-con {
+    padding-left: 160rpx;
+    padding-top: 105rpx;
+    margin-bottom: 120rpx;
+}
+
+.tab-con .list .Advertisement {
+    width: 588rpx;
+    height: 171rpx;
+}
+
+.tab-con .list .classification {
+    overflow: hidden;
+    padding-bottom: 20rpx;
+}
+
+.tab-con .list .classification view {
+    float: left;
+    line-height: 44rpx;
+    padding: 0 20rpx;
+    border: 2rpx solid #545454;
+    color: #545454;
+    border-radius: 22rpx;
+    margin: 28rpx 20rpx 0 20rpx;
+    font-size: 26rpx;
+}
+ 
+.tab-con .list .classification view.on {
+    color: #fff;
+    background: #fe5802;
+    border: 2rpx solid #fe5802;
+}
+
+.tab-con .list .item {
+    background: #fff;
+    border-radius: 20rpx;
+    display: flex;
+    margin: 0rpx 20rpx;
+    padding: 20rpx 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.tab-con .list .item image {
+    width: 204rpx;
+    height: 204rpx;
+    margin-right: 16rpx;
+    border-radius: 4rpx;
+}
+
+.tab-con .list .item .right {
+    height: 204rpx;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-con .list .item .right .name {
+    font-size: 28rpx;
+    font-weight: bold;
+    color: #444;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.tab-con .list .item .right .avatar {
+  margin-top: 10rpx;
+}
+.tab-con .list .item .right .avatar .avatar-content {
+    color: #a4a4a4;
+    font-size: 20rpx;
+    display: flex;
+    align-items: center;
+}
+.tab-con .list .item .right .avatar-item {
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    margin-right: 10rpx;
+}
+.tab-con .list .item .right .lettername {
+    font-size: 24rpx;
+    color: #BDBDBD;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tab-con .list .item .right .introduce {
+    line-height: 40rpx;
+    font-size: 26rpx;
+    color: #909090;
+}
+
+.tab-con .list .item .right .price {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.tab-con .list .item .right .price .xian {
+    float: left;
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #fe5802;
+}
+
+.tab-con .list .item .right .price .xian text {
+    font-size: 20rpx;
+}
+
+.tab-con .list .item .right .price .yuan {
+    font-size: 20rpx;
+    color: #bfbfbf;
+    text-decoration: line-through;
+    margin: 12rpx 0 0 10rpx;
+    float: left;
+}
+
+.tab-con .list .item .right .price .qiang {
+    font-size: 40rpx;
+    text-align: center;
+    margin-top: 6rpx;
+    line-height: 39rpx;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.qiang-btn{
+    width: 40rpx;
+    height: 40rpx;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.xuanguige{
+  padding: 5rpx 20rpx;
+  font-size: 20rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  float: right;
+}
+.nums{
+  padding: 0 10rpx;
+  font-size: 28rpx;
+}
+
+mask{
+  left: 0;
+  top: 0;
+  width: 750rpx;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+layer{
+  background: #fff;
+  display: block;
+  width: 750rpx;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 80vh;
+}
+.layer-footer{
+  position: absolute;
+  bottom: 0rpx;
+  padding: 20rpx 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid #f2f2f2;
+}
+.layer-footer button{
+  border-radius: 50rpx;
+  color: #ffffff;
+}
+header{
+  text-align: center;
+  display: block;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #eee;
+
+}
+content{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.goodsProperty{
+  font-size: 28rpx;
+  color: #595959;
+  margin: 10rpx 20rpx;
+  border: 1rpx solid #595959;
+  padding: 10rpx 20rpx;
+  position: relative;
+  border-radius: 50rpx;
+}
+.goodsProperty-number{
+  position: absolute;
+  right: -20rpx;
+  top: -20rpx;
+  width: 40rpx;
+  height: 40rpx;
+  background: red;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40rpx;
+}
+.goodsContent{
+  border-top: 1rpx solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+}
+.goodsContent-price{
+  color: red;
+  font-size: 30rpx;
+}
+.goodsContent-price::before{
+  content: '￥';
+  font-size: 26rpx;
+}
+.goodsContent-right{
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+}
+.goodsContent-btn{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 39rpx;
+  background: red;
+  color: #fff;
+  font-size: 30rpx;
+}
+.right-number{
+  padding: 0 10rpx;
+  font-size: 28rpx;
+}
+
+
+.content{
+  padding: 20rpx 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column wrap;
+}
+
+.goodsPropertyList-title{
+  font-size: 30rpx;
+  padding:20rpx 0 20rpx 20rpx;
+  border-bottom: 1px solid #f2f2f2;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.goodsPropertyList{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.content-title{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width:100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.content-list{
+  width:100%;
+  height: calc(80vh - 440rpx);
+  overflow: hidden;
+}
+.content-title image{
+  width: 200rpx;
+  margin-right: 20rpx;
+}
+
+.content-title-right{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  height: 200rpx;
+  font-size: 26rpx;
+}
+
+.goodsPropertyNumber{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 20rpx;
+}
+.goodsPropertyNumber-label{
+
+}
+.goodsPropertyNumber-right{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.shopCart-compute-btn{
+  width: 56rpx;
+  height: 56rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1rpx solid #888;
+  font-size: 40rpx;
+}
+.shopCart-compute-number{
+  width: 112rpx;
+  height: 56rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1rpx solid #888;
+  border-bottom: 1rpx solid #888;
+  font-size: 40rpx;
+}

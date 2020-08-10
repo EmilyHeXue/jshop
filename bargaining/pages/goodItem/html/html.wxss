@@ -1,0 +1,9 @@
+.html{
+  background: #ffffff;
+  margin-bottom: 110rpx;
+}
+.header{
+  text-align: center;
+  font-size: 32rpx;
+  padding: 40rpx;
+}

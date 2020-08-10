@@ -1,0 +1,78 @@
+<view>
+  <view class='header'>
+    <image lazy-load class='banner' src='{{bargain_poster}}'></image>
+    <view class='header-content'>
+      <image lazy-load class='icon' src='{{avatar}}'></image>
+      <view class='header-content-item'>
+        <view class='header-content-item-title'> 小伙伴们, 我在【{{app_name}}】发现一件好货, 快来帮我砍砍价, 一起优惠购买</view>
+        <view class='goods'>
+          <image lazy-load class='goods-img' src='{{pic_url}}'></image>
+          <view class='goods-item'>
+            <view class='goods-name'>{{goods_name}}</view>
+            <view class='goods-sold'>{{number}}人已抢到手</view>
+            <view class='goods-item-footer'>
+              <view class='goods-item-footer-label red'>当前价￥</view>
+              <view class='goods-price red'>{{price}}</view>
+              <view class='goods-item-footer-label gray'>最低￥</view>
+              <view class='goods-linePrice gray'>{{min_pirce}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='progress-bar'>
+        <view class='progress'>
+          <view class='already' style='width: {{progress}}%;'></view>
+          <view class='progress-top' style='left: {{progress > 87 ? 87 : progress < 15 ? 13 : progress}}%;'>
+            <view class='progress-label'>已砍{{cost_price - price}}元</view>
+          </view>
+        </view>
+        <view class='progress-footer'>
+          <view class='progress-price'>原价{{cost_price}}</view>
+          <view class='progress-minprice'>还差{{cost_price - min_pirce - (cost_price - price)}}</view>
+        </view>
+      </view>
+      <view wx:if='{{isend}}'>砍价结束</view>
+      <view class='countdown' wx:else>
+        <view class='date-label'>{{hour}}</view>:
+        <view class='date-label'>{{minute}}</view>:
+        <view class='date-label'>{{second}}</view>
+        后砍价结束
+      </view>
+    </view>
+  </view>
+  <view class='btn'>
+    <button class='btn-item toshare' catchtap="goBargaining">帮他砍一刀</button>
+    <button class='btn-item tobuy' catchtap="gogood">我也要砍价</button>
+    
+  </view>
+  <view class='participation'>
+    <view class='participation-title'>砍价英雄榜</view>
+    <view class='participation-content'>
+      <block wx:for='{{bargin}}'>
+        <view class='participation-item'>
+          <image lazy-load class='avatar' src='{{item.avatar}}'></image>
+          <view class='participation-item-center'>
+            <view class='participation-item-name'>{{item.nickname}}</view>
+            <view class='participation-item-label'>看我一阳指, 点点点!</view>
+          </view>
+          <view class='participation-item-right'>
+            <image lazy-load class='participation-icon' src='https://imgs.juanpao.com/ui/kandao50.png'></image>
+            <view class='participation-price'>砍掉{{item.price}}元</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='prompt'>最终解释权归{{app_name}}所有</view>
+</view>
+
+<view wx:if='{{layerFlag}}' catchtap="showLayer" class='mask'>
+  <view class='layer' catchtap>
+    <image lazy-load class='layer-avatar' src='{{myAvatar}}'></image>
+    <view class='layer-text' wx:if='{{isbargaining}}'>你已砍掉{{myPrice}}元</view>
+    <view class='layer-text' wx:else>你一出手就砍掉了{{myPrice}}元</view>
+    <view class='layer-text'>快要请好友帮你一起砍价吧!</view>
+    <image lazy-load class='layer-img' src='https://imgs.juanpao.com/ui/kandao.png'></image>
+    <button class='layer-btn' open-type="share">找人帮砍</button>
+  </view>
+</view>

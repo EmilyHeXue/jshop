@@ -1,0 +1,24 @@
+.button{
+  display: flex;
+  justify-content: center;
+  padding-top: 0;
+}
+.icon{
+  width:24px;
+  height:24px;
+  float:left;
+  margin-right:10px;
+  display:block;
+  position:relative;
+  top:3px;
+}
+.btn{
+  display:inline-block;
+  width:auto;
+  margin:0 auto;
+  padding:5px 20px;
+  height:40px;
+  border-radius:0;
+  background-color:#00aaee;
+  line-height: 30px;
+}

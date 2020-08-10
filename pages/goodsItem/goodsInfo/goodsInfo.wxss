@@ -1,0 +1,15 @@
+.seckilTime{
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  box-sizing: border-box;
+  margin: 20rpx;
+  background: #FFEBE4;
+  padding: 20rpx 28rpx;
+  font-size: 28rpx;
+  color: #ff4400;
+  border-radius: 10rpx;
+}
+.startTime, .sendTime{
+  flex: 1;
+}

@@ -1,0 +1,9 @@
+
+<video 
+  class="video"
+  src="{{data.details.imgs[0].link}}"
+  poster="{{data.details.imgs[0].src}}"
+  controls
+  enable-play-gesture="{{true}}"
+  style="height:{{data.details.boxHeight}}px">
+</video>

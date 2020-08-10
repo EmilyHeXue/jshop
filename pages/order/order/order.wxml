@@ -1,0 +1,9 @@
+<!--pages/order/order/order.wxml-->
+<view class='{{page ? "page":""}}'>
+  <orderHeader headIndex='{{headIndex}}' bind:postId='getid'></orderHeader>
+  <login noLogin='{{noLogin}}'/>
+  <orderItem bind:getList='getOrderList' orderList='{{orderList}}'></orderItem>
+</view>
+
+
+<footer bindshow='footerFlag'></footer>

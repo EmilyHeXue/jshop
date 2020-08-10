@@ -1,0 +1,22 @@
+<!--pages/group/changegroup/ItsGroupList/ItsGroupList.wxml-->
+<view class='ItsGroupList'>
+  <view class='ItsGroupList-content'>
+    <block wx:for='{{3}}' wx:key='{{item}}'>
+      <view class='ItsGroupList-item'>
+        <image lazy-load src='{{avatar}}' class='item-img'></image>
+        <view class='item-content'>
+          <view class='item-community'>四季</view>
+          <view class='item-address'>江苏省,连云港市,海州区,新浦海莲东路127号</view>
+          <view class='item-group'>{{leader_name}}:咸鱼康</view>
+        </view>
+        <view class='item-right'>
+          <view class='item-distance'>距离4756m</view>
+          <view class='item-btn'>进入{{leader_name}}小区</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view wx:if='{{false}}' class='noData'>
+    <image lazy-load src='/images/group/ItsGroup/img31.png' class='noData-img'></image>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+.recommend{
+  margin: 20rpx;
+  padding: 20rpx;
+  background: #ffffff;
+  border-radius: 10rpx;
+}
+.recommend-title{
+  font-size: 28rpx;
+  color: #101010;
+  margin-bottom: 16rpx;
+}
+.recommend-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recommend-item{
+  width: calc((750rpx - 80rpx - 52rpx)/3);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.recommend-pic{
+  width: calc((750rpx - 80rpx - 52rpx)/3);
+  height: calc((750rpx - 80rpx - 52rpx)/3);
+}
+.recommend-name{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 26rpx;
+  color: #101010;
+}
+.recommend-price{
+  font-size: 36rpx;
+  color: #ff2a2a;
+}
+.recommend-price::before{
+  content: '￥';
+  font-size: 26rpx;
+}

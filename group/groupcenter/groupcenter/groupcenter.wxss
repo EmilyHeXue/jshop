@@ -1,0 +1,44 @@
+@charset "UTF-8";
+@import '../../utils/main.wxss';
+
+.layer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  z-index: 999;
+}
+.content{
+  background: #ffffff;
+  width: 580rpx;
+  margin: 20vh auto 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 54rpx  50rpx 74rpx 50rpx;
+  box-sizing: border-box;
+}
+.content view:nth-child(1){
+  font-size: 56rpx;
+}
+.content view:nth-child(2){
+  width: 100%;
+}
+.codetext{
+  border: 1px solid #eeeeee;
+  height: 142rpx;
+  width: 100%;
+  font-size: 80rpx;
+  text-align: center;
+  margin: 50rpx 0 72rpx 0;
+}
+.btn{
+  color: #ffffff;
+  width: 482rpx;
+  height: 94rpx;
+  font-size: 36rpx;
+  line-height: 94rpx;
+  background: #373D4B;
+}

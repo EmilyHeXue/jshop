@@ -1,0 +1,13 @@
+<!--pages/applicationForDrawback/applicationForDrawback/applicationForDrawback.wxml-->
+<view class='{{page ? "page":""}}'>
+  <goodsItem
+    list='{{list}}'>
+  </goodsItem>
+  <postData
+    status='{{status}}'
+    order_sn='{{order_sn}}'>
+  </postData>
+</view>
+
+
+<footer bindshow='footerFlag'></footer>

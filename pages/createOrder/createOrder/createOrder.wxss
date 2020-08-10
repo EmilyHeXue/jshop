@@ -1,0 +1,74 @@
+/* pages/createOrder/createOrder/createOrder.wxss */
+page{
+  background: #f2f2f2;
+  padding-bottom: 100rpx;
+}
+.footer{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:750rpx;
+  height:90rpx;
+  border-top:1px solid #eee;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  font-size:27rpx;
+  background: #ffffff;
+}
+.price{
+  margin-right:20rpx;
+  color: red;
+}
+.btn{
+  width:270rpx;
+  background:linear-gradient(to right, #ff7301, #ff4b03);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+  font-size:27rpx;
+  border-radius: 0;
+  height:90rpx;
+}
+
+.yuan{
+  margin: 0 26rpx;
+}
+
+.price::before{
+  content: '合计:';
+  color: #595959;
+}
+
+.pay_type{
+  background: #fff;
+  margin: 32rpx 26rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+  padding: 40rpx 0;
+  font-size: 36rpx;
+}
+.pay_type_item{
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  
+}
+.recharge_balance{
+  position: absolute;
+  bottom: -30rpx;
+  font-size: 25rpx;
+  color: red;
+  margin-left: 17px;
+}
+.recharge_balance::before{
+  content: '剩余: ';
+  color: #555;
+}

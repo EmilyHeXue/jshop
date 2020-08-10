@@ -1,0 +1,46 @@
+<!--pages/home/addAddress/addAddress.wxml-->
+<form bindsubmit="postShopContact">
+  <view class='addAddress'>
+    <view class='addAddress-item'>
+      <view class='addAddress-item-title'>收货人</view>
+      <input confirm-type='next' value='{{name}}' name='name' class='addAddress-item-right'  placeholder='请输入收货人姓名' type='text' />
+    </view>
+    <view class='addAddress-item'>
+      <view class='addAddress-item-title'>手机号码</view>
+      <input confirm-type='next' value='{{phone}}' name='phone' class='addAddress-item-right'  placeholder='请输入手机号码' type='number' />
+    </view>
+   <!-- <view class='addAddress-item'>
+      <view class='addAddress-item-title'>省市区</view>
+      <picker mode='region' bindchange="bindRegionChange">
+        <input disabled value='{{loction_address}}' name='loction_address' class='addAddress-item-right'  type='text' />
+      </picker>
+    </view> -->
+	
+	<view class="section addAddress-item">
+		<view class="section__title addAddress-item-title">省市区</view>
+		  <picker class="group-form-input" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" range-key="name">
+			  <input disabled value='{{loction_address}}' name='loction_address' class='addAddress-item-right'  type='text' />
+		  </picker>
+	</view>
+	
+    <view class='addAddress-item' style='border: 0;'>
+      <view class='addAddress-item-title'>详细地址</view>
+      <view class='addAddress-bottom location' catchtap="chooseLocal" style='background: {{background}};'>定位</view>
+      <textarea confirm-type='next' auto-height value='{{loction_name}}' name='address' class='addAddress-item-right' placeholder='请输入详细地址'/>
+    </view>
+    
+  </view>
+  <view class='addAddress'>
+    <view class='addAddress-item' style='border: 0;'>
+      <view class='addAddress-bottom nlp' catchtap="toaddress" style='background: {{background}};'>智能识别</view>
+      <textarea confirm-type='next' bindblur="writeNlp" value='{{nlp}}'  class='addAddress-item-right' placeholder='地址粘贴此处后点击智能识别,姓名电话地址请以空格分隔'/>
+    </view>
+  </view>
+  <view class='addAddress'>
+    <view class='default-address'>
+      <view class='addAddress-item-left'>设置默认地址</view>
+      <switch class='default-address-right' checked='{{is_default == 1}}' name='is_default' bindchange="changeSwitch"/>
+    </view>
+  </view>
+  <button class='post' style='background: {{background}};' form-type="submit">保存</button>
+</form>

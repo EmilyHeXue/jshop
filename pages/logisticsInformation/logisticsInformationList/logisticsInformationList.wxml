@@ -1,0 +1,9 @@
+<!--pages/logisticsInformation/logisticsInformationList/logisticsInformationList.wxml-->
+<view class='content'>
+  <block wx:for='{{List}}' wx:key='{{index}}'>
+    <view class='row'>
+      <view class='row-context'>{{item.context || item.AcceptStation}}</view>
+      <view class='row-time'>{{item.time || item.AcceptTime}}</view>
+    </view>
+  </block>
+</view>

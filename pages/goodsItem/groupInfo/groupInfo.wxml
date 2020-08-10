@@ -1,0 +1,12 @@
+<!--pages/goodsItem/groupInfo/groupInfo.wxml-->
+<view class="groupInfo" wx:if='{{area_id != 0 && groupFlag}}'>
+  <view class='groupInfo-label'>团长</view>
+  <view class="content">
+    <view class="content-top">{{area.area_name}}{{area.realname}}</view>
+    <view class="content-addr">{{area.addr}}</view>
+  </view>
+  <view class='groupInfo-right' bindtap="navto">
+    <image class="groupInfo-icon" mode='widthFix' src='/images/go.png'/>
+    <view>导航</view>
+  </view>
+</view>

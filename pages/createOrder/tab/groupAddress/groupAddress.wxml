@@ -1,0 +1,30 @@
+<view class='groupAdress'>
+  <view class='addInfo'  wx:if='{{false}}'>
+    <view class='addInfo-item'>
+      <view class='label'>姓名:</view>
+      <input class='input' bindblur='change' data-type='name' value='{{name}}'></input>
+    </view>
+    <view class='addInfo-item'>
+      <view class='label'>电话:</view>
+      <input class='input' bindblur='change' data-type='phone' value='{{phone}}'></input>
+    </view>
+    <view  class='addInfo-item'>
+      <view class='label'>地址:</view>
+      <input class='input' bindblur='change' data-type='address' value='{{address}}'></input>
+    </view>
+  </view>
+  <view class='group'>
+    <view class='avatar' style='background: {{bg}};'>{{leader_name}}</view>
+    <view class='right'>
+      <view class='top'>
+        <view class='user'>{{group}}-{{area_name}}</view>
+      </view>
+      <view class='bottom'>自提点:{{addr}}</view>
+    </view>
+    <form report-submit bindsubmit='go'>
+      <button class='change' form-type='submit'>
+        <image lazy-load class='icon' src='/images/my/menu/right.png'></image>
+      </button>
+    </form>
+  </view>
+</view>

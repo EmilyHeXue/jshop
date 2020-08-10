@@ -1,0 +1,10 @@
+<view wx:if='{{goods_list.length != 0}}' class="recommend">
+  <view class="recommend-title">精品优选</view>
+  <view class="recommend-content">
+    <view catchtap="go" data-id='{{item.id}}' class="recommend-item" wx:for='{{goods_list}}' wx:key='item'>
+      <image class="recommend-pic" src='{{item.pic_urls}}'></image>
+      <view class="recommend-name">{{item.name}}</view>
+      <view class="recommend-price">{{item.price}}</view>
+    </view>
+  </view>
+</view>

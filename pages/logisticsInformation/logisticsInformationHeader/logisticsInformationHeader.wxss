@@ -1,0 +1,20 @@
+/* pages/logisticsInformation/logisticsInformationHeader/logisticsInformationHeader.wxss */
+.header{
+  background-color:#ffffff;
+  margin-bottom:15rpx;
+}
+.row{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  padding:15rpx;
+  font-size:30rpx;
+}
+.row-label{
+  width:150rpx;
+  
+}
+.row-data{
+  flex:1;
+  color:#555;
+}

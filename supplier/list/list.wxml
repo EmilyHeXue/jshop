@@ -1,0 +1,32 @@
+<view style='padding-bottom: {{foorterFlag ? "60px" : "0px"}}'>
+  <view style='z-index: -1;'>
+    <image lazy-load class="header" mode="widthFix" src='{{host}}'></image>
+  </view>
+  
+  <view class="list">
+    <view class="list-item" wx:for='{{list}}' wx:key='item'>
+      <view class="item-store">
+        <image lazy-load class="item-logo" src='{{item.leader.pic_urls}}'></image>
+        <view class="item-top-center">
+          <view class="item-name">{{item.leader.realname}}</view>
+          <view class="item-label">{{item.intro}}</view>
+        </view>
+        <view class="item-btn" bindtap="go" data-url='/supplier/index/index?id={{item.id}}'>进入店铺</view>
+      </view>
+      <view class="item-goods">
+        <view class="goods-item" wx:for='{{item.goods}}' wx:key='item'>
+          <image lazy-load class="goods-img" src='{{item.pic_urls[0]}}'  bindtap="to" data-url='/pages/goodsItem/goodsItem/goodsItem?id={{item.id}}'></image>
+          <view class="goods-content">
+            <view class="goods-name">{{item.name}}</view>
+            <view class='goods-price'>{{item.price}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <footer bindshow='show'/>
+</view>
+
+<navigator open-type='redirect' url='/pages/index/index/index' class="back">
+  <image lazy-load class="backindex" src='/images/backindex.png' mode="widthFix"></image>
+</navigator>

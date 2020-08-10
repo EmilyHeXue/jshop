@@ -1,0 +1,88 @@
+.seckill-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+.title-left{
+  width: 160rpx;
+  height: 40rpx;
+}
+.title-center{
+  flex:1;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  margin-left: 20rpx;
+}
+.avatar{
+  width: 32rpx;
+  height: 32rpx;
+  background: green;
+  margin-right: 10rpx;
+  border-radius: 50%;
+}
+.buyinfo{
+  font-size: 24rpx;
+  color: #808080;
+}
+
+.top-right{
+  display: flex;
+  align-items: center;
+  color: #868686;
+  font-size: 28rpx;
+}
+.icon{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.seckill{
+  margin: 20rpx;  
+  background: #ffffff;
+}
+.scroll{
+  white-space: nowrap;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 20rpx 20rpx 10rpx 20rpx;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+}
+.item{
+  display: inline-block;
+  text-align: center;
+  margin-right: 26rpx;
+}
+.item:last-child{
+  margin-right: 0;
+}
+.goodimg{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  background: green;
+}
+.goodname{
+
+}
+.good-bottom{
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+.goodprice{
+  color: red;
+  font-size: 36rpx;
+  margin-right: 10rpx;
+}
+.goodprice::before{
+  content: '￥';
+  font-size: 28rpx;
+}
+.goodline-price{
+  text-decoration:line-through;
+  font-size: 24rpx;
+  color: #999999;
+}

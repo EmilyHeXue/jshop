@@ -1,0 +1,11 @@
+{
+  "usingComponents":{
+    "header": "/pages/shopCart/header/header",
+    "cartData": "/pages/shopCart/cartData/cartData", 
+    "shopItem": "/pages/shopCart/shopItem/shopItem",
+    "Cartfooter": "/pages/shopCart/footer/footer", 
+    "nodata": "/pages/shopCart/nodata/nodata",
+    "footer": "/pages/footer/footer",
+    "login": "/pages/utill/noLogin/noLogin"
+  }
+}

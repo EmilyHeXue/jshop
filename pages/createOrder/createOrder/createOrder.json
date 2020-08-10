@@ -1,0 +1,10 @@
+{
+  "usingComponents":{
+    "goods": "/pages/createOrder/goods/goods",
+    "coupons": "/pages/createOrder/coupons/coupons",
+    "aogTime": "/pages/createOrder/aogTime/aogTime",
+    "tab": "/pages/createOrder/tab/tab/tab",
+    "model": "/pages/model/model",
+    "footer": "/pages/footer/footer"
+  }
+}

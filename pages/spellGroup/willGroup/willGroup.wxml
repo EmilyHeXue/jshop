@@ -1,0 +1,42 @@
+<view class='willGroup'>
+  <view class='willGroup-top' style="background: {{background}};">
+    <view class='top-left'>
+      <view class='left-top'>
+        <image lazy-load src='/images/png/ok.png' class='top-icon'></image>
+        <view class='top-text'>等待成团</view>
+      </view>
+      <view class='top-time'>剩余{{expire_time}}</view>
+    </view>
+    <image lazy-load class='top-clock' src='/images/order/orderStatus/reimburse.png'></image>
+  </view>
+
+  <view class='willGroup-goods'>
+    <image lazy-load src='{{goods_info.pic_url}}' class='good-img'></image>
+    <view class='good-content'>
+      <view class='content-top'>
+        <view class='good-name'>{{goods_info.name}}</view>
+        <view class='good-property'>{{goods_info.property1_name}}{{goods_info.property2_name.length != 0 ? ",":""}}{{goods_info.property2_name}}</view>
+      </view>
+      
+      <view class='content-footer'>
+        <view class='good-price'>{{goods_info.price}}</view>
+        <view class='good-linePrice'>{{goods_info.line_price ? "￥":""}}{{goods_info.line_price}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='willGroup-info'>
+    <view class='info-top'>
+      <block wx:for='{{avatar}}' wx:key='{{index}}'>
+        <view class='info-avatar {{item.is_leader == 1 ? "leader" : ""}}'>
+          <image lazy-load src='{{item.avatar}}' class='info-avatar {{item.is_leader == 1 ? "leader" : ""}}'></image>
+        </view>
+      </block>
+      <block wx:for='{{poor}}' wx:key='{{index}}'>
+        <image lazy-load class='info-avatar'></image>
+      </block>
+    </view>
+    <view class='info-text'>还差{{poor}}个人即可拼团成功</view>
+    <button open-type="share" class='info-btn'>发给好友拼团</button>
+  </view>
+</view>

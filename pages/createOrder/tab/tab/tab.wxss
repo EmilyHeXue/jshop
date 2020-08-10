@@ -1,0 +1,87 @@
+.tab{
+  margin: 28rpx 26rpx  20rpx 26rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.navigation{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 25rpx;
+  flex: 1;
+  grid-column-gap: 28rpx;
+}
+.menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25rpx;
+}
+.label{
+  font-size: 25rpx;
+  padding: 20rpx 30rpx 20rpx 30rpx;
+  border-right: 1px solid #eee;
+}
+.nav{
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+  font-size: 28rpx;
+  background: rgba(255, 255, 255, .9);
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+.nav:last-child{
+  margin-right: 0;
+}
+
+.on{
+  color: #fff;
+}
+
+
+.form{
+  padding: 32rpx 0rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.form-item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  margin-top: 48rpx;
+  font-size: 28rpx;
+}
+.form-item:first-child{
+  margin-top: 0;
+}
+.form-label{
+  width: 84rpx;
+}
+.form-btn{
+  position: absolute;
+  right: 0;
+  background: red;
+  color: #ffffff;
+  font-size: 24rpx;
+  padding: 12rpx 22rpx;
+  border-radius: 4rpx;
+  bottom: 0;
+  line-height: inherit;
+}
+
+
+.content{
+  background: #ffffff;
+  padding: 0 31rpx;
+}
+.background{
+  height: 338rpx;
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  z-index: -1;
+}

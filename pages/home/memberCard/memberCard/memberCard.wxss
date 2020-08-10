@@ -1,0 +1,117 @@
+.header{
+  background: #fdeec9;
+}
+.card{
+  background: #d2d2d2;
+  padding-top: 80rpx;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center;
+  border-bottom-left-radius: 370rpx 60rpx;
+  border-bottom-right-radius: 370rpx 60rpx;
+  overflow: hidden;
+}
+.card-item{
+  width: 576rpx;
+  height: 252rpx;
+  background: #3d3d3d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+  box-sizing: border-box;
+  padding: 40rpx 40rpx 20rpx;
+  border-radius: 24rpx;
+}
+.card-icon{
+  width: 45px;
+  height: 40px;
+}
+.card-level{
+  color: #ffe6a8;
+  font-size: 36rpx;
+}
+.card-content{
+  color: #9d9d9d;
+  font-size: 20rpx;
+}
+.menu{
+  background: #fdeec9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 750rpx;
+  padding: 34rpx 0;
+  border-left:1px solid #e4e4e4;
+  border-right:1px solid red;
+}
+.menu-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.menu-item-icon{
+  width: 32rpx;
+  height: 32rpx;
+}
+.menu-item-text{
+  font-size: 24rpx;
+  color: #101010;
+}
+.btn{
+  padding: 46rpx;
+}
+.btn-item{
+  width: 576rpx;
+  height: 74rpx;
+  font-size: 28rpx;
+  background: #fbd99d;
+  border-radius: 50rpx;
+}
+.bottom{
+  background: #F9F4E8;
+  margin: 0 32rpx;
+  padding: 16rpx;
+  border-radius: 20rpx;
+  margin-bottom: 64rpx;
+}
+.bottom-header{
+  font-size: 28rpx;
+  text-align: center;
+  padding-bottom: 16rpx;
+}
+.bottom-content{
+  font-size: 24rpx;
+  color: #8C4E1B;
+}
+.bottom-content-item{
+
+}
+.item-header{
+}
+.one::before{
+  content: '1';
+}
+.two::before{
+  content: '2';
+}
+.three::before{
+  content: '3';
+}
+.one::before, .two::before, .three::before{
+  display: inline-block;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background: #fbd081;
+  text-align: center;
+  line-height: 30rpx;
+  font-size: 20rpx;
+  margin-right: 10rpx;
+}
+.item-content{
+  margin-bottom: 20rpx;
+  margin-top: 5rpx;
+}

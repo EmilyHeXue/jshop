@@ -1,0 +1,35 @@
+<view>
+  <!--我的砍价列表-->
+  <view class='content'>
+    <block wx:for='{{data}}' wx:key='{{item.id}}'>
+      <view class='content-item'>
+        <image lazy-load class='content-img' src='{{item.pic_url}}'></image>
+        <view class='content-right'>
+          <view class='content-name'>{{item.name}}</view>
+          <view class='content-time' wx:if='{{item.status == 1}}'>{{item.time}}后结束</view>
+          <view class='content-time' wx:else>已结束</view>
+          <view class='content-footer'>
+            <view class='content-footer-left'>
+              <view class='content-status' wx:if='{{item.bargain_price == item.goods_price}}'>已砍至最低价</view>
+              <view wx:else class='content-price'>{{item.goods_price}}</view>
+            </view>
+            <view class='content-btn detail' catchtap="goDetail" data-id='{{item.id}}' wx:if='{{item.status == 0 && item.bargain_price != item.goods_price}}'>查看详情</view>
+            <view class='content-btn' catchtap="goDetail" data-id='{{item.id}}' wx:if='{{item.status == 1 && item.bargain_price != item.goods_price}}'>继续砍价</view>
+            <view class='content-btn' catchtap="toBuy" data-data='{{item}}' wx:if='{{item.bargain_price == item.goods_price}}'>立即支付</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!--我的砍价底部-->
+  <view class='footer'>
+    <navigator url="/bargaining/pages/bargaining/Index/Index" class='footer-item'>
+      <image lazy-load class='footer-icon' src='https://imgs.juanpao.com/ui/kanjiahuise.png'></image>
+      <view class='footer-text'>砍价会场</view>
+    </navigator>
+    <navigator url='/bargaining/pages/myBargaining/myBargaining' class='footer-item'>
+      <image lazy-load class='footer-icon' src='https://imgs.juanpao.com/ui/wochense.png'></image>
+      <view class='footer-text bind'>我的砍价</view>
+    </navigator>
+  </view>
+</view>

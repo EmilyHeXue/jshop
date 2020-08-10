@@ -1,0 +1,50 @@
+<!--pages/comments/goods/goodsItem.wxml-->
+<view classs=''>
+<block wx:for='{{data}}' wx:key='{{index}}'>
+  <view class='ItemEvaluation'>
+    <view class='ItemEvaluation-head'>
+      <image lazy-load src='{{item.pic_url}}' class='ItemEvaluation-head-img'></image>
+      <view class='ItemEvaluation-head-test'>描述相符</view>
+      <star bind:nums='describe_score' faindex='{{index}}'></star>
+    </view>
+
+    <view class='ItemEvaluation-content'>
+      <textarea placeholder='宝贝满足你的期待吗?说说你的使用心得,分享给想买的他/她们吧' bindinput='write' data-index='{{index}}'></textarea>
+      <view class='ItemEvaluation-content-item'>
+        <block wx:for='{{item.pics_url}}' wx:key='{{index}}' wx:for-index="imgindex" >
+          <view class='ItemEvaluation-content-img' >
+            <image lazy-load src='{{item}}' class='ItemEvaluation-content-img-item'> </image>
+            <image lazy-load 
+              src='/images/comments/del.png' 
+              class='del' 
+              catchtap='delImg' 
+              data-imgindex='{{imgindex}}' 
+              data-index='{{index}}'
+            >
+            </image>
+          </view>
+        </block>
+        <view 
+          class='ItemEvaluation-content-choose' 
+          bindtap='chooseImg' 
+          data-index='{{index}}' 
+          wx:if='{{item.pics_url.length != 5}}' 
+        >
+          <image lazy-load src='/images/comments/picture.png' class='ItemEvaluation-content-choose-img'></image>
+        </view>
+      </view>
+    </view>
+
+
+    <view class='ItemEvaluation-head'>
+      <view class='ItemEvaluation-head-test'>物流服务</view>
+      <star faindex='{{index}}' bind:nums='express_score'></star>
+    </view>
+    <view class='ItemEvaluation-head'>
+      <view class='ItemEvaluation-head-test'>服务态度</view>
+      <star faindex='index' bind:nums='service_score'></star>
+    </view>
+  </view>
+</block>
+</view>
+

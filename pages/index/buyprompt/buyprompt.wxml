@@ -1,0 +1,4 @@
+<view class='buyprompt {{animation}}' wx:if='{{name}}'>
+  <image lazy-load class='icon' src='{{avatar}}'></image>
+  <view class='content'>最新订单来自{{name}}</view>
+</view>

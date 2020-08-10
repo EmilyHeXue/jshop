@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "goodsItem": "/pages/comments/goodsItem/goodsItem",
+    "footer":"/pages/footer/footer"
+  }
+}

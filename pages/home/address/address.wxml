@@ -1,0 +1,33 @@
+<!--pages/home/address/address.wxml-->
+<view class='address'>
+  <block wx:for='{{addressData}}' wx:key='index'>
+    <view class='address-item'>
+      <view class='address-content'>
+        <view class='address-row'>
+          <view class='address-name'>{{item.name}}</view>
+          <view class='address-phone'>{{item.phone}}</view>
+        </view>
+        <view  class='address-address'>
+          <view class='address-default'>{{item.is_default == 0 ? "":"默认"}}</view>
+          {{item.loction_address}}-{{item.loction_name}}-{{item.address}}
+        </view>
+      </view>
+      <view class="item-bottom">
+        <view class="bottom-left">
+          <view class="default" wx:if='true'>
+            <radio checked="{{item.is_default == '1' ? 'true' : ''}}" disabled="{{item.is_default == '0' ? 'true' : ''}}"></radio>
+            默认数据
+          </view>
+        </view>
+        <view class="bottom-right">
+          <view catchtap="edit" data-id='{{item.id}}' class="bottom-edit">编辑</view>
+          <view catchtap="delData" data-id='{{item.id}}' class='bottom-delete'>删除</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+<login noLogin='{{noLogin}}'/>
+<view class='footer' bindtap='go'>
+  添加地址
+</view>

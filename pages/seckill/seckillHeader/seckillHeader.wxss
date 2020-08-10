@@ -1,0 +1,56 @@
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 125px;
+}
+.bg{
+  width: 100vw;
+  opacity: 0.15;
+  position: absolute;
+}
+.headerimg{
+  width: 250rpx;
+}
+
+.scroll{
+  overflow: hidden;
+  white-space: nowrap;
+  background: red;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding-bottom: 96px;
+  margin-top: -32px;
+}
+.scroll-item{
+  display: inline-block;
+  font-size: 32rpx;
+  text-align: center;
+  padding:  20rpx;
+  box-sizing: border-box;
+  border: 0px solid red;
+  color: #fff;
+}
+.date{
+  font-size: 20rpx;
+}
+.time{
+  font-size: 36rpx;
+  font-weight: 600;
+  color: rgba(255, 255, 255, .7);
+}
+.footer{
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, .7);
+}
+
+.select .date{
+
+}
+.select .time{
+  color: #fff;
+}
+.select .footer{
+  color: #fff;
+}

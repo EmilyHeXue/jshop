@@ -1,0 +1,9 @@
+<view class="view-bannerThree">
+  <view class="list">
+    <image lazy-load class='left'  catchtap='go' data-link='{{data.details.imgs[0].link}}' src="{{data.details.imgs[0].src}}"></image>
+    <view class='right'>
+      <image lazy-load class='small-img' catchtap='go' data-link='{{data.details.imgs[1].link}}' src="{{data.details.imgs[1].src}}"></image>
+      <image lazy-load class='small-img' catchtap='go' data-link='{{data.details.imgs[2].link}}' src="{{data.details.imgs[2].src}}"></image>
+    </view>
+  </view>
+</view>

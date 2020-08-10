@@ -1,0 +1,32 @@
+.buyprompt{
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 10vh;
+  left: 20rpx;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.5);
+  padding-right:20rpx;
+  border-radius: 50rpx;
+  opacity: 0;
+}
+.icon{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.content{
+  color: #fff;
+}
+.animation{
+  animation: show 3s;
+}
+@keyframes show{
+  from{
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}

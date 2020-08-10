@@ -1,0 +1,4 @@
+<view class="seckilTime" wx:if='{{startTime != "" && sendTime != ""}}'>
+  <view class="startTime">销售时间: {{startTime}}</view>
+  <view class="sendTime">提货时间: {{sendTime}}</view>
+</view>

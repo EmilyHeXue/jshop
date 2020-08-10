@@ -1,0 +1,48 @@
+<view class="header">
+  <image lazy-load class="header-bg" src='{{leaderInfo.leader.logo}}' mode='widthFix'></image>
+  <view class="header-content">
+    <image lazy-load class="header-avatar" src='{{leaderInfo.leader.pic_urls}}'></image>
+    <view class="header-info">
+      <view class="header-name">{{leaderInfo.leader.realname}}</view>
+      <view class="header-label">
+        <view class="label-item" wx:for='{{leaderInfo.leader.authentication}}' wx:key='item'>
+          <image lazy-load src='/images/supplier/ok.png'></image>
+          <view>{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="header-nav" bindtap="navigation">导航</view>
+  </view>
+</view>
+<scroll-view class="classification" scroll-x>
+  <view wx:for='{{category}}' wx:key='item' class='classification-item'>
+    <image lazy-load 
+      class="classification-icon" 
+      src='{{item.pic_url}}' 
+      bindtap="to"
+      data-url='/pages/goodsClassify/goodsClassify/goodsClassify?id={{item.id}}&supplier={{leaderInfo.id}}'></image>
+    <view class="classification-name" data-url='{{item.id}}'>{{item.name}}</view>
+  </view>
+</scroll-view>
+<view class="goods-list" wx:for='{{goodslist}}' wx:key='id'>
+  <image lazy-load class="goods-img" src='{{item.pic_urls[0]}}' bindtap="to" data-url='/pages/goodsItem/goodsItem/goodsItem?id={{item.id}}'></image>
+  <view class="goods-content">
+    <view class="goods-name">{{item.name}}</view>
+    <view class="goods-shortname">{{item.short_name}}</view>
+    <view class="goods-slod">
+      <image lazy-load src='/images/supplier/fire.png' mode='widthFix'></image>
+      已售{{item.sold || 0}}件
+    </view>
+    <view class="goods-footer">
+      <view class="goods-price">
+        <view>{{item.price}}</view>
+        <view>{{item.line_price}}</view>
+      </view>
+      <view class="goods-btn" bindtap="to" data-url='/pages/goodsItem/goodsItem/goodsItem?id={{item.id}}'>立即购买</view>
+    </view>
+  </view>
+</view>
+
+<navigator open-type='redirect' url='/pages/index/index/index' class="back">
+  <image lazy-load class="backindex" src='/images/backindex.png' mode="widthFix"></image>
+</navigator>

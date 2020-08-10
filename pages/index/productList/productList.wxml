@@ -1,0 +1,8 @@
+<view class="list scroll{{data.details.style}}" style="background-color:{{data.details.color2}}">
+  <block wx:for="{{data.details.imgs}}" wx:key="itemImg" wx:for-item="itemImg" wx:for-index="itemIndex">
+    <view class='item style{{data.details.style}}' data-url="{{itemImg.link}}">
+      <image lazy-load class='img' src="{{itemImg.src}}" ></image>
+      <view class="txt1" style="color:{{data.details.color1}};font-size:{{data.details.fontSize}}">{{itemImg.text}}</view>
+    </view>
+  </block>
+</view>

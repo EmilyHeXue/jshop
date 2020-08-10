@@ -1,0 +1,28 @@
+<!--pages/login/login.wxml-->
+
+<image lazy-load class='bg' mode='widthFix' src='{{imgSrc}}'></image>
+<view class='login'>
+  <view class='login-view'>
+    <!-- 图片区域 -->
+    
+     <!-- 文字区域 -->
+    <view class='login-view-text' >
+      您好，小程序需要您的授权才能更好的为您服务哦~
+    </view>
+    
+    <!-- 获取说明区域 -->
+    <view class='login-view-prompt' > 
+      ·获取你的公开信息(昵称,头像等)
+    </view>
+    <view style="width: 100%; display: flex; justify: center; align-items: center;">
+       <!-- 点击按钮区域 -->
+      <button class='login-view-btn unset' catchtap="back">
+        取消
+      </button>
+      <!-- 点击按钮区域 -->
+      <button class='login-view-btn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getUserInfo">
+        登录
+      </button>
+    </view>
+  </view>
+</view>

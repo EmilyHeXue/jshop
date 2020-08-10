@@ -1,0 +1,10 @@
+<view class="shopBanner" style="background-color:{{data.details.color2}}">
+  <view class="item">
+    <image lazy-load src="{{data.details.imgs[0].src}}" class="icon"></image>
+    <view class="center" style="color:{{data.details.color1}}">
+      <view class="txt">{{data.details.name}}</view>
+      <view class="txt">工作时间：{{data.details.time}}</view>
+    </view>
+    <image lazy-load src="/images/index/stores/telephone.png" class="icon-tel" mode="widthFix"></image>
+  </view>
+</view>

@@ -1,0 +1,310 @@
+page{
+  background: #ffc12d;
+}
+.banner{
+  width: 750rpx;
+  height: 538rpx;
+  background: yellow;
+}
+.header-content{
+  position: relative;
+  margin-top: -88rpx;
+  margin-left: 26rpx;
+  background: #fff9eb;
+  width: 698rpx;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 26rpx;
+  box-sizing: border-box;
+  flex-flow: row wrap;
+}
+.icon{
+  position: absolute;
+  top: -57rpx;
+  background: #ffffff;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.header-content-item-title{
+  margin-top: 62rpx;
+  padding: 0 42rpx;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.goods{
+  background: #f3eee1;
+  border-radius: 10rpx;
+  padding: 16rpx;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 28rpx;
+}
+.goods-img{
+  width: 160rpx;
+  height: 160rpx;
+  background: #8bc34a;
+  margin-right: 22rpx;
+}
+.goods-item{
+  flex: 1;
+  position: relative;
+  height: 160rpx;
+}
+.goods-name{
+  font-size: 24rpx;
+  color: #808080;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.goods-sold{
+  font-size: 24rpx;
+  color: #ff9800;
+  margin-top: 10rpx;
+}
+.goods-item-footer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  position: absolute;
+  bottom: 0;
+}
+.goods-item-footer-label{
+  font-size: 24rpx;
+}
+.goods-price{
+  font-size: 40rpx;
+  margin-right: 24rpx;
+}
+.goods-linePrice{
+  font-size: 28rpx;
+}
+.gray{
+  color: #aaaaaa;
+}
+.red{
+  color: red;
+}
+
+
+.progress-bar{
+  width: 100%;
+  margin-top: 70rpx;
+}
+.progress{
+  width: 100%;
+  height: 22rpx;
+  border-radius: 50rpx;
+  background: #f3eee1;
+  position: relative;
+}
+.already{
+  background: #FFA72C;
+  height: 22rpx;
+  border-radius: 50rpx;
+}
+.progress-top{
+  position: absolute;
+  top: -58rpx;
+  font-size: 28rpx;
+  color: #ffffff;
+  width: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.progress-label{
+  display: inline-block;
+  padding: 6rpx 18rpx;
+  background: #fdbd2a;
+  border-radius: 50rpx;
+  white-space: nowrap;
+}
+.progress-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  color: #aaaaaa;
+  margin-top: 14rpx;
+}
+.progress-price{
+  color: red;
+}
+
+.countdown{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #101010;
+  font-size: 24rpx;
+  padding-top: 20rpx;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 32rpx;
+  width: 100%;
+}
+.date-label{
+  background: #fdbd2a;
+  text-align: center;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin: 0 8rpx;
+  border-radius: 10rpx;
+}
+
+.btn{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40rpx;
+}
+.btn-item{
+  width: 250rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  border-radius: 50rpx;
+  font-size: 28rpx;
+}
+.tobuy{
+  background: red;
+  color: #ffffff;
+}
+.toshare{
+  border: 1px solid red;
+  box-sizing: border-box;
+  color: red;
+  background: #ffe0e0;
+}
+
+
+.participation{
+  margin: 92rpx 26rpx 0rpx 26rpx;
+  background: #fff9eb;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 62rpx 46rpx 26rpx 46rpx;
+}
+.participation-title{
+  position: absolute;
+  font-size: 30rpx;
+  color: #ffffff;
+  background: #FB601F;
+  padding: 10rpx 38rpx;
+  top: -30rpx;
+  border-radius: 50rpx;
+}
+.participation-content{
+  flex: 1;
+}
+.participation-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 18rpx 0rpx;
+  border-top: 1px solid #f2f2f2;
+}
+.participation-item:first-child{
+  border-top: 0 solid red;
+}
+.avatar{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #8bc34a;
+  margin-right: 22rpx;
+}
+.participation-item-center{
+  flex: 1;
+}
+.participation-item-name{
+  font-size: 26rpx;
+  color: #101010;
+  font-weight: bold;
+}
+.participation-item-label{
+  font-size: 22rpx;
+  color: #939393;
+}
+.participation-item-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.participation-icon{
+  width: 42rpx;
+  height: 40rpx;
+  margin-right: 6rpx;
+}
+.participation-price{
+  font-size: 26rpx;
+  color: #fd6442;
+}
+
+.prompt{
+  margin: 50rpx;
+  font-size: 24rpx;
+  color: #ff2b2b;
+  text-align: center;
+}
+
+
+.mask{
+  position: fixed;
+  width: 750rpx;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+.layer{
+  position: absolute;
+  background: #ffffff;
+  top: 20vh;
+  width: 568rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  padding: 122rpx 84rpx 64rpx 84rpx;
+  border-radius: 10rpx;
+}
+.layer-avatar{
+  position: absolute;
+  top: -78rpx;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+.layer-text{
+  font-size: 28rpx;
+}
+.layer-img{
+  width: 252rpx;
+  height: 300rpx;
+  margin-top: 8rpx;
+}
+.layer-btn{
+  padding: 21rpx 136rpx;
+  color: #ffffff;
+  background: #ff580c;
+  font-size: 32rpx;
+  border-radius: 50rpx;
+  line-height: 32rpx;
+  margin-top: 18rpx;
+}

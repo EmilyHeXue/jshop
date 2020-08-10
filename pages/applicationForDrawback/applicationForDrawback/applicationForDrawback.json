@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "goodsItem": "/pages/applicationForDrawback/goodsItem/goodsItem",
+    "postData": "/pages/applicationForDrawback/postData/postData",
+    "footer":"/pages/footer/footer"
+  }
+}

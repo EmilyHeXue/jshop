@@ -1,0 +1,152 @@
+/* pages/createOrder/coupons/coupons.wxss */
+.row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20rpx;
+  font-size:30rpx;
+  background: #fff;
+}
+.coupons{
+  overflow: hidden;
+}
+.row-label{
+  width: 140rpx;
+  text-align: right;
+}
+.row-data{
+  flex:1;
+  text-align:right;
+  margin-left:30rpx;
+  z-index: 0;
+  color: #999999;
+}
+.layer{
+  position:fixed;
+  top:0;
+  left:0;
+  width:750rpx;
+  background-color:rgba(0,0,0,0.7);
+  height:100vh;
+  z-index:9;
+}
+
+.layer-content{
+  width:722rpx;
+  height:800rpx;
+  background-color:#ffffff;
+  position:absolute;
+  bottom:0rpx;
+  left:0rpx;
+  border-top-left-radius: 2vw 2vw;
+  border-top-right-radius: 2vw 2vw;
+  padding:15rpx 15rpx 0rpx 15rpx;
+}
+
+.layer-scroll{
+  height:800rpx;
+}
+.layer-nocoupone{
+  background-color:#fff2e6;
+  margin-bottom:20rpx;
+  padding:20rpx;
+  text-align:center;
+  font-size:30rpx;
+  color:#ff952e;
+}
+.layer-item{
+  display: flex;
+  flex-flow: row nowrap;
+  background: #fff2e6;
+  color: #ff952e;
+  border-radius: 1vw;
+  margin-bottom: 2vw;
+}
+.layer-item-left{
+  flex:1;
+  font-size:22.5rpx;
+  padding:15rpx;
+}
+.layer-item-Number{
+  display:flex;
+  align-items:flex-end;
+}
+.layer-item-price{
+  font-size:37.5rpx;
+  margin-right:3rpx;
+}
+.layer-item-full_price{
+  
+}
+.layer-item-time{
+  
+}
+.layer-item-right{
+  width:216rpx;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:26.25rpx;
+  position:relative;
+  border-left:1px dotted #ffc791;
+}
+.layer-item-right:after{
+  content:'';
+  position:absolute;
+  width:30rpx;
+  height:30rpx;
+  border-radius:50%;
+  background:#ffffff;
+  bottom:-13rpx;
+  left:-13rpx;
+}
+.layer-item-right:before{
+  content:'';
+  position:absolute;
+  width:30rpx;
+  height:30rpx;
+  border-radius:50%;
+  background:#ffffff;
+  top:-13rpx;
+  left:-13rpx;
+}
+
+.vip{
+  color: red;
+}
+.vip::after{
+  content: '元';
+  color: #595959;
+}
+
+
+.free_shoping{
+  top: 20vh;
+  width: 700rpx;
+  left: 25rpx;
+  box-sizing: border-box;
+  height: auto;
+  border-radius: 10rpx;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  position: relative;
+  padding-bottom: 160rpx;
+
+}
+.layer-content-header{
+  font-size: 50rpx;
+  color: #555555;
+}
+.layer-buttom{
+  width: 300rpx;
+  display: inline-block;
+  height: 70rpx;
+  background: #f3f3f3;
+  border-radius: 50rpx;
+  line-height: 70rpx;
+  position: absolute;
+  bottom: 40rpx;
+}

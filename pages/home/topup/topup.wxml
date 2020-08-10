@@ -1,0 +1,25 @@
+<view class='topup'>
+  <view class='topup-top'>
+    <view class='top-header'>当前余额 (元)</view>
+    <view class='top-price'>{{recharge_balance}}</view>
+  </view>
+  <view class='topup-center'>
+    <view class='center-header'>- 余额充值 -</view>
+    <view class='center-content'>
+      <block wx:for='{{balanceList}}'>
+        <view data-index='{{index}}' data-id='{{item.id}}' data-price='{{item.money}}' catchtap="change" class='content-item {{chooseindex == index ? "select":""}}'>
+          <view class='item-price'>{{item.money}}元</view>
+          <view class='item-giving {{chooseindex == index ? "select":""}}'>送{{item.remain_money - item.money}}元</view>
+        </view>
+      </block>
+      <view data-index='-1' data-id='' catchtap="change" class='content-item {{chooseindex == -1 ? "select":""}}'>
+        <input bindinput="changePrice" class='other-price {{chooseindex == -1 ? "select":""}}' placeholder-class="other-price" placeholder="其他金额"></input>
+      </view>
+    </view>
+  </view>
+  <view class='topup-bottom'>
+    <form report-submit bindsubmit="createOrder">
+      <button form-type="submit" class='bottom-btn'>立即充值</button>
+    </form>
+  </view>
+</view>

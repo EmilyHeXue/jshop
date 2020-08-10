@@ -1,0 +1,45 @@
+page { font-family: "微软雅黑"; font-size: 26rpx; color: #333; }
+
+.wrap{
+  padding-bottom: 51px;
+}
+.close_pic_url{
+  background: #fff;
+  text-align: center;
+}
+.close_pic_url-item{
+  width: 750rpx;
+}
+
+.gobottom{
+  text-align: center;
+  padding: 20rpx 20rpx 30rpx;
+  color: #bbb;
+}
+.loading{
+  background: #fff;
+  text-align: center;
+  padding: 20rpx 20rpx 30rpx;
+  color: #bbb;
+}
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-img{
+  transform:rotate(7deg);
+  animation: rotated 2s;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+@keyframes rotated {
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}

@@ -1,0 +1,22 @@
+<view class='seckill'>
+  <view class='seckill-title'>
+    <image lazy-load class='title-left' src='/images/index/seckill/title.png'></image>
+    <view class='title-center'>
+      <image lazy-load class='avatar' src=''></image>
+      <view class='buyinfo'>赵**刚刚抢购成功</view>
+    </view>
+    <view class='top-right'>更多秒杀<image lazy-load src='/images/my/info/right.png' class='icon'></image></view>
+  </view>
+  <scroll-view scroll-x class='scroll'>
+    <block wx:for='{{5}}'>
+      <view class='item'>
+        <image lazy-load class='goodimg'></image>
+        <view class='goodname'>商品名称哟哟哟</view>
+        <view class='good-bottom'>
+          <view class='goodprice'>29.9</view>
+          <view class='goodline-price'>39.9</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

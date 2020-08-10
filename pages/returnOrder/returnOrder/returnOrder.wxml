@@ -1,0 +1,57 @@
+<!--pages/returnOrder/returnOrder/returnOrder.wxml-->
+<view class='returnOrder {{page ? "page":""}}'>
+  <returnOrderHeader bind:change='change'></returnOrderHeader>
+  <block wx:for='{{ List }}' wx:key='id'>
+    <view class='returnOrder-item'>
+      <view class='returnOrder-item-goods'>
+        <navigator url='/pages/orderItem/orderItem/orderItem?order_sn={{item.order_sn}}'>
+          <goods
+            List='{{ item.order }}'>
+          </goods>
+        </navigator>
+        <view class='returnOrder-item-text'>
+          <view wx:if='{{ item.after_status == 0 && item.status != 4 }}' class='returnOrder-item-text-ok'>非售后订单</view>
+          <view wx:if='{{ item.after_status == 1 && item.status != 4 }}' class='returnOrder-item-text-ok'>处理中</view>
+          <view wx:if='{{ item.after_status == 2 && item.status != 4 }}' class='returnOrder-item-text-ok'>商家已拒绝您的退款申请,请尽快联系商家客服，咨询具体原因</view>
+          <view wx:if='{{ item.after_status == 3 && item.status != 4 }}' class='returnOrder-item-text-ok'>商家已同意退货，稍后会将订单金额退还至您的账户</view>
+          <view wx:if='{{ item.after_status == 4 && item.status != 4 }}' class='returnOrder-item-text-ok'>商家已拒绝您的退款申请,请尽快联系商家客服，咨询具体原因</view>
+          <view wx:if='{{ item.after_status == 5 && item.status != 4 }}' class='returnOrder-item-text-ok'>处理中</view>
+          <view wx:if='{{ item.after_status == 6 && item.status != 4 }}' class='returnOrder-item-text-ok'>商家已同意退货，请尽快将货退回，并且填写退货快递单号</view>
+          <view wx:if='{{ item.after_status == 7 && item.status != 4 }}' class='returnOrder-item-text-ok'>等待商户确认收货</view>
+        </view>
+      </view>
+      <view class='returnOrder-item-tabbar'>
+        <view wx:if='{{ item.after_status == 3 && item.status != 4 }}' class='returnOrder-item-bar-btn'>退款中</view>
+        
+        <!--商家未处理订单-->
+        <view wx:if='{{ item.after_status == 1 || item.after_status == 5 && item.status != 4 }}' class='returnOrder-item-bar-btn'>处理中</view>
+        
+        <!--商家同意退货但是没有填写快递单号-->
+        <view wx:if='{{ item.after_status == 6 && item.status != 4 }}' class='returnOrder-item-bar-btn' bindtap='fullOrder' data-order_sn='{{item.order_sn}}'>填写快递单号</view>
+        
+        <!--退货退款同意退款且填写完快递单号-->
+        <view wx:if='{{ item.after_status == 7 && item.status != 4 }}' class='returnOrder-item-bar-btn'>待商家确认收货</view>
+        
+        <!--已退款-->
+        <view wx:if='{{ item.status == 4 }}' class='returnOrder-item-bar-btn'>已退款</view>
+      </view>
+    </view>
+    
+  </block>
+</view>
+
+<!--模态窗-->
+<view class='modal' wx:if='{{modalFlag}}'>
+  <view class='modal-item'>
+    <view class='modal-item-title'>同意退货</view>
+    <input class='modal-item-text' bindinput='write' placeholder='请在此填写快递单号'></input>
+    <view class='modal-item-tabbar'>
+      <view class='modal-item-btn' catchtap='canel'>取消</view>
+      <view class='modal-item-btn' catchtap='ok'>确定</view>
+    </view>
+  </view>
+</view>
+
+
+
+<footer bindshow='footerFlag'></footer>

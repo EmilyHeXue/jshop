@@ -1,0 +1,80 @@
+.userCard{
+  background: #ffffff;
+  padding: 40rpx 32rpx;
+  margin-top: 10rpx;
+}
+.card-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card{
+  width: 322rpx;
+  height: 172rpx;
+  padding: 28rpx 14rpx 24rpx 36rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+  background: #E1B365;
+  color: #ffffff;
+  border-radius: 10rpx;
+  text-align: left;
+  line-height: 100% !important;
+}
+.card:last-child{
+  background: #E5C4A3;
+}
+.card-name{
+  font-size: 32rpx;
+}
+.card-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-left{
+  font-size: 24rpx;
+}
+.footer-right{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.store{
+  margin-top: 32rpx;
+  background: #8A90A0;
+  box-sizing: border-box;
+  padding: 42rpx 38rpx 32rpx 34rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10rpx;
+}
+.store-avatar{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 16rpx;
+  background: pink;
+  border-radius: 50%;
+}
+.store-content{
+  flex: 1;
+}
+.store-name{
+  font-size: 36rpx;
+  color: #DFEFFF;
+  margin-bottom: 10rpx;
+}
+.store-label{
+  color: #ffffff;
+  font-size: 24rpx;
+}
+.store-btn{
+  width: 100rpx;
+  height: 60rpx;
+  border-radius: 50rpx;
+  background: #EAEAEA;
+  text-align: center;
+  line-height: 60rpx;
+}

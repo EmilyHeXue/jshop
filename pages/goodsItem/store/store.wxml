@@ -1,0 +1,23 @@
+<view wx:if='{{is_open}}' class="store">
+		<view class='store-item' catchtap='goIndex'>
+			<image lazy-load src='{{pic_url}}' class='store-img'></image>
+      <view class='store-content'>
+        <view class='content-top'>
+          <view class='store-name'>{{name}}</view>
+          <view class='store-right'>
+            <view class='store-right-text'>进店逛逛</view>
+          </view>
+        </view>
+
+        <view class='content-bottom'>{{detail_info}}</view>
+      </view>
+		</view>
+    <view class='flex-row-between'>
+      <block wx:for='{{label}}' wx:key='index'>
+        <view class='info-item'>
+          <image lazy-load class='info-img' src='/images/goodsItem/store/yes.png'></image>
+          <view>{{item}}</view>
+        </view>
+      </block>
+    </view>
+  </view>

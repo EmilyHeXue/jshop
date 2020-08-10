@@ -1,0 +1,19 @@
+<view class="view-product fa{{data.details.style}}" style="background-color:{{data.details.color2}}">
+  <block 
+    wx:for="{{data.details.imgs}}" 
+    wx:key="itemImg" 
+    wx:for-item="itemImg" 
+    wx:for-index="itemIndex">
+    <view catchtap='go' data-link="{{itemImg.link}}" class="item style{{data.details.style}}">
+      <image lazy-load class="img" src="{{itemImg.src}}" mode="widthFix"></image>
+      <view class="con">
+        <view 
+          class="txt1" 
+          style="color:{{data.details.color1}};font-size:{{data.details.fontSize}}">
+          {{itemImg.title}}
+        </view>
+        <view class="txt2">{{itemImg.text}}</view>
+      </view>
+    </view>
+  </block>
+</view>

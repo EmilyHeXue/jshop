@@ -1,0 +1,21 @@
+<view class='menu'>
+  <block 
+    wx:for='{{menu}}' 
+    wx:key='{{item.name}}'>
+    <view 
+      class='menu-item' 
+      catchtap='go' 
+      data-name='{{item.name}}'
+      data-url='{{item.url}}'>
+      <image 
+        lazy-load
+        class='menu-item-img' 
+        src='{{name === item.name ? item.selectpicurl : item.picurl}}'
+      ></image>
+      <view 
+        class='menu-item-name' 
+        style='color: {{name === item.name ? text_selection : ""}}'
+      >{{item.name}}</view>
+    </view>
+  </block>
+</view>

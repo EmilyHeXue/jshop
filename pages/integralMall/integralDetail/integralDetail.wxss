@@ -1,0 +1,52 @@
+.header{
+  height: 92rpx;
+  width: 750rpx;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.text{
+  font-size: 28rpx;
+}
+.integral{
+  right: 30rpx;
+  bottom: 4rpx;
+  position: absolute;
+  color: red;
+  font-size: 24rpx;
+}
+.integral::before{
+  content: '剩余:';
+  margin-right: 10rpx;
+  color: #101010;
+}
+.item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32rpx;
+  border-bottom: 1px solid #bbb;
+  box-shadow: 1px 1px 1px #eee;
+}
+.item:last-child{
+  border-bottom: 0px solid #bbb;
+  box-shadow: 0px 0px 0px #eee;
+}
+.date{
+  font-size: 24rpx;
+}
+.way{
+  font-size: 28rpx;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.reduction{
+  color: #259b24;
+  font-size: 28rpx;
+}
+.add{
+  color: red;
+  font-size: 28rpx;
+}

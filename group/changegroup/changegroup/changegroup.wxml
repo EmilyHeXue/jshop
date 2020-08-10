@@ -1,0 +1,2 @@
+<ChangeGroupTop bind:getData='getData' bind:search='search'/>
+<ChangeGroupList data='{{data}}'/>

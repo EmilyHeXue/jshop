@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "footer":"/pages/footer/footer"
+  },
+  "navigationStyle": "custom"
+}

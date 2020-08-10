@@ -1,0 +1,49 @@
+/* pages/logisticsInformation/logisticsInformationList/logisticsInformationList.wxss */
+.content{
+  background-color:#ffffff;
+  padding:30rpx 30rpx 0rpx 30rpx;
+  overflow:hidden;
+}
+.row{
+  margin-bottom:15rpx;
+  padding-left:41.25rpx;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  flex-flow: column wrap;
+}
+.row:after{
+  content:'';
+  width:22.5rpx;
+  height:22.5rpx;
+  background:#fff;
+  position:absolute;
+  left:0vw;
+  border-radius:50%;
+  border:1px solid #aaa;
+}
+.row:before{
+  content:'';
+  width:1px;
+  height:120%;
+  background:#aaa;
+  position:absolute;
+  left:12rpx;
+  top:0%;
+}
+.row:last-child{
+  margin-bottom:0;
+}
+.row-context{
+  font-size:30rpx;
+  word-wrap:break-word ;
+  word-break: break-all;
+}
+.row-time{
+  font-size:26.25rpx;
+  color:#999999;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 7.5rpx;
+  margin-top: 7.5rpx;
+}

@@ -1,0 +1,93 @@
+page{
+  background: #f5f5f5;
+  font-size: 26rpx;
+}
+
+.withdrawal{
+  padding: 30rpx;
+}
+.withdrawal-item{
+  background: #ffffff;
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+.title{
+  
+}
+.input{
+  display: flex;
+  border-bottom: 1px solid #eee;
+  justify-content: center;
+  align-items: center;
+  margin-top:40rpx;
+}
+.input-item{
+  flex: 1;
+  font-size:36rpx;
+  height:80rpx;
+  padding:0 10rpx;
+}
+.placeholder{
+  color:#ccc;
+}
+.remark{
+  display: flex;
+  font-size: 22rpx;
+  color: #aaa;
+}
+.remark view{
+  margin-right: 30rpx;
+}
+.input-all{
+  padding: 20rpx;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 50rpx;
+}
+
+.left{
+  margin-right: 30rpx;
+}
+.right{
+  flex: 1;
+}
+.right-top{
+
+}
+.right-top label{
+  margin-right: 20rpx;
+}
+.right-bottom{
+  margin-top: 20rpx;
+}
+.right-bottom-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-bottom-label{
+  margin-right: 20rpx;
+}
+.right-bottom-input{
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80rpx 50rpx;
+}
+.btn-item{
+  font-size:36rpx;
+  border-radius:88rpx;
+  color: #ffffff;
+  line-height:88rpx;
+  flex: 1;
+  text-align: center;
+}

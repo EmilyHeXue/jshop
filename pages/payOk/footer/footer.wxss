@@ -1,0 +1,28 @@
+.menu{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  width: 750rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 7px 0px;
+  border-top:1rpx solid #eee;
+  max-height: 7vh;
+  min-height: 5vh;
+}
+.menu-item{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.menu-item-img{
+  width: 22px;
+  height: 22px;
+}
+.menu-item-name{
+  font-size: 12px;
+}

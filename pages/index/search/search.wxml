@@ -1,0 +1,8 @@
+<form bindsubmit='sub'>
+  <view class='search' >
+    <input name='search'  disabled='{{true}}' placeholder="请输入" class="input" value="{{data.details.text}}" bindinput="" bindblur="btnBlurInput" catchtap='go' placeholder-class="phColor" style="background-color:{{data.details.color1}};color:{{data.details.color3}}"/>
+    <button form-type='submit' class="btns">
+      <image lazy-load class='icon' src="/images/index/search/search.png"></image>
+    </button>
+  </view>
+</form>

@@ -1,0 +1,4 @@
+.video{
+  width: 710rpx;
+  margin: 20rpx;
+}

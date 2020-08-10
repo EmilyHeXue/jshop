@@ -1,0 +1,37 @@
+<!--分类商品信息-->
+<view class='screen'>
+    <view class='left'>
+        <view class='left-item {{active==1?"on":""}}' data-index='1' bindtap='tab'>综合</view>
+        <!--<view class='left-item {{active==2?"on":""}}' data-index='2' bindtap='tab'>销量</view>-->
+    </view>
+    <view class='right'>
+        <view bindtap='nav'>分类</view>
+    </view>
+</view>
+
+<view class='classify'>
+  <block wx:for='{{data}}' wx:key='{{item.id}}'>
+    <view class='classify-item' bindtap='togoodsItem' data-id='{{item.id}}'>
+      <image lazy-load class='classify-img' src='{{item.pic_urls[0]}}'/>
+      <view class='classify-name'>{{item.name}}</view>
+      <view class='classify-footer'>
+        <view class='classify-price'>￥{{item.score}}</view>
+        <view class='classify-number'>{{item.sale}}已售</view>
+      </view>
+    </view>
+  </block>
+</view>
+
+
+<view class='nav' hidden='{{nav}}' bindtap='hide'>
+  <view class='nav-back'>
+    <block wx:for='{{classifyData}}' wx:key='{{index}}'>
+      <view catchtap='change' data-id='{{item.id}}' data-name='{{item.name}}'>
+          <image lazy-load src='{{item.pic_url}}'></image>
+          <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view wx:if='{{data.length == 0}}' class='noData'>暂无商品</view>

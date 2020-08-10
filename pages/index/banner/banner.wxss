@@ -1,0 +1,37 @@
+.slide-image{
+  height: 100%;
+}
+.style1{
+  width: 750rpx;
+}
+.style1 .slide-image{
+  width: 750rpx;
+}
+.style2{
+  width: 710rpx;
+  border-radius: 10rpx;
+}
+.style2 .slide-image{
+  width: 710rpx;
+  border-radius: 10rpx;
+}
+.swiper2{
+  text-align: center;
+}
+.view-banner1{
+  padding-top: 0;
+}
+.view-banner2{
+  padding-top: 0;
+  margin: 20rpx 0;
+}
+.form{
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+image{
+  width: 100%;
+}

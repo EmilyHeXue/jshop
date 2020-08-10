@@ -1,0 +1,75 @@
+.banner{
+  background: #ffffff;
+}
+.swiper, .swiper-item, .swiper-item image{
+  width: 750rpx;
+  height: 750rpx;
+}
+.countdown{
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600rpx;
+  height: 78rpx;
+  z-index: 1;
+  margin-top: -34rpx;
+  left: 75rpx;
+  border-radius: 50rpx;
+  color: #ffffff;
+  position: relative;
+}
+.date-label{
+  color: red;
+  background: #ffffff;
+  text-align: center;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin: 0 8rpx;
+}
+
+
+.content{
+  margin-top: 20rpx;
+  padding: 0 30rpx 30rpx 30rpx;
+}
+.content-price{
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-bottom: 26rpx;
+}
+.content-label{
+  font-size: 24rpx;
+}
+.content-label::after{
+  content: '￥';
+  font-size: 26rpx;
+  font-weight: bold;
+}
+.price{
+  font-size: 48rpx;
+  margin-right: 16rpx;
+  font-weight: bold;
+}
+.original-price{}
+.red{
+  color: red;
+}
+.gray{
+  color: #aaaaaa;
+}
+
+.content-name{
+  margin-bottom: 26rpx;
+  font-weight: bold;
+  font-size: 40rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.content-time{
+  color: #ff9800;
+  font-size: 26rpx;
+}

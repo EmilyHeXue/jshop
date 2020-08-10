@@ -1,0 +1,27 @@
+page{
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+image{
+  width: 750rpx;
+  height: 750rpx;
+}
+canvas{
+  width: 750rpx;
+  height: 1050rpx;
+  opacity: 1;
+}
+.share-banner{
+  width: 550rpx;
+  height: 1050rpx;
+  margin: 20rpx auto;
+}
+.savbtn{
+  color: #ffffff;
+  width: 500rpx;
+  border-radius: 50rpx;
+  position: fixed;
+  bottom: 40rpx;
+  right: calc((750rpx - 500rpx) / 2);
+}

@@ -1,0 +1,233 @@
+.coupons{
+	background:#FFEBE4;
+	margin:20rpx;
+	padding:20rpx;
+  color: #FF4400;
+  border-radius: 10rpx;
+}
+.coupons-text{
+	color:red;
+	font-size:3.6vw;
+	font-weight:600;
+}
+.coupons-item{
+	margin-bottom:2vw;
+}
+.coupons-item-img{
+	width:5vw;
+}
+.coupons-item-text{
+	font-size:3.5vw;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width:60vw;
+	margin-left:0.5vw;
+}
+.coupons-go{
+	display:flex;
+	align-items:center;
+	font-size:4vw;
+  justify-content: space-between;
+}
+.coupons-left{
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 28rpx;
+}
+.coupons-left view{
+  display: inline-block;
+  margin-right: 10rpx;
+}
+.coupons-img{
+	width:5vw;
+	height:5vw;
+  margin-left: 20rpx;
+}
+.coupons-layer-title{
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:center;
+	align-items:center;
+	font-size:4.5vw;
+	padding:1vw;
+}
+.coupons-layer-header{
+	padding-bottom:1vw;
+}
+.coupons-layer-informaotion{
+	overflow:hidden;
+	height:65vh;
+	margin-bottom:2vw;
+}
+.layer-title2{
+  color: #373737;
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+  margin-top: 20rpx;
+}
+.coupons-layer-reduction{
+  font-size: 24rpx;
+  color: #FF2A2A;
+  margin-bottom: 10rpx;
+}
+.coupons-layer-item{
+	margin-bottom:3vw;
+	background:#FFECEC;
+	padding: 27rpx 20rpx;
+	color:#FF2A2A;
+	display:flex;
+	justify-content:start;
+	align-items:center;
+	flex-flow:row wrap;
+  position: relative;
+  border-radius: 10rpx;
+}
+.coupons-layer-item-label{
+  position: absolute;
+  top: 0rpx;
+  left: 16rpx;
+  font-size: 20rpx;
+}
+.coupons-layer-content{
+  flex: 1;
+	font-size:3.2vw;
+  display: flex;
+}
+.coupons-layer-price{
+	font-size:56rpx;
+  margin-right: 115rpx;
+  margin-left: 15rpx;
+  max-width: 20px;
+  font-weight: 600;
+}
+.coupons-layer-price::before{
+	font-size:28rpx;
+  content: '￥'
+}
+.coupons-layer-content-content{
+  flex: 1;
+}
+.coupons-layer-full_price{
+  font-size: 28rpx;
+}
+.coupons-layer-date{
+  font-size: 20rpx;
+}
+.coupons-layer-get{
+	width:27vw;
+	margin-left:2vw;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size:4vw;
+}
+.layer-buttom{
+  position: absolute;
+  bottom: 0rpx;
+  left: 0rpx;
+  width: 750rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:15rpx 0;
+  margin-left: 20rpx;
+}
+.layer-buttom-btn{
+	background:#ff9901;
+  width: 600rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70rpx;
+  border-radius: 55rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+.mask{
+	z-index:6;
+	position:fixed;
+	bottom:0vw;
+	left:0vw;
+	background:rgba(0,0,0,0.5);
+	width:100vw;
+	height:100vh;
+}
+.layer{
+  width: 100vw;
+  box-sizing: border-box;
+	height:60vh;
+	padding:0vw 30rpx;
+	padding-top:2vw;
+	background:#fff;
+	position:fixed;
+	bottom:0vw;
+	border-top-left-radius:2vw 2vw;
+	border-top-right-radius:2vw 2vw; 
+}
+.scroll{
+  height: 75%;
+}
+
+
+/*
+ * 店铺红包样式
+*/
+.goodsCoupons{
+  margin: 20rpx;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  background: #FF4400;
+  color: #ffffff;
+  border-radius: 10rpx;
+  padding: 26rpx 0 22rpx 0;
+  box-sizing: border-box;
+  position: relative;
+}
+.goodsCoupons::after, .goodsCoupons::before{
+  content: '';
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background: #f2f2f2;
+}
+.goodsCoupons::before{
+  left: -15rpx;
+}
+.goodsCoupons::after{
+  right: -15rpx;
+}
+.goodsCoupons-left{
+  flex: 1;
+  text-align: center;
+}
+.goodsCoupons-price{
+  font-size: 28rpx;
+  margin-bottom: 18rpx;
+  line-height: 28rpx;
+  
+}
+.goodsCoupons-date{
+  font-size: 22rpx;
+  line-height: 22rpx;
+}
+.goodsCoupons-right{
+  text-align: center;
+  padding: 0rpx 20rpx;
+  min-width: 200rpx;
+  border-left: 1px dashed #ffffff;
+}
+.goodsCoupons-text{
+  font-size: 28rpx;
+}
+.goodsCoupons-count{
+  font-size: 24rpx;
+  color: #FF4400;
+  background: #ffffff;
+  padding: 2rpx 20rpx;
+  border-radius: 50rpx;
+  display: inline-block;
+  margin-top: 10rpx;
+}

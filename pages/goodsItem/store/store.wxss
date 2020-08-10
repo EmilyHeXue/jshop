@@ -1,0 +1,97 @@
+.store {
+  background: #fff;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20rpx;
+  padding: 20rpx;
+  border-radius: 10rpx;
+}
+
+.store-item {
+  display: flex;
+  width: 96vw;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom:3vw;
+  padding-top:1vw;
+}
+
+.store-img {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 1vw;
+  margin-right: 38rpx;
+}
+
+.store-content {
+  flex: 1;
+}
+.content-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-bottom{
+  font-size: 25rpx;
+  color: #919191;
+}
+.store-name {
+  font-size: 4vw;
+}
+
+.store-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.store-right-text {
+  font-size: 3vw;
+  padding: 5rpx 20rpx;
+  border: 1px solid #999;
+  color: #999;
+  border-radius: 50rpx;
+}
+
+.store-go {
+  width: 4vw;
+  height: 4vw;
+  margin: 0vw 1vw;
+}
+
+.flex-row-between {
+  border-top: 1px solid #eee;
+  flex: 1;
+  font-size: 3.5vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  justify-items: center;
+}
+
+.info-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 4vw 0;
+  color: #808080;
+}
+
+.info-img {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 8rpx;
+}
+
+.store-btn-white {
+  background: linear-gradient(to bottom, #22dfc6, #31cfcd);
+  color: #fff;
+}
+
+.store-score {
+  font-size: 3.2vw;
+  color: red;
+}

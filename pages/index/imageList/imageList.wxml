@@ -1,0 +1,18 @@
+<view 
+  class="list list{{data.details.style}}" 
+ >
+  <block 
+    wx:for="{{data.details.imgs}}" 
+    wx:key="itemImg" 
+    wx:for-item="itemImg" 
+    wx:for-index="itemIndex">
+    <view catchtap='go' data-link="{{itemImg.link}}" class="item style{{data.details.style}}">
+      <image 
+        lazy-load
+        src="{{itemImg.src}}" 
+        mode="widthFix" 
+        style="border-radius:{{data.details.radius}}">
+      </image>
+    </view>
+  </block>
+</view>

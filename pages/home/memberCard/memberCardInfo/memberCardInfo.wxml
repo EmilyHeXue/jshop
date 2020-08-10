@@ -1,0 +1,11 @@
+<scroll-view class='scroll' scroll-x>
+  <block wx:for='{{list}}' wx:key='{{item.id}}'>
+    <view class='item'>
+      <view class='flex {{index == flag ? "select" : ""}}' catchtap='choose' data-index='{{index}}'>
+        <view class='name'>{{item.name}}</view>
+        <view class='price'>{{item.money}}</view>
+        <view class='content'>享{{item.validity_time_text}}权益</view>
+      </view>
+    </view>
+  </block>
+</scroll-view>

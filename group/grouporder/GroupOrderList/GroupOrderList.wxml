@@ -1,0 +1,33 @@
+<!--pages/group/grouporder/GroupOrderList/GroupOrderList.wxml-->
+<view class='GroupOrderList'>
+  <block wx:for='{{5}}' wx:key='{{index}}'>
+    <view class='GroupOrderList-item'>
+      <view class='item-date'>2019-03-03</view>
+      <view class='item-content'>
+        <view class='content-item'>
+          <view class='item-data'>2</view>
+          <view class='item-text'>售出商品总数</view>
+        </view>
+        <view class='content-item'>
+          <view class='item-data'>2</view>
+          <view class='item-text'>代发货商品</view>
+        </view>
+        <view class='content-item'>
+          <view class='item-data'>2</view>
+          <view class='item-text'>待收货商品</view>
+        </view>
+        <view class='content-item'>
+          <view class='item-data'>2</view>
+          <view class='item-text'>预计佣金</view>
+        </view>
+      </view>
+      <view class='item-footer'>
+        <view class='footer-left'>
+          销售额
+          <text class='footer-price'>￥0.001</text>
+        </view>
+        <view class='footer-right'>请等待平台发货</view>
+      </view>
+    </view>
+  </block>
+</view>

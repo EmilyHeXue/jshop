@@ -1,0 +1,10 @@
+<!--订单导航-->
+<view class='header'>
+  <block wx:for='{{menu}}' wx:key='id'>
+    <view 
+      class='menu-item {{index == flag?"select":""}}' 
+      data-index='{{index}}' 
+      data-id='{{item.id}}' 
+      bindtap='changemenu'>{{item.name}}</view>
+  </block>
+</view>

@@ -1,0 +1,40 @@
+<!--pages/createOrder/tab/tab.wxml-->
+<view class='background' style="background: {{bg}}"></view>
+<view class='tab'>
+  <view wx:if='{{show}}' class='menu'>
+    <view class='navigation'>
+      <block wx:for='{{list}}' wx:key='index'>
+        <view
+          catchtap='changeList' 
+          wx:if='{{item.flag}}' 
+          data-index='{{index}}'  
+          class='nav {{index == chooseIndex ? "on" : ""}}' 
+          style='color: {{ index == chooseIndex ? bg || "red" : "#999999"}}; background: {{index == chooseIndex ? "#ffffff" : "rgba(255, 255, 255, 0.9)"}}'>{{item.name}}</view>
+      </block>
+    </view>
+  </view>
+  <view class="content">
+    <block wx:if='{{list[chooseIndex].id != 1}}'>
+      <address show='{{show}}' addressFlag='{{addressFlag}}' listname='{{list[chooseIndex].name}}' bind:getaddress='getaddress'/>
+    </block>
+    <block wx:else>
+      <view class='form'>
+        <view class='form-item'>
+          <view class='form-label'>姓名:</view>
+          <input class='form-input' value='{{user_name}}' bindblur="changeName" placeholder="请输入姓名"></input>
+        </view>
+        <view  class='form-item'>
+          <view class='form-label'>电话:</view>
+          <input class='form-input' value='{{user_phone}}' type="number" bindblur='changePhone' placeholder='请输入手机号码'></input>
+          <button class='form-btn' open-type='getPhoneNumber' bindgetphonenumber='getPhone'>获取微信手机号</button>
+        </view>
+      </view>
+    </block>
+    
+    <GroupAddress  
+      wx:if='{{list[chooseIndex].name != "快递送货" && flag}}' 
+      show='{{show}}' 
+      bind:getaddress='getaddress'/>
+  </view>
+  
+</view>

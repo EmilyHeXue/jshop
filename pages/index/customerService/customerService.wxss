@@ -1,0 +1,9 @@
+.customerService{
+  position: fixed;
+  width: 80rpx;
+  height: 80rpx;
+  background: none;
+}
+.icon{
+  width: 100%;
+}

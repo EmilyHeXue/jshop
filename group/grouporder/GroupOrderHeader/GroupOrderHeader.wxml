@@ -1,0 +1,18 @@
+<view class='GroupOrderHeader'>
+  <view class='GroupOrderHeader-header'>
+    <block wx:for='{{menu}}' wx:key='{{index}}'>
+      <view catchtap='changeIndex' data-index='{{index}}'  class='GroupOrderHeader-header-item {{index === selectIndex ? "select":""}}'>{{item.text}}</view>
+    </block>
+  </view>
+
+  <picker  class="g-timePicker" mode="date" value="{{date}}" start="" end="2018-09-01" bindchange="bindDateChange999">
+		<view class="picker">
+      <text class="">{{date}}</text> 
+      <view class="picker-btn">
+        <image src="/images/group/groupOrder/date.png" class="picker-icon" mode="widthFix"></image>
+        选择日期
+      </view>
+    </view>
+	</picker>
+  
+</view>

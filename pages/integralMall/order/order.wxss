@@ -1,0 +1,88 @@
+page{
+  padding-bottom: 20rpx;
+}
+
+.header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 32rpx 0;
+  font-size: 28rpx;
+  border-bottom: 1px solid #eee;
+  box-shadow: 1px 1px 1px #ddd;
+}
+.tab{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.select::after{
+  content: '';
+  position: absolute;
+  width: 150rpx;
+  height: 4rpx;
+  background: red;
+  bottom: -33rpx;
+}
+.item{
+  padding: 26rpx;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.item:last-child{
+  border-bottom: 0px solid #eee;
+}
+
+.item-img{
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 28rpx;
+}
+.item-content{
+  flex: 1;
+  height: 200rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 5rpx 0;
+}
+.item-name{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
+}
+.item-price{
+  color: red;
+  font-size: 28rpx;
+  width: 100%;
+  text-align: right;
+  font-weight: 600;
+}
+.item-price::before{
+  content: '支付积分:';
+  margin-right: 10rpx;
+  color: #101010;
+}
+
+.item-status-will{
+  width: 100%;
+  text-align: right;
+  font-size: 28rpx;
+  color: red;
+}
+.item-status-ing{
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  color: red;
+  font-size: 24rpx;
+}

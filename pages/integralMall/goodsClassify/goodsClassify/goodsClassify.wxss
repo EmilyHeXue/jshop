@@ -1,0 +1,7 @@
+/* pages/goodsClassify/goodsClassify/goodsClassify.wxss */
+.noData{
+  display:flex;
+  width:750rpx;
+  height:750rpx;
+  justify-content:center;
+}

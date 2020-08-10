@@ -1,0 +1,2 @@
+<Header selectIndex='{{apiIndex}}' bind:changeList='changeList'/>
+<List apiIndex='{{apiIndex}}' data='{{data}}'/>

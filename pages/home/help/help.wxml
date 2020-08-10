@@ -1,0 +1,10 @@
+  <view class='menus'>
+    <navigator url='/pages/home/helpList/helpList?id={{item.id}}&name={{item.name}}' wx:for='{{menu}}' wx:key='id' class='menu' catchtap="go" data-name='{{item.name}}' data-id='{{item.id}}'>
+      <view class='menu-left'>
+        <view class='menu-text'>{{item.name}}</view>
+      </view>
+      <view class='menu-right'>
+        <image lazy-load class='menu-go' src='/images/my/menu/right.png'/>
+      </view>
+    </navigator>
+  </view>

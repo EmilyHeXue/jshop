@@ -1,0 +1,47 @@
+<view>
+  <view class='header'>
+    <swiper class='banner'>
+      <block wx:for='{{banner}}'>
+        <swiper-item class='banner-item'>
+          <image lazy-load class='banner-item-img' src='{{item}}'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='center'>
+    <block wx:for='{{data}}'>
+      <view class='goods-item'>
+        <image lazy-load class='goods-img' src='{{item.pic_urls[0]}}'></image>
+        <view class='goods-content'>
+          <view class='goods-name'>{{item.name}}</view>
+          <view class='goods-buy'>
+            <view class='goods-buy-avatar'>
+              <block wx:for='{{item.avatar}}' wx:key='{{item}}'>
+                <image lazy-load class='goods-buy-avatar-item' src='{{item}}'></image>
+              </block>
+            </view>
+            <view class='goods-buy-content'>{{item.stocks}}人参与了砍价</view>
+          </view>
+          <view class='goods-linePrice'>{{item.price}}</view>
+          <view class='goods-footer'>
+            <view class='goods-footer-price'>
+              <view class='goods-footer-price-content'>最低</view>
+              <view class='goods-price'>{{item.bargain_price}}</view>
+            </view>
+            <view catchtap="toDeatil" data-id='{{item.id}}' class='goods-btn {{item.stocks != 0 ? "buy":"err"}}'>{{item.stocks != 0 ? "我要砍价" : "已售罄"}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='footer'>
+    <navigator url="/bargaining/pages/bargaining/Index/Index" class='footer-item'>
+      <image lazy-load class='footer-icon' src='https://imgs.juanpao.com/ui/kanjiachense.png'></image>
+      <view class='footer-text bind'>砍价会场</view>
+    </navigator>
+    <navigator url='/bargaining/pages/myBargaining/myBargaining' class='footer-item'>
+      <image lazy-load class='footer-icon' src='https://imgs.juanpao.com/ui/wohuise.png'></image>
+      <view class='footer-text'>我的砍价</view>
+    </navigator>
+  </view>
+</view> 

@@ -1,0 +1,64 @@
+<div class="orderItemFooter" v-if='{{show}}'>
+  <div 
+    wx:if='{{status == 3 || status == 6 || status == 7}}' 
+    class='btn' 
+    catchtap='checkLogistics'
+  >
+    查看物流
+  </div>
+  <div 
+    wx:if='{{status == 3 && express_type == 0}}' 
+    class='btn' 
+    catchtap='getGoods' 
+    style='border-color: {{color}}; color: {{color}};'
+  >
+    确认收货
+  </div>
+  <div 
+    class='btn' 
+    wx:if='{{status == 3 && express_type != 0}}' 
+    style='border-color: {{color}}; color: {{color}};'
+    bindtap='getGoods'>
+    扫码核销
+  </div>
+  <div 
+    wx:if='{{status != 11 &&status != 0 && status !=7 && status != 2 && status != 6 && status != 4 && status != 5}}' 
+    class='btn' 
+    catchtap='returnGoods'
+  >
+    退款
+  </div>
+
+
+  <div 
+    wx:if='{{status == 0}}' 
+    class='btn' 
+    catchtap='unpay'
+  >
+    取消订单
+  </div>
+
+  <div 
+    wx:if='{{status == 6}}' 
+    class='btn' 
+    catchtap='evaluation'
+    style='border-color: {{color}}; color: {{color}};'
+  >
+    评价
+  </div>
+
+  <div 
+    wx:if='{{status == 0}}' 
+    class='btn' 
+    catchtap='gopay'
+    style='border-color: {{color}}; color: {{color}};'
+  >
+    付款
+  </div>
+</div>
+<view wx:if='{{qrcodeShow}}' catchtap='show' class='mask' catchtouchmove='true'>
+  <view class='layer'>
+    <view class='layer-header'>提货二维码</view>
+    <image lazy-load class='qrcode' src='{{qrcode}}'></image>
+  </view>
+</view>

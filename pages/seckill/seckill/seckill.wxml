@@ -1,0 +1,7 @@
+<SeckillHeader background='{{background}}' menu='{{menu}}' bind:change='change' />
+<!--<SeckillScroll data='{{data}}'  />-->
+<SeckillGoods data='{{data}}' />
+
+<navigator open-type='redirect' url='/pages/index/index/index' class="back">
+  <image lazy-load class="backindex" src='/images/backindex.png' mode="widthFix"></image>
+</navigator>

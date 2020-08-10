@@ -1,0 +1,24 @@
+<view class="uc-wrap uc-helpShare" >
+	<view class="panel" style='background: {{background}};'>
+		<view class="face-box"><image src="{{avatar}}" mode="aspectFill"></image></view>
+		<view class="name">{{leader.area_name}}的团购接龙</view>
+	</view>
+	<view class="box">
+		<view class="title">
+			<text class="uc-b">{{name}}</text>
+			<!--<navigator class="user" url="">
+				<view class="face-box"><image src="{{leader.avatar}}" mode="aspectFill"></image></view>
+				{{leader.area_name}}
+			</navigator>-->
+			<view class="price">
+				￥ <text class="big">{{price}}</text> 起
+			</view>
+		</view>
+		<view class="list">
+			<view class="item" url="">
+				<image wx:for='{{goods}}' catchtap="go" data-url='/pages/goodsItem/goodsItem/goodsItem?id={{item.id}}' src="{{item.pic_urls}}" class="img"></image>
+				<button class="uc-btn green" style='background: {{background}}; border-color: {{background}};' hover-class="none">我要接龙</button>
+			</view>
+		</view>
+	</view>
+</view>

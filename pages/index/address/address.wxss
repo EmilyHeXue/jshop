@@ -1,0 +1,17 @@
+.list{
+  margin: 20rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  font-size: 32rpx;
+}
+.item1{
+  padding: 26rpx;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+.address-logo{
+  width: 48rpx;
+  height: 48rpx;
+}

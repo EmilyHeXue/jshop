@@ -1,0 +1,23 @@
+page{
+  background: #f2f2f2;
+}
+Nav{
+  position: fixed;
+  right: 24rpx;
+  bottom: 30vh;
+  font-size: 25rpx;
+  color: #ffffff;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  box-sizing: border-box;
+  padding: 17rpx;
+  text-align: center;
+  line-height: 26rpx;
+  letter-spacing: 2rpx;
+}

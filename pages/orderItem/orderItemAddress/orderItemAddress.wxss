@@ -1,0 +1,51 @@
+.orderItemAddress {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row nowrap;
+  background: #fff;
+  padding: 0vw 2vw;
+  margin-top: 15rpx;
+}
+
+.orderItemAddress-firstname {
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+}
+
+.orderItemAddress-content {
+  flex: 1;
+  margin: 2vw;
+}
+
+.orderItemAddress-content-item {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2vw 0vw;
+}
+
+.orderItemAddress-content-name {
+  font-size: 4vw;
+  margin-right: 2vw;
+}
+
+.orderItemAddress-content-phone {
+  color: #aaa;
+  font-size: 4vw;
+}
+
+.orderItemAddress-content-address {
+  margin: 2vw 0vw;
+  font-size: 4vw;
+  font-weight: 500;
+}
+
+.tuaninfo{
+  border-bottom: 1px solid #eee;
+  font-size: 28rpx;
+  color: #888;
+  padding: 2vw 0;
+}

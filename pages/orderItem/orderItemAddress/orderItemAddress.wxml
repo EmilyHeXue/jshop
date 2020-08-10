@@ -1,0 +1,16 @@
+<view class="orderItemAddress">
+  <image lazy-load lazy-load class='orderItemAddress-firstname' src='/images/address/address.png'></image>
+  <view class='orderItemAddress-content'>
+    <view class='orderItemAddress-content-item'>
+      <view class='orderItemAddress-content-name'>{{address.name}}</view>
+      <view class='orderItemAddress-content-phone'>{{address.phone}}</view>
+    </view>
+    <view class='orderItemAddress-content-address'>
+      {{address.address}}
+    </view>
+  </view>
+</view>
+
+<view class="orderItemAddress">
+  <view class='tuaninfo' wx:if='{{express_type == 1}}'>自提点地址: {{groupaddr}} 联系电话:{{groupphone}}</view>
+</view>

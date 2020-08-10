@@ -1,0 +1,14 @@
+<view class="buypeople" wx:if='{{data.monthSale != 0 && data.monthSale != null}}'>
+  <view class='evaluation-nums'>
+    <block wx:for='{{data.avatar}}' wx:key='index'>
+      <image lazy-load wx:if='{{index < 7}}' class='people-avatar'  src='{{item.avatar}}'></image>
+    </block>
+    <text class='ellipsis'>...</text>
+  </view>
+  <view class='evaluation-more'>
+    <view class="isbuy">{{data.monthSale || 0}}</view>
+    <view class="stocks" wx:if='{{is_open}}'>剩余{{data.stocks}}{{data.unit}}</view>
+    <view class="stocks" wx:else>剩余{{data.stocks}}</view>
+    <!--<image lazy-load class='evaluation-more-img' src='/images/my/menu/right.png'></image>-->
+  </view>
+</view>

@@ -1,0 +1,14 @@
+.banner{
+  width: 750rpx;
+}
+.timeinterval{
+  position: absolute;
+  top: 620rpx;
+  color: #FF9800;
+  font-size: 28rpx;
+}
+.rules{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

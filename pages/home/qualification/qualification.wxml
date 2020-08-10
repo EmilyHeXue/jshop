@@ -1,0 +1,28 @@
+  <view class='menus'>
+    <view class='menu' catchtap="go" data-name='资质' data-key='qualifications'>
+      <view class='menu-left'>
+        <view class='menu-text'>资质</view>
+      </view>
+      <view class='menu-right'>
+        <image lazy-load class='menu-go' src='/images/my/menu/right.png'/>
+      </view>
+    </view>
+
+    <view class='menu' catchtap="go" data-name='隐私政策' data-key='privacy_policy'>
+      <view class='menu-left'>
+        <view class='menu-text'>隐私政策</view>
+      </view>
+      <view class='menu-right'>
+        <image lazy-load class='menu-go' src='/images/my/menu/right.png'/>
+      </view>
+    </view>
+
+    <view class='menu' catchtap="go" data-name='用户协议' data-key='user_protocol'>
+      <view class='menu-left'>
+        <view class='menu-text'>用户协议</view>
+      </view>
+      <view class='menu-right'>
+        <image lazy-load class='menu-go' src='/images/my/menu/right.png'/>
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,38 @@
+<!--pages/payOk/payOk/payOk.wxml-->
+<view class='payok'>
+  <view class="uc-wrap uc-helpShare">
+    <view class="panel" style='background: {{background}};'>
+      <view class="face-box"><image src="{{avatar}}" mode="aspectFill"></image></view>
+      <view class="name">我已付款{{price}}元啦！</view>
+    </view>
+    <view class="box">
+      <view class="title">
+        <navigator class="user" url="">
+          <view class="face-box"><image src="{{leader.avatar}}" mode="aspectFill"></image></view>
+          {{leader.area_name}}
+        </navigator>
+      </view>
+      <view class="list">
+        <view class="item" url="">
+          <image catchtap="go" data-url='/pages/goodsItem/goodsItem/goodsItem?id={{item.goods_id}}' wx:for='{{order}}' wx:key='pic_url' src="{{item.pic_url}}" class="img"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+  <view>
+    <button open-type="share" style='background: {{background}}; color: #ffffff; border-radius: 50rpx; margin: 40rpx 100rpx;'>分享给好友</button>
+  </view>
+  <mask wx:if='{{layerFlag}}' catchtap='show'>
+    <layer catchtap>
+      <image lazy-load class='close' mode="widthFix" catchtap="show" src='/images/search/search/del.png'></image>
+      <image lazy-load class='icon' mode="widthFix" src='https://imgs.juanpao.com/ui/sonhonbao.png'></image>
+      <form report-submit bindsubmit="share" class='layer-btn'>
+        <button open-type="share" class='layer-btn'>click</button>
+      </form>
+    </layer>
+  </mask>
+
+  <!--推荐商品-->
+  <recommendGoods type='centre_show'/>
+<footer></footer>

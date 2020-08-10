@@ -1,0 +1,85 @@
+/* pages/returnOrder/returnOrder/returnOrder.wxss */
+page{
+  background-color:#eeeeee;
+}
+.returnOrder{
+  padding:15rpx;
+  margin-top:40px;
+}
+.returnOrder-item{
+  background-color:#ffffff;
+  margin: 15rpx 0rpx;
+}
+.returnOrder-item-goods{
+  padding:15rpx;
+}
+.returnOrder-item-text{
+  font-size:22.5rpx;
+}
+.returnOrder-item-tabbar{
+  padding:15rpx;
+  border-top:1px solid #eeeeee;
+  overflow:hidden;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+}
+.returnOrder-item-bar-btn{
+  padding:15rpx 30rpx;
+  font-size:22.5rpx;
+  border:1px solid #888;
+  margin-left:15rpx;
+  border-radius:37.5rpx;
+  color:#000;
+}
+
+
+.modal{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 750rpx;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.modal-item{
+  background-color: #ffffff;
+  width: 600rpx;
+  margin-top: 30vh;
+}
+.modal-item-title{
+  padding-top:15px;
+  text-align: center;
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+.modal-item-text{
+  padding: 10px 20px 15px;
+  border-bottom: 1px solid #ddd;
+  min-height: 36px;
+  position: relative;
+  color: #555;
+  margin: 0;
+  text-align: center;
+  line-height: 36px;
+}
+.modal-item-tabbar{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  border-top:1px solid #eee;
+  height: 40px;
+  line-height: 40px;
+}
+.modal-item-btn{
+  border-right: 1px solid #ddd;
+  flex:1;
+  text-align:center;
+}

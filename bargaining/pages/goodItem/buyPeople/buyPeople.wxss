@@ -1,0 +1,18 @@
+.buyPeople{
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  background: #ffffff;
+  margin-top: 10rpx;
+  font-size: 28rpx;
+}
+.avatar{
+  
+}
+.avatar-item{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  background: #8bc34a;
+  margin-right: 6rpx;
+}

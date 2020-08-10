@@ -1,0 +1,77 @@
+
+.Menu, .orderToday, .list{
+  background: #fff;
+  margin-left: 20rpx;
+  width: 710rpx;
+  margin-top: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.orderToday-header{
+  text-align: center;
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+.orderToday-flex{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.orderToday-item{
+  text-align: center;
+}
+.orderToday-data{
+  margin: 20rpx;
+}
+.orderToday-name{
+  font-size: 28rpx;
+}
+
+.Menu-flex{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background: #fff;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.Menu-item{
+  text-align: center;
+  margin: 20rpx;
+}
+.Menu-img{
+  width: 60rpx;
+  height: 60rpx;
+}
+.Menu-name{
+  font-size: 28rpx;
+}
+
+.list{
+
+}
+.list-header{
+  text-align: center;
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+.list-flex{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background: #fff;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.list-item{
+  text-align: center;
+  margin: 20rpx;
+}
+.list-nums{
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list-name{
+  font-size: 28rpx;
+}

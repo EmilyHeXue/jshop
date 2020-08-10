@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "address": "/pages/createOrder/tab/address/address",
+    "GroupAddress":"/pages/createOrder/tab/groupAddress/groupAddress"
+  }
+}

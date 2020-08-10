@@ -1,0 +1,22 @@
+<!--pages/login/login.wxml-->
+<view wx:if='{{show}}' class='login'>
+  <view class='login-view'>
+    <!-- 图片区域 -->
+    <image lazy-load src='{{imgSrc}}' class='login-view-logo' />
+    
+     <!-- 文字区域 -->
+    <view class='login-view-text' >
+      你好，小程序需要您的授权才能更好的为您服务哦~
+    </view>
+    
+    <!-- 获取说明区域 -->
+    <view class='login-view-prompt' > 
+      ·获取你的公开信息(昵称,头像等)
+    </view>
+      
+    <!-- 点击按钮区域 -->
+    <button class='login-view-btn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getUserInfo">
+      授权
+    </button>
+  </view>
+</view>

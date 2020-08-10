@@ -1,0 +1,13 @@
+.noLogin-view{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+.noLogin{
+  padding: 20rpx 40rpx;
+  background: red;
+  display: inline-block;
+  border-radius: 50rpx;
+  color: #ffffff;
+}

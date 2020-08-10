@@ -1,0 +1,6 @@
+/* pages/orderItem/orderItem/orderItem.wxss */
+
+page{
+  background-color: #eeeeee;
+  padding-bottom:65px;
+}

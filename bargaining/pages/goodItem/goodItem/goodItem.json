@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "Banner": "/bargaining/pages/goodItem/banner/banner",
+    "BuyPeople": "/bargaining/pages/goodItem/buyPeople/buyPeople",
+    "player": "/bargaining/pages/goodItem/player/player",
+    "Html": "/bargaining/pages/goodItem/html/html",
+    "footer": "/bargaining/pages/goodItem/footer/footer",
+    "layer": "/bargaining/pages/goodItem/layer/layer"
+  }
+}

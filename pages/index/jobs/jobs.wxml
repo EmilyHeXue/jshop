@@ -1,0 +1,7 @@
+<view class="jobs">
+  <block wx:for="{{data.details.imgs}}" wx:key="itemImg" wx:for-item="itemImg" wx:for-index="itemIndex">
+    <view class="item">
+      <view>{{itemImg.text}}</view>
+    </view>
+  </block>
+</view>

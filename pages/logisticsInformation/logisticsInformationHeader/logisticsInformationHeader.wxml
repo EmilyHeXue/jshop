@@ -1,0 +1,11 @@
+<!--pages/logisticsInformation/logisticsInformationHeader/logisticsInformationHeader.wxml-->
+<view class='header'>
+  <view class='row'>
+    <view class='row-label'>快递单号:</view>
+    <view class='row-data'>{{orderNum}}</view>
+  </view>
+  <view class='row'>
+    <view class='row-label'>承运快递:</view>
+    <view class='row-data'>{{name}}</view>
+  </view>
+</view>

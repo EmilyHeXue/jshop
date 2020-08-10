@@ -1,0 +1,46 @@
+/* pages/shopCart/footer/footer.wxss */
+.footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:750rpx;
+  height:112.5rpx;
+  background-color:#ffffff;
+  position:fixed;
+  bottom:54px;
+  left:0;
+  font-size:30rpx;
+}
+.flex-left{
+  display:flex;
+  padding-left:30rpx;
+  justify-content:center;
+  align-items:center;
+}
+
+.flex-right{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.flex-right-price::before{
+  content:'合计: ';
+  color: #555;
+}
+
+.btn{
+  background-color:#ffcc01;
+  font-size:30rpx;
+  padding:20rpx 50rpx;
+  border-radius:50rpx;
+  margin:0rpx 15rpx;
+  color:#fff;
+}
+.delbtn{
+  background-color:#ff0000;
+  font-size:30rpx;
+  padding:20rpx 50rpx;
+  border-radius:50rpx;
+  margin:0rpx 15rpx;
+  color:#ffffff;
+}

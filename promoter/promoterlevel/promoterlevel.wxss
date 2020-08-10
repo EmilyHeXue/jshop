@@ -1,0 +1,117 @@
+.card{
+  padding: 40rpx 40rpx 0;
+  position: relative;
+  overflow: hidden;
+}
+.card-bg{
+  position: absolute;
+  left: 40rpx;
+  top: 40rpx;
+  width: 670rpx;
+  height: 402rpx;
+  z-index: -1;
+}
+.card-info{
+  width: 670rpx;
+  height: 402rpx;
+  overflow: hidden;
+}
+.card-user-info{
+  padding: 30rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+}
+.card-user-avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.card-user-name{
+  font-size: 28rpx;
+}
+.card-user-level{
+  font-size: 20rpx;
+}
+
+.card-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-center-icon{
+  width: 50rpx;
+  height: 50rpx;
+}
+.card-center-text{
+  font-size: 40rpx;
+  color: #ffd45a;
+  margin-left: 12rpx;
+}
+
+.card-bottom, .card-level{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 86rpx 68rpx 0rpx 68rpx;
+  font-size: 28rpx;
+  color: #cb17f4;
+}
+.card-bottom-min{
+  margin-right: 26rpx;
+}
+.card-bottom-max{
+  margin-left: 26rpx;
+}
+.card-bottom-article{
+  position: relative;
+  background: #fff;
+  height: 10rpx;
+  width: 100%;
+  border-radius: 50rpx;
+}
+.card-bottom-current{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10rpx;
+  background: #ff9800;
+}
+.card-level{
+  padding: 0 44rpx;
+  color: #ffffff;
+  font-size: 24rpx;
+}
+
+.level-instructions{
+  margin: 34rpx 42rpx;
+  padding: 16rpx 32rpx;
+  font-size: 22rpx;
+  color: #aeaeae;
+  background: #fbf8ff;
+  white-space: pre-wrap;
+}
+
+.equities{
+  padding: 0 38rpx;
+}
+.equities-header{
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+}
+.equities-header::before{
+  content: ' ';
+  display: inline-block;
+  width: 6rpx;
+  height: 34rpx;
+  background: #9f83f7;
+  margin-right: 12rpx;
+}
+.equities-content{
+  margin-top: 38rpx;
+  padding: 0 26rpx;
+  font-size: 28rpx;
+}

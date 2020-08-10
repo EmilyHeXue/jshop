@@ -1,0 +1,3 @@
+<view class="view-article" style="background-color:{{data.details.color2}}">
+  <rich-text nodes='{{data.details.text}}'></rich-text>
+</view>

@@ -1,0 +1,20 @@
+.slide-image{
+  width: 700rpx;
+  height: 260rpx;
+  border-radius: 20rpx;
+}
+
+.swiper{
+  text-align: center;
+  height: 260rpx;
+}
+.view-banner{
+  padding: 25rpx 0;
+}
+.form{
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+}

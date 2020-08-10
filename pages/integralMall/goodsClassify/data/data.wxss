@@ -1,0 +1,131 @@
+/* pages/goodsClassify/data/data.wxss */
+page{
+  background: #f4f5f9;
+}
+.screen {
+    overflow: hidden;
+    background: #fff;
+    padding: 24rpx 0;
+    border-bottom:1px solid #efefef;
+}
+
+.screen .left {
+    overflow: hidden;
+    float: left;
+}
+
+.left-item {
+    float: left;
+    line-height: 36rpx;
+    text-align: center;
+    width: 150rpx;
+    font-size: 28rpx;
+    color: #3c4245;
+}
+
+.on {
+    color: #fa5908;
+}
+
+.screen .right {
+    overflow: hidden;
+    float: right;
+}
+
+.screen .right image {
+    float: left;
+    width: 38rpx;
+    height: 36rpx;
+    margin: 0 24rpx;
+}
+
+.screen .right view {
+    float: left;
+    line-height: 36rpx;
+    text-align: center;
+    width: 98rpx;
+    font-size: 28rpx;
+    color: #162c37;
+    border-left: 2rpx solid #d2d2d2;
+}
+
+.classify{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-around;
+  align-items:center;
+  padding:13rpx;
+}
+.classify::after{
+  content:'';
+  width:360rpx;
+  height:360rpx;
+  margin:7.5rpx;
+}
+.classify-item{
+  width:350rpx;
+  background-color:#ffffff;
+}
+.classify-img{
+  width:360rpx;
+  height:360rpx;
+}
+.classify-name{
+  font-size:25rpx;
+  padding:2rpx 10rpx;
+}
+.classify-footer{
+  display:flex;
+  justify-content:space-between;
+  font-size:23rpx;
+  padding:10rpx 10rpx;
+}
+.classify-price{
+  color:#ff0000;
+}
+.classify-number{
+  color:#999;
+}
+
+
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+}
+.nav-back{
+  background: #fff;
+  width: 750rpx !important;
+}
+.nav view {
+    float: left;
+    width: 20%;
+    background: #fff;
+    padding: 20rpx 0;
+}
+
+.nav view image {
+    width: 74rpx;
+    height: 74rpx;
+    display: block;
+    margin: 0 auto;
+}
+
+.nav view text {
+    display: block;
+    text-align: center;
+    font-size: 30rpx;
+    margin-top: 10rpx;
+    color: #303030;
+}
+.noData{
+  display:flex;
+  width:750rpx;
+  height:750rpx;
+  justify-content:center;
+}

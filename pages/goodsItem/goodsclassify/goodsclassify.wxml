@@ -1,0 +1,10 @@
+<view class="chooseGoods"  catchtap='show'>
+  <view class='store-item'>
+    <view class='store-content'>
+      <view class='store-name'>选择</view>
+      <view class='store-right'>
+        <image lazy-load src='/images/my/menu/right.png' class='store-go'></image>
+      </view>
+    </view>
+  </view>
+</view>

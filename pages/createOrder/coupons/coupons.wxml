@@ -1,0 +1,60 @@
+<!--红包及配送及留言-->
+<view class='coupons'>
+  <view bindtap='showLayer' class='row'>
+    <view class='row-label'>店铺优惠:</view>
+    <view class='row-data gray'>{{couponeList.length == 0 ? "无优惠" : coupone.is_used == 0 ? "满"+coupone.full_price+"元减"+coupone.price:"不使用优惠券 >"}}</view>
+  </view>
+  <view  wx:if='{{is_reduction}}' bindtap="closefree_shopinglayer" class='row'>
+    <view class='row-label'>满减优惠:</view>
+    <view class='row-data gray'>{{reduction_decrease == 0 ? "未达满减条件" : reduction_decrease + "元"}}</view>
+  </view>
+  <view class='row' wx:if='{{is_vip}}'>
+    <view class='row-label'>会员卡</view>
+    <view class='row-data vip'>-{{(discount_ratio)}}</view>
+  </view>
+  <view class='row'>
+    <view class='row-label'>运费:</view>
+    <view wx:if='{{youfei != 0}}' class='row-data'>{{youfei}}元</view>
+    <view wx:else class='row-data'>包邮</view>
+  </view>
+  <view class='row' wx:if='{{leader_discount}}'>
+    <view class='row-label'>开团人优惠:</view>
+    <view class='row-data'>{{leader_discount}}元</view>
+  </view>
+  <view class='row'>
+    <view class='row-label'>买家留言:</view>
+    <input class='row-data' bindinput='remark' placeholder="请输入需要给商家的信息"  />
+  </view>
+</view>
+
+<view wx:if='{{show}}' class='layer'>
+  <view class='layer-content'>
+    <scroll-view scroll-y class='layer-scroll'>
+      <view bindtap='nocpuponce' class='layer-nocoupone'>关闭</view>
+      <block wx:if='{{item.is_used == 0 && item.full_price < goodsPrice}}' wx:for='{{couponeList}}' wx:key='{{item.id}}'>
+        <view data-index='{{index}}' bindtap='closeLayer' class='layer-item'>
+          <view class='layer-item-left'>
+            <view class='layer-item-Number'>￥
+              <view class='layer-item-price'>{{item.price}}</view>
+              {{item.type_name}}
+            </view>
+            <view class='layer-item-full_price'>订单金额满{{item.full_price}}元可用</view>
+            <view class='layer-item-time'>{{item.start_time}}-{{item.end_time}}</view>
+          </view>
+          <view class='layer-item-right'>立即使用</view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+
+<view wx:if='{{free_flag}}' class='layer'>
+  <view class='layer-content free_shoping'>
+    <!--<view class="layer-content-header">满减优惠</view> -->
+    <view style="margin-top: 20rpx;" wx:for='{{free_data.reduction_achieve}}' wx:key='item'>
+      满{{free_data.reduction_achieve[index]}}元{{free_data.reduction_decrease[index] == 0 ? "":"减" + free_data.reduction_decrease[index] + "元"}}{{free_data.free_shipping[index] == true ? "包邮":""}}
+    </view>
+      <view class="layer-buttom" bindtap="closefree_shopinglayer" style='left: 20rpx;'>关闭</view>
+      <navigator class="layer-buttom" style='background: red; color: #ffffff; right: 20rpx;' url="/pages/index/index/index">去凑单</navigator> 
+  </view>
+</view>

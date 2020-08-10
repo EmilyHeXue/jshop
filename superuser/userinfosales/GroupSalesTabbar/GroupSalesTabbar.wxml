@@ -1,0 +1,13 @@
+<view>
+  <view class='GroupSalesTabbar-header' style='background: ; color: '>
+    <block wx:for='{{menu}}' wx:key='{{item.id}}'>
+      <view
+        class='GroupSalesTabbar-header-item {{index === selectIndex ? "select":""}}'
+        catchtap='changeIndex'
+        data-index='{{index}}'>
+        {{item.text}}
+        <text class='{{index === selectIndex ? "selectline":""}}'></text>
+      </view>
+    </block>
+  </view>
+</view>

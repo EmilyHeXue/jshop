@@ -1,0 +1,10 @@
+<view class='ItsGroupCard'>
+  <view class='groupCard-card2'>
+    <image class='groupCard-card2-bg' src='/images/group/groupContent/img71.png'></image>
+    <view>推荐</view>
+    <view class='groupCard-card2-btns'>
+      <view class='groupCard-btn'>推荐{{leader_name}}</view>
+      <view class='groupCard-btn'>推荐团员</view>
+    </view>
+  </view>
+</view>

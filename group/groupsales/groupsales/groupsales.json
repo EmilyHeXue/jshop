@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "GroupSalesTabbar": "/group/groupsales/GroupSalesTabbar/GroupSalesTabbar",
+    "GroupSalesData": "/group/groupsales/GroupSalesData/GroupSalesData"
+  }
+}

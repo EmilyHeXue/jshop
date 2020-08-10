@@ -1,0 +1,57 @@
+.view-service{
+  position: fixed;
+  z-index: 999;
+}
+.icon{
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+}
+
+.layer{
+  background: #ffffff;
+  padding-bottom: calc(46rpx + 20px);
+  width: 100vw;
+  position: fixed;
+  left: 0 !important;
+  bottom: 0;
+}
+.layer-title{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layer-title-head{
+  font-size: 32rpx;
+  font-weight: bold;
+  padding: 28rpx;
+}
+.layer-title-icon{
+  position: absolute;
+  width: 48rpx;
+  height: 48rpx;
+  right: 22rpx;
+}
+.layer-content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.layer-item{
+  margin: 0;
+  padding: 0;
+  height: auto;
+  line-height: normal;
+  font-size: 28rpx;
+  background: none;
+}
+
+.layer-icon{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.layer-img{
+
+}

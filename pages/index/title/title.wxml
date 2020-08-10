@@ -1,0 +1,18 @@
+<view class="view-title">
+  <view 
+    class="title style{{data.details.style}}" 
+    style="background-color:{{data.details.color2}};color:{{data.details.color1}}">
+    <text class="line"></text>
+    <block wx:if="data.details.style==5">
+      <view 
+        class="txt" 
+        style="background-color:{{data.details.color2}};font-size:{{data.details.fontSize}};">
+        {{data.details.text}}
+      </view>
+    </block>
+    <block wx:else>
+      <text class="txt" style="font-size:{{data.details.fontSize}}">{{data.details.text}}</text>
+    </block>
+    <text class="line"></text>
+  </view>
+</view>

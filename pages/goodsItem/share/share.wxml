@@ -1,0 +1,19 @@
+<view wx:if='{{shareFlag}}' catchtouchmove catchtap='showShare' class='mask'>
+  <view class='layer'>
+    <image lazy-load catchtap='showShare' src='/images/goodsItem/image/close.png' class='close'></image>
+    <view class='layer-item'>
+      <button open-type='share' class='share-item'>
+        <image lazy-load src='/images/goodsItem/image/weixin.png' class='share-item-icon'></image>
+        <view>分享好友</view>
+      </button>
+      <view catchtap='toshare' class='share-item'>
+        <image lazy-load src='/images/goodsItem/image/image.png' class='share-item-icon'></image>
+        <view>生成海报</view>
+      </view>
+      <view wx:if='{{good_phenosphere_is_open}}' catchtap='togoodsgroup' class='share-item'>
+        <image lazy-load src='/images/goodsItem/image/haowuquan.png' class='share-item-icon'></image>
+        <view>分享好物圈</view>
+      </view>
+    </view>
+  </view>
+</view>

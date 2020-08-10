@@ -1,0 +1,101 @@
+.content{
+  margin-bottom: 100rpx;
+}
+page{
+  background: #f4f4f4;
+}
+.content-item{
+  padding: 36rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: #ffffff;
+  position: relative;
+  margin-top: 8rpx;
+}
+.content-img{
+  width: 240rpx;
+  height: 240rpx;
+  background: #8BC34A;
+  margin-right: 32rpx;
+}
+.content-right{
+  flex: 1;
+}
+.content-name{
+  font-size: 32rpx;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.content-time{
+  background: #ffddde;
+  padding: 4rpx 12rpx;
+  display: inline-block;
+  margin-top: 14rpx;
+  color: red;
+  font-size: 28rpx;
+}
+.content-footer{
+  position: absolute;
+  bottom: 36rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 402rpx;
+}
+.content-footer-left{}
+.content-status{
+  color: #b3b3b3;
+  font-size: 24rpx;
+  margin-bottom: 6rpx;
+}
+.content-price{
+  color: red;
+  font-size: 36rpx;
+}
+.content-price::before{
+  content: '￥';
+}
+.content-btn{
+  color: #ffffff;
+  background: #ff3d44;
+  padding: 8rpx 24rpx;
+  border-radius: 50rpx;
+  font-size: 28rpx;
+}
+/*底部导航-start*/
+ .footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 750rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ffffff;
+  height: 84rpx;
+}
+.footer-item{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 16rpx;
+}
+.footer-text{
+  font-size: 28rpx;
+  color: #575757;
+}
+.bind{
+  color: #ff9800;
+}
+.detail{
+  background: #ff9800;
+}
+/*底部导航-end*/

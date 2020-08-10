@@ -1,0 +1,46 @@
+.good{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  padding: 30rpx;
+}
+.good-img{
+  width: 160rpx;
+  height: 160rpx;
+}
+.good-content{
+  height: 160rpx;
+  flex: 1;
+  padding: 4rpx 0rpx 4rpx 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-flow: column wrap;
+}
+.good-name{
+  text-overflow: ellipsis;
+  width: 100%;
+  font-size: 28rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-weight: 600;
+}
+.good-price{
+  color: red;
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.good-price::before{
+  content: '积分:';
+  color: #101010;
+  font-size: 28rpx;
+  margin-right: 10rpx;
+}

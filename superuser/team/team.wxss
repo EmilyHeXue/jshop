@@ -1,0 +1,32 @@
+.header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+}
+.header-item{
+  width: 300rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 28rpx;
+  box-sizing: border-box;
+}
+
+.search{
+  position: relative;
+  margin: 10rpx 26rpx 16rpx 26rpx;
+}
+.search image{
+  position: absolute;
+  left: 40rpx;
+  top: 18rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+.search input{
+  background: #F4F4F4;
+  border-radius: 50rpx;
+  height: 78rpx;
+  padding-left: 100rpx;
+}

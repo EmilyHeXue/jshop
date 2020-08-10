@@ -1,0 +1,159 @@
+<official-account style='width:300px; height:100px;'></official-account>
+
+<view  class='close_pic_url'>
+  <image lazy-load class='close_pic_url-item' mode='widthFix' hidden='{{is_bool}}' src='{{close_pic_url}}'></image>
+</view>
+<BuyPrompt leave='{{leave}}' />
+
+<NewUserVoucher isLogin='{{isLogin}}' flag='{{is_new_people}}' bind:getVoucherAll='getVoucherAll' />
+<openAdvertisement/>
+<AddIcon wx:if='{{my_mini_info}}' />
+<view class="wrap" style='background: {{indexBg}};'>
+	<block wx:for="{{dataList}}"  wx:key="item">
+	<!-- <block wx:for="{{defaultModels}}" wx:key="item" wx:for-item="item" wx:for-index="index"> -->
+		<!-- 轮播图 -->
+		<block wx:if="{{item.type==1}}">
+			<Banner data='{{item}}'/>
+		</block>
+		<!-- 广告位 -->
+		<block wx:if="{{item.type==2}}">
+			<Advertising data='{{item}}'/>
+		</block>
+		<!-- 宫格导航 -->
+		<block wx:if="{{item.type==3}}">
+			<Navigation data='{{item}}'/>
+		</block>
+		<!-- 标题 -->
+		<block wx:if="{{item.type==4}}">
+      <Title data='{{item}}'/>
+		</block>
+		<!-- 图文集 -->
+		<block wx:if="{{item.type==5}}">
+      <Glossary data='{{item}}'/>
+		</block>
+		<!-- 图片列表 -->
+		<block wx:if="{{item.type==6}}">
+      <ImageList data='{{item}}'/>
+		</block>
+		<!-- 三方图 -->
+		<block wx:if="{{item.type==7}}">
+			<ThreeImage data='{{item}}'/>
+		</block>
+		<!-- 四方图 -->
+		<block wx:if="{{item.type==8}}">
+			<FourImage data='{{item}}'/>
+		</block>
+
+
+		<!-- 视频 -->
+		<block wx:if="{{item.type==9}}">
+      <VideoItem data="{{item}}"/>
+		</block>
+		<!-- 音频 -->
+		<block wx:if="{{item.type==10}}">
+      <AudioItem data="{{item}}" leave='{{leave}}'/>
+		</block>
+		<!-- 富文本 -->
+		<block wx:if="{{item.type==11}}">
+      <RichText data='{{item}}'/>
+		</block>
+		<!-- 辅助空白 -->
+		<block wx:if="{{item.type==12}}">
+			<White data='{{item}}' />
+		</block>
+		<!-- 分割线 -->
+		<block wx:if="{{item.type==13}}">
+			<Line data='{{item}}' />
+		</block>
+		<!-- 悬浮图标 -->
+		<block wx:if="{{item.type==14}}">
+			<FixedIcon data='{{item}}' />
+		</block>
+		<!-- 按钮 -->
+		<block wx:if="{{item.type==15}}">
+      <ButtonItem data='{{item}}' />
+		</block>
+		<!-- 表单 -->
+		<block wx:if="{{item.type==16}}">
+			<view class="view-chooseForm">
+				<button class="btn">
+					{{item.details.text}}
+				</button>
+			</view>
+		</block>
+		<!-- 客服 -->
+		<block wx:if="{{item.type==17}}">
+			<CustomerService data='{{item}}' />
+		</block>
+		<!-- 公告 -->
+		<block wx:if="{{item.type==18}}">
+      <Announcement data='{{item}}' />
+		</block>
+		<!-- 流量主 -->
+		<block wx:if="{{item.type==19}}">
+			<view class="view-flowMaster" style="height:{{item.details.boxHeight}}px">
+				<image lazy-load src="/images/uc-banner2.png" mode="widthFix"></image>
+			</view>
+		</block>
+		<!-- 商品集 -->
+		<block wx:if="{{item.type==20}}">
+      <GoodList data='{{item}}' leave='{{leave}}' /> 
+		</block>
+		<!-- 产品集 -->
+		<block wx:if="{{item.type==21}}">
+      <ProductList data='{{item}}'/>
+		</block>
+		<!-- 搜索框 -->
+		<block wx:if="{{item.type==22}}">
+      <Search data='{{item}}' />
+		</block>
+		<!-- 招聘 -->
+		<block wx:if="{{item.type==23}}">
+      <Jobs data='{{item}}'/>
+		</block>
+		<!-- 留言板 -->
+		<block wx:if="{{item.type==24}}">
+      <Message data='{{item}}'/>
+		</block>
+		<!-- 门店 -->
+		<block wx:if="{{item.type==25}}">
+      <Stores data='{{item}}'/>
+		</block>
+		<!-- 位置 -->
+		<block wx:if="{{item.type==26}}">
+      <Address data='{{item}}'/>
+		</block>
+    <!-- 红包 -->
+    <block wx:if="{{item.type==27}}">
+      <Coupons data='{{item}}' bg='{{bg}}'/>
+		</block>
+    <!-- 商品分类 -->
+    <block wx:if="{{item.type==28}}">
+      <ClassGoods leave='{{leave}}' bindcartUpdata='cartUpdata' reload='{{reload}}' bind:loading="changLoading" background='{{background}}' pageFlag='{{page}}' data='{{item}}' />
+		</block>
+    <!--团长组件-->
+    <block wx:if='{{item.type == 29}}'>
+      <Group 
+        reload='{{reload}}'
+        id='group' 
+        leader_id='{{leader_id}}' 
+        isLogin='{{isLogin}}' 
+        bind:is_bool='showColose' 
+        data='{{item}}'
+        groupFlag='{{groupFlag}}'/>
+    </block>
+    <!--秒杀组件-->
+    <block wx:if='{{item.type == 30}}'>
+      <absoluteTitle data='{{item}}' />
+    </block>
+	</block>
+
+<view class='loading' wx:if='{{loading}}'>
+  <image lazy-load class='loading-img' src='/images/index/loading.png'></image>
+</view>
+<view wx:else class='gobottom'>~已经到底了~</view>
+</view>
+
+
+
+<footer cartUpdata='{{cartUpdata}}' bind:background='setbg' footer='{{footer}}'></footer>

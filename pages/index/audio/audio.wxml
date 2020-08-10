@@ -1,0 +1,13 @@
+<view class="audio">
+  <view class="item">
+    <view class="left">
+      <image lazy-load class="poster" src="{{data.details.imgs[0].src}}" mode="aspectFill"></image>
+      <image lazy-load wx:if='{{status === false}}' class="btn-play" bindtap='todo' src="/images/index/audio/play.png" mode="widthFix"></image>
+      <image lazy-load wx:else class="btn-play" bindtap='stop' src="/images/index/audio/stop.png" mode="widthFix"></image>
+    </view>
+    <view class="right">
+      <view class="txt1">{{data.details.imgs[0].name}} <text class="time">{{time}}</text></view>
+      <view class="txt2">{{data.details.imgs[0].author}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,67 @@
+<form report-submit bindsubmit='shopBalances'>
+  <view class='withdrawal'>
+    <view class='withdrawal-item'>
+      <view class='title'>提现</view>
+      <view class='input'>
+        ￥
+        <input 
+          name='money' 
+          value='{{money}}' 
+          class='input-item' 
+          bindinput='calculate'
+          placeholder='请输入提现金额' 
+          placeholder-class='placeholder'>
+        </input>
+        <view class='input-all' bindtap='all_price'>全部</view>
+      </view>
+      <view class='remark'>
+        <view>可提现佣金￥{{balance}}</view>
+        <view>手续费￥{{poundage}}</view>
+      </view>
+
+      <view class='content'>
+        <view class='left'>提现到</view>
+        <view class='right'>
+          <view class='right-top'>
+            <radio-group name='send_type' bindchange="radioChange">
+              <label wx:for='{{list}}' wx:key='{{list.value}}'>
+                <radio value='{{item.value}}' checked='{{item.value == bindValue}}'>{{item.name}}</radio>
+              </label>
+            </radio-group>
+          </view>
+          <view class='right-bottom' wx:if='{{bindValue == 2}}'>
+            <view class='right-bottom-item'>
+              <label class='right-bottom-label'>姓名:</label>
+              <input name='realname' value='{{alipay_name}}' class='right-bottom-input' placeholder='请输入姓名'>请输入姓名</input>
+            </view>
+            <view class='right-bottom-item'>
+              <label class='right-bottom-label'>账号:</label>
+              <input name='pay_number' value='{{alipay_account}}' class='right-bottom-input' placeholder='请输入支付宝账号'></input>
+            </view>
+          </view>
+
+          <view class='right-bottom' wx:if='{{bindValue == 3}}'>
+            <view class='right-bottom-item'>
+              <label class='right-bottom-label'>姓名:</label>
+              <input name='realname' value='{{name_of_cardholder}}' class='right-bottom-input' placeholder='请输入姓名'>请输入姓名</input>
+            </view>
+            <view class='right-bottom-item'>
+              <label class='right-bottom-label'>卡号:</label>
+              <input name='pay_number' value='{{bank_card_id}}' class='right-bottom-input' placeholder='请输入银行卡号'></input>
+            </view>
+            <view class='right-bottom-item'>
+              <label class='right-bottom-label'>银行:</label>
+              <input name='pay_bank' value='{{bank_card_branch}}' class='right-bottom-input' placeholder='请输入银行名称'></input>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class='btn'>
+        <button form-type='submit' class='btn-item' style='color:{{background}}; border: 1px solid {{background}};'>
+          申请提现
+        </button>
+      </view>
+    </view>
+  </view>
+</form>

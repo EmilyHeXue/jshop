@@ -1,0 +1,16 @@
+<view class='search'>
+    <input class='search-input' value='{{text}}' placeholder='搜索' bindinput='writing'></input>
+    <image lazy-load class='search-image' src='/images/search/search/search.png'></image>
+    <image lazy-load class='search-image-right' src='/images/search/search/del.png' catchtap='deltext'></image>
+    <view class='search-btn' catchtap='getData'>搜索</view>
+</view>
+<view animation='{{animation}}' class='hide'>
+  <searchData 
+    data='{{data}}'
+    background='{{background}}'
+    bind:changData='getData'
+    style='background:red'
+  ></searchData>
+</view>
+
+<footer bindshow='show'></footer>

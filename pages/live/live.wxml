@@ -1,0 +1,62 @@
+<view style='padding-bottom: {{foorterFlag ? "60px" : "0px"}}'>
+<view wx:for='{{list}}'  wx:key='roomid'>
+  <navigator wx:if='{{item.replay.length == 0}}' url="plugin-private://{{appid}}/pages/live-player-plugin?room_id={{item.roomid}}"  class="view">
+    <view class="left">
+      <view class="live-status">
+        <view class="live-status-item" wx:if='{{item.liveStatus == 102}}'>
+          <view class="live-status-label">预告</view>
+          <view class="live-status-date">{{item.date}}</view>
+        </view>
+        <view class="live-status-item" wx:elif='{{item.liveStatus == 101}}'>
+          <image lazy-load src='/images/live/in.gif'></image>
+          <view class="live-status-date">正在直播</view>
+        </view>
+        <view class="live-status-item isover" wx:else>{{item.date}}</view>
+      </view>
+      <image lazy-load mode='aspectFill' class="left-icon" src='{{item.cover_img}}'></image>
+    </view>
+    
+    <view class="right">
+      <view class="title">{{item.name}}</view>
+      <view class="flex">
+        <image lazy-load class="avatar" src='{{item.anchor_img}}'></image>
+        <view class="name">{{item.anchor_name}}</view>
+      </view>
+      <view class="right-bottom">
+        <view wx:for='{{item.goods}}' class="img">
+          <image lazy-load class="img-icon" src='{{item.cover_img}}'></image>
+          <view class="price">￥{{item.price / 100}}</view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+  <!--回放视频-->
+  <view wx:else url="plugin-private://{{appid}}/pages/live-player-plugin?room_id={{item.roomid}}"  class="view">
+    <view class="left">
+      <view class="live-status">
+        <view class="live-status-item isover">{{item.date}}</view>
+      </view>
+      <image lazy-load src='/images/live/player.png' class='player'></image>
+      <video wx:if='{{videoIndex == index}}'  poster='{{item.cover_img}}' class="left-icon" src='{{item.replay[0].media_url}}'></video>
+      <image lazy-load bindtap="bindvideoIndex" data-index='{{index}}' wx:else  mode='aspectFill' class="left-icon" src='{{item.cover_img}}'></image>
+      
+    </view>
+    
+    <view class="right">
+      <view class="title">{{item.name}}</view>
+      <view class="flex">
+        <image lazy-load class="avatar" src='{{item.anchor_img}}'></image>
+        <view class="name">{{item.anchor_name}}</view>
+      </view>
+      <navigator class="right-bottom" url="plugin-private://{{appid}}/pages/live-player-plugin?room_id={{item.roomid}}">
+        <view wx:for='{{item.goods}}' class="img">
+          <image lazy-load class="img-icon" src='{{item.cover_img}}'></image>
+          <view class="price">￥{{item.price / 100}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+<footer bindshow='show'/>
+</view>

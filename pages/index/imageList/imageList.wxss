@@ -1,0 +1,66 @@
+.view-bannerList{
+  
+}
+
+.list{
+  display: grid;
+  justify-content: flex-start;
+  align-items: flex-start;
+  grid-row-gap: 10rpx;
+  grid-column-gap: 10rpx;
+  margin: 20rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  grid-template-columns: 1fr;
+}
+.list2{
+  grid-template-columns: 1fr 1fr;
+}
+.list3{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.list4{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.txt{
+  line-height:1.5em;
+  text-align:flex-start;
+  padding-top:5px;
+  font-size:14px;
+}
+.item image{
+  vertical-align: bottom;
+  width: 100%;
+}
+.style1{
+  width: 100%;
+}
+
+/**样式2**/
+.style2{
+  width: 100%;
+}
+
+.style2 image{
+  width: 100%;
+}
+
+/**样式3**/
+.style3{
+  width: 100%;
+}
+
+.style3 image{
+  width: 100%;
+}
+
+/**样式4**/
+.style4{
+  width: 100%;
+}
+
+.style4 image{
+  width: 100%;
+}

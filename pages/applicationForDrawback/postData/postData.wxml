@@ -1,0 +1,27 @@
+<!--pages/applicationForDrawback/postData/postData.wxml-->
+
+<!--类型选择-->
+<view>
+  <view class="picker">
+    <view class='picker-label'>退款方式</view>
+    <view class='picker-value'>{{array[status].name}}</view>
+  </view>
+</view>
+
+<!---文本域+图片选择-->
+<view class='content'>
+  <view class='content-header'>问题描述</view>
+  <textarea bindinput='changeAfterRemark' value='{{after_remark}}' placeholder='请描述申请售后服务的具体原因,文字为必填,图片最多可上传五张' class='content-textarea'></textarea>
+  <view class='content-img'>
+    <block wx:for='{{imgData}}' wx:key='{{index}}'>
+      <image lazy-load data-index='{{index}}' class='content-img-item' src='{{item}}'/>
+    </block>
+    <view wx:if='{{imgData.length != 5}}' class='content-img-item'>
+      <image lazy-load bindtap='chooseImg'  class='content-logo' src='/images/png/picture.png'/>
+    </view>
+  </view>
+</view>
+
+<view class='footer'>
+  <view class='btn' style='background: {{background}}' bindtap='postReturnOrder'>提交</view>
+</view>

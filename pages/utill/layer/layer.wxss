@@ -1,0 +1,16 @@
+mask{
+  width: 750rpx;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layer{
+  position: absolute;
+  top: 20vh;
+  left: 87rpx;
+  width: 576rpx;
+}

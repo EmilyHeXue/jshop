@@ -1,0 +1,86 @@
+.banner{
+  width: 750rpx;
+  height: 375rpx;
+  background: rosybrown;
+  margin-bottom: 20rpx;
+}
+
+.form-item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  padding-bottom: 30rpx;
+}
+
+.form-label{
+  padding: 12rpx 46rpx;
+  padding-right: 30rpx;
+  text-align: right;
+  width: 128rpx;
+  font-size: 32rpx;
+}
+.form-input{
+  flex: 1;
+  padding-right: 46rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  position: relative;
+}
+.form-input::after{
+  content: '';
+  width: 160rpx;
+}
+input[type=text]{
+  width: 100%;
+  height: 66rpx;
+  line-height: 40rpx;
+  border: 1px solid #eee;
+  font-size: 30rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.textarea{
+  width: 100%;
+  line-height: 40rpx;
+  border: 1px solid #eee;
+  font-size: 30rpx;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  height: 160rpx;
+}
+.radio-group{
+  font-size: 30rpx;
+}
+.radio{
+  line-height:66rpx;
+  height: 66rpx;
+  margin-right: 30rpx;
+}
+.add{
+  border: 1px solid #eee;
+  margin-bottom: 4rpx;
+  width: 160rpx;
+  height: 160rpx;
+}
+.add-img{
+  width: 160rpx;
+  height: 160rpx;
+}
+.instructions{
+  flex: 1;
+  position: absolute;
+  left: 180rpx;
+  top: 27rpx;
+  width: 320rpx;
+  font-size: 25rpx;
+  color: #777;
+}
+
+.btn{
+  width: 600rpx;
+  border-radius: 50rpx;
+  color: #ffffff;
+  margin-bottom: 30rpx;
+}

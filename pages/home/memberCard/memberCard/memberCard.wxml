@@ -1,0 +1,55 @@
+<view>
+  <view class='header'>
+    <view class='card'>
+      <view class='card-item'>
+        <image lazy-load class='card-icon' src='/images/memberCard/level.png'></image>
+        <view class='card-level'>普通会员</view>
+        <view class='card-content'>{{text}}</view>
+      </view>
+    </view>
+    
+    <view class='menu'>
+      <view class='menu-item'>
+        <image lazy-load class='menu-item-icon' src='/images/memberCard/one.png'></image>
+        <view class='menu-item-text'>优惠价格</view>
+      </view>
+
+      <view class='menu-item'>
+        <image lazy-load class='menu-item-icon' src='/images/memberCard/two.png'></image>
+        <view class='menu-item-text'>服务专享</view>
+      </view>
+
+      <view class='menu-item'>
+        <image lazy-load class='menu-item-icon' src='/images/memberCard/three.png'></image>
+        <view class='menu-item-text'>每月送券</view>
+      </view>
+
+      <view class='menu-item'>
+        <image lazy-load class='menu-item-icon' src='/images/memberCard/four.png'></image>
+        <view class='menu-item-text'>积分加倍</view>
+      </view>
+    </view>
+  </view>
+  <memberCardType bind:props='getCard'/>
+
+  <view class='btn'>
+    <button class='btn-item' catchtap='downOrder'>立即开通会员</button>
+  </view>
+  <view class='bottom'>
+    <view class='bottom-header'>会员说明</view>
+    <view class='bottom-content'>
+      <view class='bottom-content-item'>
+        <view class='item-header one'>关于有效期</view>
+        <view class='item-content'>会员支付成功后次日起开始计算, 有效期内购买, 会在原来的基础上累计时间</view>
+      </view>
+      <view class='bottom-content-item'>
+        <view class='item-header two'>关于退款</view>
+        <view class='item-content'>会员卡购买后不支持退款, 还请理解</view>
+      </view>
+      <view class='bottom-content-item'>
+        <view class='item-header three'>使用地区</view>
+        <view class='item-content'>会员卡购买后本小程序内所有城市通用</view>
+      </view>
+    </view>
+  </view>
+</view>

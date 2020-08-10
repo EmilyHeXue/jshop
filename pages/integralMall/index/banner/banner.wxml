@@ -1,0 +1,12 @@
+<view class="view-banner">
+  <swiper 
+    class="swiper" 
+    autoplay
+    circular >
+    <block wx:for="{{data}}" wx:key="item">
+      <swiper-item class='style'>
+        <image lazy-load src="{{item.pic_url}}" catchtap='go' data-link='{{item.id}}' class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

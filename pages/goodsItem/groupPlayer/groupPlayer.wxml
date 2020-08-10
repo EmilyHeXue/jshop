@@ -1,0 +1,27 @@
+<view class='groupPlayer'>
+  <view class='groupPlayer-header'>
+    <view class='groupPlayer-header-item'>拼团玩法</view>
+    <navigator url='/pages/goodsItem/groupRules/groupRules' class='groupPlayer-header-more'>
+      <view class='groupPlayer-header-more-text'>查看规则</view>
+      <image lazy-load class='groupPlayer-header-more-icon' src="/images/goodsItem/group/right.png"></image>
+    </navigator>
+  </view>
+  <view class='groupPlayer-content'>
+    <view class='groupPlayer-content-item'>
+      <image lazy-load class='item-icon' src="/images/goodsItem/group/bind.png"></image>
+      <view class='item-text'>选择喜欢商品</view>
+    </view>
+    <view class='groupPlayer-content-item'>
+      <image lazy-load class='item-icon' src="/images/goodsItem/group/ok.png"></image>
+      <view class='item-text'>支付开团或参团</view>
+    </view>
+    <view class='groupPlayer-content-item'>
+      <image lazy-load class='item-icon' src="/images/goodsItem/group/ok.png"></image>
+      <view class='item-text'>发给好友来参团</view>
+    </view>
+    <view class='groupPlayer-content-item'>
+      <image lazy-load class='item-icon' src="/images/goodsItem/group/ok.png"></image>
+      <view class='item-text'>达到人数拼团成功</view>
+    </view>
+  </view>
+</view>

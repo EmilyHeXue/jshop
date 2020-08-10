@@ -1,0 +1,33 @@
+<!--pages/shopCart/cartData/cartData.wxml-->
+<scroll-view scroll-y class='cartData'>
+  <block wx:for='{{cartData}}' wx:key='{{index}}'>
+    <view class='cartData-item'>
+      <checkbox data-index='{{index}}' checked="{{item.flag}}" bindtap='change'/>
+      <image lazy-load class='cartData-img' src='{{item.pic_url}}'/>
+      <view class='cartData-content'>
+        <view class='cartData-name'>{{item.goods_name}}</view>
+        <view class='cartData-property'>{{item.property1_name}},{{item.property2_name}}</view>
+        <view class='space-between'>
+          <view class='cartData-price'>￥{{item.price}}</view>
+          <view class='cartData-tabbar'>
+            <view 
+              class='cartData-tabbar-btn' 
+              data-index='{{index}}' 
+              data-stock_id='{{item.stock_id}}' 
+              data-goods_id='{{item.goods_id}}' 
+              data-type='reduce' 
+              bindtap='changeCartData'>-</view>
+            <view class='cartData-tabbar-nums'>{{item.number}}</view>
+            <view 
+              class='cartData-tabbar-btn' 
+              data-index='{{index}}' 
+              data-stock_id='{{item.stock_id}}' 
+              data-goods_id='{{item.goods_id}}' 
+              date-type='add' 
+              bindtap='changeCartData'>+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</scroll-view>

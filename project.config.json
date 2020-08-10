@@ -1,0 +1,649 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"scopeDataCheck": false,
+		"coverView": true,
+		"es6": true,
+		"postcss": false,
+		"compileHotReLoad": false,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"autoAudits": false,
+		"newFeature": true,
+		"uglifyFileName": true,
+		"uploadWithSourceMap": true,
+		"useIsolateContext": true,
+		"nodeModules": false,
+		"enhance": true,
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false,
+		"showShadowRootInWxmlPanel": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"bundle": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.11.1",
+	"appid": "wx6b1fbdde960889a7",
+	"projectname": "%E7%9F%A5%E4%B9%B0%E7%BD%91%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"cloudfunctionTemplateRoot": "",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "个人中心",
+					"pathName": "pages/home/my/my",
+					"query": "",
+					"scene": 1001
+				},
+				{
+					"id": -1,
+					"name": "收货地址",
+					"pathName": "pages/home/address/address",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "添加收货地址",
+					"pathName": "pages/home/addAddress/addAddress",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "商品详情",
+					"pathName": "pages/goodsItem/goodsItem/goodsItem",
+					"query": "scene=u_id%3D6%26l_id%3d6%26id%3d119",
+					"scene": 1011
+				},
+				{
+					"id": -1,
+					"name": "统一下单",
+					"pathName": "pages/createOrder/createOrder/createOrder",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "购物车",
+					"pathName": "pages/shopCart/shopCart/shopCart",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单列表",
+					"pathName": "pages/order/order/order",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "物流信息",
+					"pathName": "pages/logisticsInformation/logisticsInformation/logisticsInformation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "申请退款",
+					"pathName": "pages/applicationForDrawback/applicationForDrawback/applicationForDrawback",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "售后订单列表",
+					"pathName": "pages/returnOrder/returnOrder/returnOrder",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "红包",
+					"pathName": "pages/home/coupons/coupons/coupons",
+					"query": ""
+				},
+				{
+					"id": 11,
+					"name": "订单详情",
+					"pathName": "pages/orderItem/orderItem/orderItem",
+					"query": "order_sn=202004261341307316",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "优惠券详情",
+					"pathName": "pages/home/couponItem/couponItem",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "领券中心",
+					"pathName": "pages/home/couponRedemptionCenter/couponRedemptionCenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "评价订单",
+					"pathName": "pages/comments/comments/comments",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品评价",
+					"pathName": "pages/goodsItem/commentsDetail/commentsDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/search/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 17,
+					"name": "支付完成",
+					"pathName": "pages/payOk/payOk/payOk",
+					"query": "order_sn=t_202006120925561070",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "签到完成",
+					"pathName": "pages/clockIn/clockIned/clockIned",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "签到首页",
+					"pathName": "pages/clockIn/clockIn/clockIn",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "未签到",
+					"pathName": "pages/clockIn/clockIning/clockInging",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 21,
+					"name": "商品分类",
+					"pathName": "pages/goodsClassify/goodsClassify/goodsClassify",
+					"query": "id=983",
+					"scene": null
+				},
+				{
+					"id": 22,
+					"name": "申请团长",
+					"pathName": "group/creategroup/creategroup",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 23,
+					"name": "团长中心",
+					"pathName": "group/groupcenter/groupcenter/groupcenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 24,
+					"name": "销售额",
+					"pathName": "group/groupsales/groupsales/groupsales",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "团员订单",
+					"pathName": "group/groupmenbersorder/groupmenbersorder/groupmenbersorder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "团长资料",
+					"pathName": "group/groupInformation/groupInformation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "团长切换",
+					"pathName": "group/changegroup/changegroup/changegroup",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "团长订单",
+					"pathName": "group/grouporder/grouporder/grouporder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "旗下团长",
+					"pathName": "group/itsgroup/itsgroup/itsgrouop",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提款",
+					"pathName": "group/withdrawal/withdrawal",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "佣金流水",
+					"pathName": "group/groupcommissionwater/groupcommissionwater/groupcommissionwater",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品分类",
+					"pathName": "pages/classification/classification/classification",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 33,
+					"name": "商品购买人数",
+					"pathName": "pages/goodsItem/buypeopleDetail/buypeopleDetail/buypeopleDetail",
+					"query": "id=172",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "宣传单页",
+					"pathName": "group/groupbrochure/groupbrochure",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "供货商宣传页",
+					"pathName": "pages/supplier/supplierbrochure/supplierbrochure",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "供货商申请页",
+					"pathName": "pages/supplier/supplierform/supplerform",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "秒杀活动",
+					"pathName": "pages/seckill/seckill/seckill",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 38,
+					"name": "即将成团",
+					"pathName": "pages/spellGroup/willGroup/willGroup",
+					"query": "id=53&order_sn=202006061459415622",
+					"scene": null
+				},
+				{
+					"id": 39,
+					"name": "去拼团",
+					"pathName": "pages/spellGroup/goGroup/goGroup",
+					"query": "group_id=53&order_sn=202006061459415622",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "拼团成功",
+					"pathName": "pages/spellGroup/okGroup/okGroup",
+					"query": "id=24&order_sn=201908061852281516",
+					"scene": null
+				},
+				{
+					"id": 41,
+					"name": "拼团订单",
+					"pathName": "pages/spellGroup/groupOrderList/groupOrderList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "拼团失败",
+					"pathName": "pages/spellGroup/errGroup/errGroup",
+					"query": "id=24&order_sn=201908061852281516",
+					"scene": null
+				},
+				{
+					"id": 43,
+					"name": "首页",
+					"pathName": "pages/index/index/index",
+					"query": "scene=leader_id%3D444%26id%3D444",
+					"scene": null
+				},
+				{
+					"id": 44,
+					"name": "运气红包",
+					"pathName": "pages/luckVoucher/luckVoucher",
+					"query": "order_sn=t_202004251659384968",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "资质规则",
+					"pathName": "pages/home/qualification/qualification",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/login2/login2",
+					"query": "id=180&user_id=145&leader_id=145",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "拼团规则",
+					"pathName": "pages/goodsItem/groupRules/groupRules",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "团长等级",
+					"pathName": "group/grouplevel/grouplevel",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 49,
+					"name": "砍价首页",
+					"pathName": "bargaining/pages/bargaining/Index/Index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的砍价",
+					"pathName": "bargaining/pages/myBargaining/myBargaining",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 51,
+					"name": "砍价商品详情",
+					"pathName": "bargaining/pages/goodItem/goodItem/goodItem",
+					"query": "id=905",
+					"scene": null
+				},
+				{
+					"id": 52,
+					"name": "砍价详情(购买人)",
+					"pathName": "bargaining/pages/buyDetail/buyDetail",
+					"query": "id=3",
+					"scene": null
+				},
+				{
+					"id": 53,
+					"name": "砍价详情(帮砍人)",
+					"pathName": "bargaining/pages/helpDetail/helpDetail",
+					"query": "id=23",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "砍价规则",
+					"pathName": "bargaining/pages/rules/rules",
+					"query": "id=905",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "推客中心",
+					"pathName": "promoter/promotercenter/promotercenter/promotercenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "推客订单",
+					"pathName": "promoter/promoteOrder/promoteOrder/promoteOrder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 57,
+					"name": "旗下团员",
+					"pathName": "promoter/promoterUser/promoterUser",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分享",
+					"pathName": "pages/share/share",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "积分商城",
+					"pathName": "pages/integralMall/index/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index/index",
+					"pathName": "pages/index/index/index",
+					"query": "id=480&leader_id=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "余额支付",
+					"pathName": "pages/home/balancePay/balancePay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 62,
+					"name": "付款记录",
+					"pathName": "pages/home/blancePayList/blancePayList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "超级会员",
+					"pathName": "superuser/userinfo/userinfo/userinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "推广订单",
+					"pathName": "superuser/superuserorder/superuserorder/superuserorder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 65,
+					"name": "superuser/userinfosales/userinfosales/userinfosales",
+					"pathName": "superuser/userinfosales/userinfosales/userinfosales",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的客户",
+					"pathName": "superuser/Customer/Customer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的团队",
+					"pathName": "superuser/team/team",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 68,
+					"name": "直播列表",
+					"pathName": "pages/live/live",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "积分商城",
+					"pathName": "pages/integralMall/index/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 70,
+					"name": "门店列表",
+					"pathName": "supplier/list/list",
+					"query": "id=123",
+					"scene": null
+				},
+				{
+					"id": 71,
+					"name": "门店首页",
+					"pathName": "supplier/index/index",
+					"query": "id=135",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现",
+					"pathName": "group/withdrawal/withdrawal",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "拼团首页",
+					"pathName": "assemble/list/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新人专享",
+					"pathName": "newUser/list/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 75,
+					"name": "付款页面",
+					"pathName": "pages/gopay/gopay",
+					"query": "order_sn=t_202004261341307723",
+					"scene": null
+				},
+				{
+					"id": 76,
+					"name": "接龙活动详情",
+					"pathName": "solitaire/activity/activity",
+					"query": "id=13",
+					"scene": null
+				},
+				{
+					"id": 77,
+					"name": "接龙评论列表",
+					"pathName": "solitaire/commentlist/commentlist",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": 78,
+					"name": "接龙分享",
+					"pathName": "solitaire/share/share",
+					"query": "id=1&userid=1278&leader_id=444",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的接龙订单分享",
+					"pathName": "solitaire/mysolitaireshare/mysolitaireshare",
+					"query": "id=1&userid=1278&leader_id=444",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/level/level",
+					"pathName": "pages/home/level/level",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "帮助中心",
+					"pathName": "pages/home/help/help",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "申请团长",
+					"pathName": "group/creategroup/creategroup",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新增收货地址",
+					"pathName": "pages/home/addAddress/addAddress",
+					"scene": null
+				}
+			]
+		}
+	}
+}

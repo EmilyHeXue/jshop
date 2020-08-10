@@ -1,0 +1,19 @@
+.orderItemOrder{
+  background:#fff;
+  margin-top:2vw;
+  padding:2vw;
+}
+.orderItemOrder-item{
+  font-size:3vw;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  margin:2vw 0;
+  color:#555;
+}
+.orderItemOrder-item-left{
+  width:20vw;
+}
+.orderItemOrder-item-right{
+  
+}

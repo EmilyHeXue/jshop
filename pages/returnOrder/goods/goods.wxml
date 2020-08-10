@@ -1,0 +1,16 @@
+<!--pages/returnOrder/goods/goods.wxml-->
+<view class='goods'>
+  <block wx:for='{{List}}' wx:key='{{index}}'>
+    <view class='goods-item'>
+      <image lazy-load class='goods-item-img' src='{{item.pic_url}}'/>
+      <view class='goods-item-center'>
+        <view class='goods-item-name'>{{item.name}}</view>
+        <view class='goods-item-property'>{{item.property1_name}},{{item.property2_name}}</view>
+      </view>
+      <view class='goods-item-right'>
+        <view class='goods-item-price'>￥{{item.price}}</view>
+        <view class='goods-item-number'>x{{item.number}}</view>
+      </view>
+    </view>
+  </block>
+</view>

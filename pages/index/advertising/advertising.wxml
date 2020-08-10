@@ -1,0 +1,5 @@
+<view class="advertising" style="height:{{data.details.boxHeight}}px">
+    <block wx:for="{{data.details.imgs}}" wx:key="itemImg" wx:for-item="itemImg" wx:for-index="itemIndex">
+      <image lazy-load catchtap='go' data-link='{{itemImg.link}}' src="{{itemImg.src}}" style="width:{{itemImg.w}}" mode="widthFix"></image>
+    </block>
+</view>

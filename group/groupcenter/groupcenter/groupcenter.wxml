@@ -1,0 +1,116 @@
+<view class="uc-wrap uc-user">
+	
+
+	<view class="panel">
+		<image src='/group/images/indexbg.png' mode='widthFix' style="width: 100%; height: 100%; position: absolute; z-index: 0; left: 0; top: 0;"></image>
+		<view class="user">
+			<view class="face-box"><image src="{{avatar}}"></image></view>
+			<view class="center">
+				<view class="name">{{leader.realname}}</view>
+				<view class="txt">UID：{{leader.uid}}</view>
+			</view>
+			<view class="tag">{{leader.leader_level}}</view>
+		</view>
+		<view class="info">
+			<navigator class="item" url="">
+				<view class="number">{{data.stay_settlement}}</view>
+				<view class="txt">待结算</view>
+			</navigator>
+			<navigator class="item" style='margin-right: 70rpx;' url="">
+				<view class="number">{{balance}}</view>
+				<view class="txt">待提现</view>
+			</navigator>
+			<navigator   url='/group/withdrawal/withdrawal?type=1'>
+				<button class="uc-btn" style="float: right;" hover-class="none">提现</button>
+			</navigator>
+		</view>
+	</view>
+
+	<view class="detail">
+		<view class="title">数据概况</view>
+		<view class="con">
+			<view class="item">
+				<view class="txt1">{{data.today_money}}</view>
+				<view class="txt2">今日销售额</view>
+			</view>
+			<view class="item">
+				<view class="txt1">{{data.today_number}}</view>
+				<view class="txt2">今日订单</view>
+			</view>
+			<view class="item">
+				<view class="txt1">{{data.today_leader_money}}</view>
+				<view class="txt2">今日收入</view>
+			</view>
+			<view class="item">
+				<view class="txt1">{{data.total_money}}</view>
+				<view class="txt2">总销售额</view>
+			</view>
+			<view class="item">
+				<view class="txt1">{{data.total_number}}</view>
+				<view class="txt2">总订单</view>
+			</view>
+			<view class="item">
+				<view class="txt1">{{data.total_leader_money || 0}}</view>
+				<view class="txt2">总收入</view>
+			</view>
+		</view>
+	</view>
+	<view class="two">
+		<navigator class="item" url="/group/groupmenbersorder/groupmenbersorder/groupmenbersorder?id=4">
+			<view class="txt1">团长收货</view>
+			<view class="txt2 uc-arrow">去签收</view>
+		</navigator>
+		<view class="item" catchtap="showLayer">
+			<view class="txt1">取货码核销</view>
+			<view class="txt2 uc-arrow">去核销</view>
+		</view>
+	</view>
+
+	<view class="menu">
+		<navigator class="item" url="/group/groupmenbersorder/groupmenbersorder/groupmenbersorder?id=3"> 
+			<image src="/group/images/icon141-1.png" mode="widthFix" class="uc-icon80"></image> 
+			待发货 
+			<text class="dot">{{data.stay_delivery_goods}}</text> 
+		</navigator>
+		<navigator class="item" url="/group/groupmenbersorder/groupmenbersorder/groupmenbersorder?id=4"> 
+			<image src="/group/images/icon141-2.png" mode="widthFix" class="uc-icon80"></image> 
+			配送中 
+			<text class="dot">{{data.stay_receipt}}</text> 
+		</navigator>
+		<navigator class="item" url="/group/groupmenbersorder/groupmenbersorder/groupmenbersorder?id=5"> 
+			<image src="/group/images/icon141-3.png" mode="widthFix" class="uc-icon80"></image> 
+			待取货 
+			<text class="dot">{{data.stay_take_delivery}}</text> 
+		</navigator>
+		<navigator class="item" url="/group/groupmenbersorder/groupmenbersorder/groupmenbersorder?id=1"> 
+			<image src="/group/images/icon141-4.png" mode="widthFix" class="uc-icon80"></image> 
+			全部
+		</navigator>
+		<navigator class="item" url="/group/groupcommissionwater/groupcommissionwater/groupcommissionwater"> 
+			<image src="/group/images/icon141-5.png" mode="widthFix" class="uc-icon80"></image> 
+			佣金流水 
+		</navigator>
+		<navigator class="item" url="/group/groupsales/groupsales/groupsales"> <image src="/group/images/icon141-6.png" mode="widthFix" class="uc-icon80"></image> 销售统计 </navigator>
+		<navigator class="item" url="/promoter/promoterUser/promoterUser"> <image src="/group/images/icon141-7.png" mode="widthFix" class="uc-icon80"></image> 团员 </navigator>
+	</view>
+
+	<view class="operate">
+		<button catchtap="toscan" class="uc-btn" hover-class="none">
+			<image src="/group/images/scan.png" mode="widthFix" class="uc-icon50"></image>
+			扫码核销
+		</button>
+	</view>
+</view>
+
+
+<view wx:if='{{codeLayer}}' catchtap="showLayer" class="layer">
+	<view catchtap class="content">
+		<view>输入取货码</view>
+		<view>
+			<input bindblur="changIndex" class="codetext"></input>
+		</view>
+		<view>
+			<button catchtap="codetoget" class="btn">确认取货</button>
+		</view>
+	</view>
+</view>

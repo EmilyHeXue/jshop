@@ -1,0 +1,62 @@
+.seckillScroll{
+  margin: 30rpx;
+  background: #fff;
+  padding: 20rpx 30rpx;
+  border-radius: 20rpx;
+}
+.head{
+  display: flex;
+  align-items: flex-end;
+}
+.head-name{
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.head-date{
+  font-size: 25rpx;
+  margin-left: 10rpx;
+}
+.goods{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item{
+  width: 140rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  margin-top: 20rpx;
+}
+.item-img{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 10rpx;
+  background: #009688;
+  margin-bottom: 10rpx;
+}
+.item-price{
+  color: red;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.item-price::before{
+  content: '￥';
+  font-size: 24rpx;
+}
+
+.animation{
+  animation: myfirst linear .3s ;
+  position: relative;
+}
+
+@keyframes myfirst{
+  from{
+    opacity: 0;
+    left: 20px;
+  } to {
+    opacity: 1;
+    left: 0px;
+  }
+} 

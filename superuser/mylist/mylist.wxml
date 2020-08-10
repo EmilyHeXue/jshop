@@ -1,0 +1,14 @@
+<view class="mylist">
+  <view class="item" wx:for='{{data}}' wx:key='item'>
+    <image lazy-load class="item-avatar" src='{{item.avatar}}'></image>
+    <view class="item-content">
+      <view class="item-name">{{item.nickname}}</view>
+      <view class="item-price">消费: {{item.pay_money}}元</view>
+      <view class="item-date">{{item.create_time}}</view>
+    </view>
+    <view class="item-right">
+      <view class="item-level">{{item.level_name}}</view>
+      <view class="item-order">{{item.num}}个订单</view>
+    </view>
+  </view>
+</view>

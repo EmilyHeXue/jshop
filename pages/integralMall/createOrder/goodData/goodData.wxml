@@ -1,0 +1,7 @@
+<view class='good'>
+  <image lazy-load class='good-img' src='{{data.pic_urls[0]}}'></image>
+  <view class='good-content'>
+    <view class='good-name'>{{data.name}}</view>
+    <view class='good-price'>{{data.score}}</view>
+  </view>
+</view>

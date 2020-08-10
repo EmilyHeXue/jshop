@@ -1,0 +1,54 @@
+/* pages/home/blancePayList/blancePayList.wxss */
+page{
+  background: #f2f2f2;
+}
+.item{
+  padding: 32rpx 40rpx;
+  background: #ffffff;
+  margin-bottom: 1px;
+}
+.item-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 0; 
+  border-bottom: 1px solid #f2f2f2;
+  margin-bottom: 26rpx;
+}
+.ordersn{
+  font-size: 28rpx;
+  color: #595959;
+}
+.copy{
+  font-size: 24rpx;
+  background: #1aad19;
+  color: #ffffff;
+  width: 100rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  text-align: center;
+  border-radius: 4rpx;
+}
+
+.item-content{
+  
+}
+.content-top{
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-shopname{
+  color: 2f2f2f;
+}
+.content-type{
+  color: #595959;
+}
+.content-price{
+  color: red;
+}
+.content-date{
+  color: a2a2a2;
+  font-size: 20rpx;
+}

@@ -1,0 +1,134 @@
+.mask{
+  position: fixed;
+  width: 750rpx;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.layer{
+  position: absolute;
+  bottom: 0;
+  background: #ffffff;
+  width: 750rpx;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.layer-content{
+  width: 750rpx;
+  flex: 1;
+}
+.layer-content-img{
+  width:30rpx;
+  height:30rpx;
+  position:absolute;
+  right:15rpx;
+  top:15rpx;
+  padding:0 0 15rpx 15rpx;
+}
+
+.content-header{
+  display: flex;
+  padding: 20rpx;
+}
+.goods-img{
+  width: 250rpx;
+  height: 250rpx;
+  margin-right: 20rpx;
+}
+.goods-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+  flex-flow: column wrap;
+}
+.goods-price{
+  color: red;
+}
+.goods-price::before{
+  content: '￥';
+  font-weight: bold;
+}
+.goods-sold{}
+.goods-name{}
+.content-center{
+  padding: 20rpx;
+}
+.layer-classification-name{
+  border-bottom:1px solid #eee;
+  padding-bottom:10rpx;
+  font-size:30rpx;
+}
+.layer-classification-data{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  flex-flow:row wrap;
+  
+}
+.layer-classification-data-item{
+  font-size:26.25rpx;
+  background-color:#eee;
+  padding:7.5rpx 30rpx;
+  border-radius:45rpx;
+  margin:15rpx 7.5rpx;
+}
+.select{
+  color:#ff4b03;
+  border: 1rpx solid #ff4b03;
+  background-color:#fff;
+}
+.tabbar{
+  display:flex;
+  border-top:1rpx solid #eee;
+  padding-top:20rpx;
+}
+.tabbar-text{
+  font-size:26.25rpx;
+}
+.tabbar-item{
+  padding-right:40rpx;
+  display:flex;
+  flex:1;
+  justify-content:flex-end;
+  align-items:center;
+}
+.tabbar-btn{
+  width:37.5rpx;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border:1rpx solid #888;
+  font-size:26.25rpx;
+}
+.tabbar-nums{
+  width:75rpx;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-top:1rpx solid #888;
+  border-bottom:1rpx solid #888;
+  font-size:26.25rpx;
+}
+.layer-footer{
+  width: 750rpx;
+  height: 100rpx;
+  border-top: 1rpx solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.footer-btn{
+  background: red;
+  font-size: 30rpx;
+  padding: 20rpx;
+  width: 280rpx;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 50rpx;
+}

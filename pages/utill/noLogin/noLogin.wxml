@@ -1,0 +1,5 @@
+<block wx:if='{{noLogin}}'>
+  <view class='noLogin-view'>
+    <navigator class='noLogin' url='/pages/login2/login2' style='background: {{background}}'>立即登录</navigator>
+  </view>
+</block>

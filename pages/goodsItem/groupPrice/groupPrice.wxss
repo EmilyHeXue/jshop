@@ -1,0 +1,40 @@
+.groupPrice{
+  background: linear-gradient(to right, #ff005e, #ff0137);
+  font-size: 14px;
+  padding: 16rpx 20rpx 15rpx 25rpx;
+  border: 1px solid rgba(255, 255, 255, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+
+.left{
+  display: flex;
+  align-items: flex-end;
+  font-weight: 600;
+}
+
+.small-price{
+  font-size: 75rpx;
+  font-weight: 700;
+  vertical-align: sub;
+  line-height: 55rpx;
+  margin-right: 10rpx;
+}
+.small-price::before{
+  content: '￥';
+  font-size: 30rpx;
+  line-height: 30rpx;
+}
+.big-price{
+  vertical-align: sub;
+}
+.big-price::before{
+  content: '-';
+  margin-right: 10rpx;
+}
+
+.right{
+  text-align: center;
+}

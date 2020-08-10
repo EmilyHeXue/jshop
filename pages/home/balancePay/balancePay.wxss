@@ -1,0 +1,50 @@
+/* pages/home/balancePay/balancePay.wxss */
+.balancePay{
+  width: 666rpx;
+  margin: 50rpx auto;
+  box-sizing: border-box;
+  padding: 32rpx 35rpx;
+  box-shadow: 0rpx 0rpx 6rpx #ddd;
+  border-radius: 20rpx;
+}
+.title{
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8; 
+  padding-bottom: 26rpx;
+}
+.right{
+  font-size: 28rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 333rpx;
+}
+
+.price{
+  color: red;
+  margin-left: 14rpx;
+}
+.price::after{
+  content: '元';
+  color: #101010;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.qrcode{
+  width: 400rpx;
+  height: 400rpx;
+  margin-top: 28rpx;
+  background: pink;
+}
+.label{
+  margin-top: 8rpx;
+  font-size: 26rpx;
+}

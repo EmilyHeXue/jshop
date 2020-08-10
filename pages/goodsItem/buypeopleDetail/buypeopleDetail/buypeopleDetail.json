@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "BPDHeader": "/pages/goodsItem/buypeopleDetail/BPDHeader/BPDHeader",
+    "BPDList": "/pages/goodsItem/buypeopleDetail/BPDList/BPDList"
+  }
+}

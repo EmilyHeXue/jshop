@@ -1,0 +1,14 @@
+<view class='groupPrice'>
+  <view class='left'>
+    <view class='small-price'>{{min_price}}</view>
+    <view class='big-price' wx:if='{{min_price != max_price}}'>{{max_price}}</view>
+  </view>
+  <view wx:if='{{!isstart}}' class='right'>
+    <view>距结束</view>
+    <view>{{time}}</view>
+  </view>
+  <view wx:if='{{isstart}}' class='right'>
+    <view>距开始还有</view>
+    <view>{{time}}</view>
+  </view>
+</view>

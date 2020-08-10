@@ -1,0 +1,22 @@
+<view class="view-location">
+  <view class="list" style="">
+    <view class="item1" wx:if="{{data.details.style=='1'}}">
+      <view
+        catchtap='navgar'
+        data-lon='{{data.details.lon}}' 
+        data-lat='{{data.details.lat}}'>{{data.details.addr}}</view>
+        <image lazy-load class='address-logo' src='{{data.details.logo}}'></image>
+    </view>
+    <view class="item2" wx:if="{{data.details.style=='2'}}">
+      <map 
+        id='address' 
+        markers='{{marker}}' 
+        longitude='{{data.details.lon}}' 
+        latitude='{{data.details.lat}}'
+        catchtap='navgar'
+        data-lon='{{data.details.lon}}' 
+        data-lat='{{data.details.lat}}'
+      ></map>
+    </view>
+  </view>
+</view>

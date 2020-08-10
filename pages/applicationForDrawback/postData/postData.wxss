@@ -1,0 +1,90 @@
+/* pages/applicationForDrawback/postData/postData.wxss */
+
+.picker{
+  background-color:#fff;
+  margin:15rpx;
+  border-radius:15rpx;
+  padding:30rpx 15rpx;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:30rpx;
+}
+
+.picker-label{
+  font-weight:600;
+}
+
+.picker-value{
+  
+}
+
+.content{
+  background-color:#fff;
+  margin:15rpx;
+  border-radius:15rpx;
+  padding:30rpx 15rpx;
+  font-size:30rpx;
+}
+.content-header{
+  
+}
+.content-textarea{
+  background:#eee;
+  width:660rpx;
+  height:100rpx;
+  border-radius:15rpx;
+  padding:15rpx;
+  font-size:22.5rpx;
+  margin-top:15rpx;
+}
+.content-img{
+  margin-top:25rpx;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-flow:row wrap;
+}
+.content-img:after{
+  content:'';
+  width:217.5rpx;
+  height:217.5rpx;
+}
+
+.content-logo{
+  width:150rpx;
+  height:150rpx;
+}
+.content-img-item{
+  width:217.5rpx;
+  height:217.5rpx;
+  border:1px solid #eee;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:10rpx;
+}
+
+
+
+.footer{
+  position:fixed;
+  width:750rpx;
+  height:90rpx;
+  bottom:0;
+  left:0;
+  background-color:#ffffff;
+}
+.btn{
+  position:absolute;
+  right:0;
+  top:0;
+  background:linear-gradient(to right, #ff7301, #ff4b03);
+  color:#ffffff;
+  height:100%;
+  width:187.5rpx;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:26.25rpx;
+}

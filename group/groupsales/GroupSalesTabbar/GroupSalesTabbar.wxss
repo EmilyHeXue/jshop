@@ -1,0 +1,57 @@
+page{
+  background: #f5f5f5;
+}
+.GroupSalesTabbar-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  background: #ffffff;
+}
+.GroupSalesTabbar-header-item{
+  flex: 1;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.select{
+  color: #ff7c13;
+}
+.selectline{
+  position: absolute;
+  background: #ff7c13;
+  width: 150rpx;
+  height: 4rpx;
+  bottom: 0;
+  left: 22rpx;
+  animation: show 1s;
+}
+
+@keyframes show{
+  from{opacity: 0}
+  to{opacity: 1}
+}
+
+.GroupSalesTabbar-tab{
+  padding:20rpx 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.GroupSalesTabbar-tab-item{
+  flex: 1;
+  text-align: center;
+  background: #ffffff;
+  font-size:26rpx;
+  color:#333;
+  padding: 17rpx 0;
+}
+.tabselect{
+  background: #373D4B;
+  color: #ffffff;
+  animation: show 1s;
+}

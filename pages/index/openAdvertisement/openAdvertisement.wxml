@@ -1,0 +1,6 @@
+<view class="fixed" wx:if='{{isOpen}}'>
+  <view class="layer">
+    <image lazy-load mode='widthFix' src='{{img}}' catchtap="go" class="img"></image>
+    <image lazy-load mode='widthFix' src='/images/goodsItem/image/close.png' bindtap="close" class="close"></image>
+  </view>
+</view>

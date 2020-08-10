@@ -1,0 +1,183 @@
+<view class="uc-wrap uc-home">
+	<view class="panel" style='background: {{background}}'>
+		<view class="face-box"><image src="{{areaInfo.avatar}}" mode="widthFix"></image></view>
+		<view class="center">
+			<view class="name">{{areaInfo.area_name}}-{{areaInfo.realname}}</view>
+			<view class="txt">{{areaInfo.addr}}</view>
+		</view>
+		<button class="uc-btn" hover-class="none">
+			<image catchtap="call" src="/images/solitaire/activity/tel.png" mode="widthFix" class="uc-icon50"></image>
+		</button>
+	</view>
+	<view class="box info">
+		<view class="title">
+			<text class="uc-b">{{name}}</text>
+			<text class="status uc-green" style='color: {{background}} !important;'>接龙中</text>
+		</view>
+		<view class="time">活动截至时间：{{end_time}}</view>
+		<view class="person-box">
+			<view class="person">
+				<image wx:for='{{statistics.avatar}}' wx:if='{{index < 7}}' wx:key='item' src="{{item}}" mode="widthFix" class="face"></image>
+				<view wx:if='{{statistics.avatar.length > 6}}'>...</view>
+			</view>
+			<view class="right">
+				<view>已有<text class="uc-green">{{statistics.num}}</text>人接龙成功</view>
+				<view><text class="uc-green" style='color: {{background}} !important;'>仅剩{{statistics.stocks}}件</text></view>
+			</view>
+		</view>
+		<view class="con">{{detail_info}}</view>
+		<view class="img-box">
+			<image wx:key='item' wx:for='{{pic_urls}}' src="{{item}}" data-pic='{{item}}' catchtap="preImage" class="img"></image>
+		</view>
+		<view class="video-box" wx:if='{{video_url}}'>
+			<video src="{{video_url}}" controls  autoplay bindplay="" bindpause="" bindended="" binderror=""></video>
+		</view>
+	</view>
+
+	<!-- 接龙商品 start -->
+	<view class="box product-box">
+		<view class="title"><text style="border-color: {{background}}; color: {{background}};">接龙商品</text></view>
+		<view class="list">
+			<block wx:for="{{goods}}" wx:key="item" wx:for-item="item" wx:for-index="index">
+				<view class="item">
+					<navigator class="img-box" url="/pages/goodsItem/goodsItem/goodsItem?id={{item.id}}">
+						<image src="{{item.pic_urls}}" mode="aspectFill"></image>
+					</navigator>
+					<view class="con">
+						<view class="name">{{item.name}}</view>
+						<scroll-view scroll-x class="tags">
+							<text 
+								wx:for='{{item.stock}}' 
+								wx:key='id'
+								wx:for-item="stock" 
+								wx:for-index="stockindex"
+								class="uc-tag gray" 
+								catchtap="changeindex"
+								data-goodsid='{{item.id}}'
+								data-stockindex='{{stockindex}}'
+								style='background: {{goodsIndex[item.id] == stockindex ? background:""}};color: {{goodsIndex[item.id] == stockindex ? "#ffffff":""}};'>{{stock.property1_name}}{{stock.property2_name}}</text>
+						</scroll-view>
+						<view class="btm">
+							<view class="price"> <text class="uc-small">￥</text>{{item.stock[goodsIndex[item.id]].price}}</view>
+							<view class="g-reduceAddBox">
+								<button 
+									class="btnReduce" 
+									bindtap="btnAdd" 
+									data-type='reduce' 
+									style='color: {{background}}; border-color: {{background}}'
+									data-index="{{index}}">
+									<text class="uc-font uc-reduce"></text>
+								</button>
+								<view class="input">{{item.number}}</view>
+								<button 
+									style='background: {{background}}; border-color: {{background}}' 
+									class="btnAdd" 
+									bindtap="btnAdd" 
+									data-type='add' 
+									data-index="{{index}}">
+									<text class="uc-font uc-add"  ></text>
+								</button>
+							</view>
+						</view>
+					</view>
+				</view>
+			</block>
+		</view>
+		<view class="total">
+			<text class="uc-green" style='color: {{background}} !important;'>提货时间：{{take_delivery_time}}</text>
+			<view class="right">
+				合计<text class="uc-green" style='color: {{background}} !important;'>{{allNum}}</text>件 <text class="uc-red">¥{{allPrice}}</text>
+			</view>
+		</view>
+	</view><!-- 接龙商品 end -->
+
+	<view class="g-operate">
+		<button catchtap="tobuy" class="uc-btn green" style='background: {{background}} !important; border-color: {{background}};' hover-class="none">我要接龙购买</button>
+	</view>
+
+	<view wx:if='{{my_order}}' class="box discuss-list my-panel">
+		<view class="title">
+			<text class="uc-green">我的接龙</text>
+			<navigator class="more" url="/pages/order/order/order">查看订单</navigator>
+		</view>
+		<view wx:if='{{my_order}}' class="item">
+			<view class="face-box"><image src="{{userInfo.avatar}}" mode="aspectFill"></image></view>
+			<view class="right">
+				<view class="name">
+					{{userInfo.name}}
+					<view class="time">{{item.format_create_time}}</view>
+					<!--<view class="status uc-green">已付款</view>-->
+				</view>
+				<view class="size" wx:key='name' wx:for='{{my_order.goods}}'>{{item.name}}（{{item.property1_name+item.property2_name}}）* {{item.number}}</view>
+			</view>
+		</view>
+	</view>
+
+  
+	<view wx:if='{{is_comment == 1}}' class="box discuss-list">
+		<!-- 评论列表 start -->
+		<view class="title">
+			<text class="uc-b">评论列表</text>
+			<view class="uc-blue" catchtap="showCommentLayer">写评论</view>
+		</view>
+		<block wx:if='{{comment.length != 0}}'>
+			<view catchtap="go" data-url='solitaire/commentlist/commentlist?id={{id}}' wx:for='{{comment}}' wx:key='id' class="item">
+				<view class="face-box"><image src="{{item.avatar}}" mode="aspectFill"></image></view>
+				<view class="right">
+					<view class="name">
+						{{item.name}}
+						<text class="time">{{item.format_create_time}}</text>
+					</view>
+					<view class="txt">{{item.content}}</view>
+				</view>
+			</view>
+		</block>
+		<view class='item' wx:else>暂无评论</view>
+		<navigator url='/solitaire/commentlist/commentlist?id={{id}}' class="commentmore">查看更多</navigator>
+		<!-- 评论列表 end -->
+	</view>
+
+<!-- 接龙列表 start -->
+		<view class="box discuss-list">
+			<view class="title">
+				<text class="uc-b">接龙列表</text>
+				<view class="number">
+					<text class="uc-orange">{{count}}</text>人接龙
+				</view>
+			</view>
+			<block wx:if='{{order_list.length != 0}}'>
+				<view wx:for='{{order_list}}' wx:key='id' class="item">
+					<view class="face-box"><image src="{{item.avatar}}" mode="aspectFill"></image></view>
+					<view class="right">
+						<view class="name">
+							{{item.nickname}}
+							<text class="time">{{item.format_create_time}}</text>
+						</view>
+						<view wx:for='{{item.goods}}' class="size">{{item.name}}（{{item.property1_name + item.property2_name}}）*{{item.number}}</view>
+					</view>
+				</view>
+			</block>
+			<view class='item' wx:else>暂无接龙</view>
+		</view><!-- 接龙列表 end -->
+	</view>
+<view style='position: fixed; right: 20px; top: 40vh; z-index: 10; border-radius: 50%;'>
+	<button open-type='share'>
+		<image src='/solitaire/images/share.png' style='width: 90rpx; height: 90rpx;'></image>
+	</button>
+</view>
+
+<view hidden="{{commentFlag}}" class='mask'>
+	<view class='layer'>
+		<view class="title">写评论</view>
+		<view class='content'>
+			<textarea class="comment" bindinput="writecomment" placeholder="说说你的想法..."></textarea>
+			<view class="imageList">
+				<view catchtap="uploadFile" wx:if='{{uploadImg.length != 3}}'>+</view>
+				<image wx:for='{{uploadImg}}' wx:key='item' src='{{item}}'></image>
+			</view>
+		</view>
+		<button catchtap="postComment" style='background: {{background}};' class='btn'>提交保存</button>
+	</view>
+</view>
+
+ <canvas type='2d' id='shareimg' style='z-index: 9999;width: 375px; height: 302px; position: fixed; left: -375px; top: 0;'></canvas>

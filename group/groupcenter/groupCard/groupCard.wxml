@@ -1,0 +1,34 @@
+<view>
+  <view class='orderToday'>
+    <view class='orderToday-header'>今日详情</view>
+    <view class='orderToday-flex'>
+      <block wx:for='{{orderToday}}' wx:key='{{item.name}}'>
+        <view class='orderToday-item'>
+          <view class='orderToday-data'>{{item.data ? item.data:"0"}}</view>
+          <view class='orderToday-name'>{{item.name}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='Menu'>
+    <view class='Menu-flex'>
+      <block wx:for='{{menuList}}' wx:key='{{item.name}}'>
+        <view class='Menu-item' data-link='{{item.link}}' catchtap='go'>
+          <image lazy-load class='Menu-img' src='{{item.src}}'></image>
+          <view class='Menu-name'>{{item.name}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='list'>
+    <view class='list-header'>数据</view>
+    <view class='list-flex'>
+      <block wx:for='{{list}}' wx:key='name'>
+        <view class='list-item'>
+          <view class='list-nums'>{{item.nums ? item.nums : 0}}</view>
+          <view class='list-name'>{{item.name}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

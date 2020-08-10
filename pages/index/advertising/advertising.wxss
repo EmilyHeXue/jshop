@@ -1,0 +1,10 @@
+.advertising{
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  align-content:flex-start;
+  padding: 20rpx;
+  padding-top: 0;
+}

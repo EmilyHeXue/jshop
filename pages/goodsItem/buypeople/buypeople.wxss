@@ -1,0 +1,52 @@
+.buypeople{
+	background:#fff;
+	position:relative;
+  overflow:hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  margin: 20rpx;
+  padding: 20rpx;
+  border-radius: 10rpx;
+}
+.evaluation-nums{
+	font-size:4vw;
+}
+.people-avatar{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: -10rpx;
+}
+.ellipsis{
+  margin-left: 10rpx;
+}
+.isbuy{
+  color: #FF6200;
+}
+.isbuy::after{
+  content: '人购买';
+  color: #a2a2a2;
+}
+.isbuy::before{
+  content: '已有';
+  color: #a2a2a2;
+}
+.stocks{
+  padding: 4rpx 20rpx;
+  border-radius: 50rpx;
+  color: #FF6200;
+  background: #FFEBE4;
+  margin-top: 10rpx;
+}
+.evaluation-more{
+	font-size:3.2vw;
+  color: #a2a2a2;
+  text-align: center;
+}
+.evaluation-more-img{
+	width:4vw;
+	height:4vw;
+	margin: 0vw 1vw;
+}

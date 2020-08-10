@@ -1,0 +1,31 @@
+.Header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  background-color: #ffffff;
+  font-size: 25rpx;
+  border-bottom: 1px solid #eeeeee;
+}
+.Header-item{
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+.select{
+  color: red;
+}
+
+.select::after{
+  content:'';
+  width: 185rpx;
+  height: 1rpx;
+  background: red;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}

@@ -1,0 +1,162 @@
+/* pages/createOrder/address/address.wxss */
+
+.address {
+  overflow: hidden;
+}
+
+.address-data {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row nowrap;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eee;
+}
+
+.address-data-surnames {
+  width: 70rpx;
+  font-size: 30rpx;
+  text-align: center;
+  border-radius: 50%;
+  height: 70rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30rpx;
+}
+
+.address-data-item {
+  flex: 1;
+}
+
+.address-data-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-bottom: 10rpx;
+}
+
+.address-data-name {
+  font-size: 32rpx;
+}
+
+.address-data-phone {
+  font-size: 28rpx;
+  margin-left: 22rpx;
+  color: #999999;
+}
+
+.address-data-address {
+  font-size: 26.25rpx;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.address-data-choose {
+  font-size: 30rpx;
+  text-align: center;
+  border-left: 1px solid #eee;
+  margin-left: 20rpx;
+  width: 120rpx;
+  background: #ffffff;
+}
+
+.layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  z-index: 9;
+}
+
+.layer-content {
+  width: 750rpx;
+  box-sizing: border-box;
+  height: 80vh;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0rpx;
+  left: 0rpx;
+  border-top-left-radius: 2vw 2vw;
+  border-top-right-radius: 2vw 2vw;
+}
+.content-title{
+  padding: 48rpx 0 34rpx 0;
+  text-align: center;
+  font-size: 36rpx;
+  position: relative;
+}
+.content-title image{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 53rpx;
+}
+.layer-scroll {
+  height: calc(80vh - 240rpx);
+  padding: 0 53rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.layer-items {
+  font-size: 26.25rpx;
+  border-bottom: 1px solid #eee;
+  padding: 32rpx 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.layer-item {
+  flex: 1;
+}
+
+.layer-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rpx;
+}
+
+.layer-item-name {
+}
+.layer-item-name::before{
+  content: '收货人: ';
+}
+
+.layer-item-phone {
+}
+.layer-item-phone::before{
+  content: '手机号: ';
+}
+.layer-item-address {
+  word-wrap: break-word;
+  word-break: break-all;
+  margin-top: 16rpx;
+}
+.icon{
+  width: 48rpx;
+  height: 48rpx;
+  background: #fff;
+  margin: 0 25rpx 0 10rpx;
+}
+
+.content-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-btn{
+  flex: 1;
+  text-align: center;
+  padding: 30rpx;
+  font-size: 40rpx;
+  border-top: 1px solid #bbbbbb;
+  box-sizing: border-box;
+}
+.footer-btn:last-child{
+  color: #ffffff;
+  background: red;
+}

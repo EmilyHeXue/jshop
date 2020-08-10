@@ -1,0 +1,100 @@
+<image lazy-load class="creategroup-banner" src="{{banner_pic_url}}"></image>
+<form bindsubmit="panduan" class='group-form' report-submit>
+  <!--头像-->
+  <view class='group-form-item'>
+    <view class='group-form-label'>头像</view>
+    <image lazy-load class='avatar' src='{{avatar}}'></image>
+    <!--<input hidden='{{true}}' name='avatar' value='{{avatar}}'></input>-->
+  </view>
+
+  <!--昵称-->
+  <view class='group-form-item'>
+    <view class='group-form-label'>昵称</view>
+    <view class='group-form-input'>{{nick_name}}</view>
+  </view>
+
+  <!--性别
+  <view class='group-form-item'>
+    <view class='group-form-label'>性别</view>
+    <picker class='group-form-input' bindchange='chooseSex' value="{{sexIndex}}" range="{{sex}}">
+      <view>
+        {{sex[sexIndex]}}
+      </view>
+    </picker>
+    <input hidden='{{true}}' class='group-form-input' name='sex' value='{{sex[sexIndex]}}'></input>
+  </view>-->
+
+  <!--姓名-->
+  <view class='group-form-item'>
+    <view class='group-form-label'>姓名</view>
+    <input class='group-form-input' name='realname' value='{{name}}'></input>
+  </view>
+
+  <!--手机-->
+  <view class='group-form-item'>
+    <view class='group-form-label'>手机</view>
+    <input class='group-form-input' bindinput='writePhone' name='phone' disabled='{{uid != 0}}' value='{{phone}}'></input>
+    <view wx:if='{{showPhome}}'>
+      <view wx:if='{{!phoneFlag}}' catchtap='getVercode' class='group-form-getCode'>获取验证码</view>
+      <view wx:if='{{phoneFlag}}' class='group-form-getCode'>{{time}}s后重新获取</view>
+    </view>
+  </view>
+
+  <!--验证码-->
+  <view wx:if='{{showPhome}}' class='group-form-item'>
+    <view class='group-form-label'>验证码</view>
+    <input class='group-form-input' name='vercode' value='{{vercode}}' placeholder='请输入验证码'></input>
+  </view>
+
+  <!--自提点地区-->
+ <!-- <view class='group-form-item'>
+    <view class='group-form-label'>地区</view>
+    <picker class='group-form-input' bindchange='chooseAddress' value="{{address}}" mode='region' >
+      <view class='{{address == "" ? "placeholder-class":""}}'>
+        {{address == "" ? "请选择自提点地区": address}}
+      </view>
+    </picker>
+    <input hidden='{{true}}' class='group-form-input' name='province_code' value='{{province_code}}'></input>
+    <input hidden='{{true}}' class='group-form-input' name='city_code' value='{{city_code}}'></input>
+    <input hidden='{{true}}' class='group-form-input' name='area_code' value='{{area_code}}'></input>
+  </view> -->
+  <view class="section group-form-item">
+	  <view class="section__title  group-form-label">地区</view>
+	  <picker class="group-form-input" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" range-key="name">
+		  <view class="{{addRes == '' ? 'picker placeholder-class':''}}">
+			{{addRes == '' ? '请选择自提点地区' : addRes}}
+		  </view>
+	  </picker>
+	  <input hidden='{{true}}' class='group-form-input' name='province_code' value='{{province_code}}'></input>
+	  <input hidden='{{true}}' class='group-form-input' name='city_code' value='{{city_code}}'></input>
+	  <input hidden='{{true}}' class='group-form-input' name='area_code' value='{{area_code}}'></input>
+  </view>
+	
+  <!--自提点地区
+  <view class='group-form-item'>
+    <view class='group-form-label'>申请成为团长</view>
+    <switch class='group-form-input' name='is_self' checked='{{is_seif}}' bindchange='show'></switch>
+  </view>-->
+
+  
+  <!--自提点小区-->
+  <view class='group-form-item'>
+    <view class='group-form-label'>{{leader_name}}小区</view>
+    <view bindtap='chooseArea' class='group-form-input {{area == "" ? "placeholder-class":""}}'>{{area == '' ? "请选择小区名称":area}}</view>
+    <input hidden='{{true}}' class='group-form-input' name='area_name' value='{{area}}'></input>
+    <input hidden='{{true}}' class='group-form-input' name='latitude' value='{{latitude}}'></input>
+    <input hidden='{{true}}' class='group-form-input' name='longitude' value='{{longitude}}'></input>
+  </view>
+
+  <!--自提点地址-->
+  <view class='group-form-item'>
+    <view class='group-form-label'>详细小区</view>
+    <input class='group-form-input' name='addr' value='{{addr}}'></input>
+  </view>
+
+  <view class='group-form-item'>
+    <view class='group-form-label'>备注</view>
+    <textarea class='group-form-textarea' name='remarks' value='{{remark}}' placeholder='请输入内容'></textarea>
+  </view>
+  <button class="group-form-btn" form-type="submit" style="background:#FE5802">{{edit ? "确认修改":"申请" + leader_name}}</button>
+</form>

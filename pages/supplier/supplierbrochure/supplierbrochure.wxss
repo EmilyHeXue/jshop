@@ -1,0 +1,18 @@
+.form{
+}
+.post{
+  background: red;
+  color: #fff;
+  margin: 40rpx;
+}
+
+button{
+  border-radius: 50rpx;
+}
+.phone{
+  color: red;
+  background: #fff;
+  box-sizing: border-box;
+  border: 1px solid red;
+  margin: 40rpx;
+}

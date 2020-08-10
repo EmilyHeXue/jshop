@@ -1,0 +1,20 @@
+<!--模态窗-->
+<view class='modal' wx:if='{{show}}'>
+  <view class='modal-item'>
+    <view class='modal-item-title'>确认收货信息</view>
+    <block wx:for='{{data}}' wx:key='index'>
+      <view class='modal-item-row'>
+        <view class='modal-item-label'>{{item.name}}: </view>
+        <view class='modal-item-text'>{{item.data}}</view>
+      </view>
+    </block>
+    <view class='modal-item-tabbar'>
+      <form class='modal-item-btn' bindsubmit='canel' report-submit>
+        <button class='modal-item-btn' form-type='submit'>取消</button>
+      </form>
+      <form class='modal-item-btn' style='background: {{background}}; color: {{fontcolor}}' bindsubmit='ok' report-submit>
+        <button class='modal-item-btn' style='background: {{background}}; color: {{fontcolor}}' form-type='submit'>确定</button>
+      </form>
+    </view>
+  </view>
+</view>

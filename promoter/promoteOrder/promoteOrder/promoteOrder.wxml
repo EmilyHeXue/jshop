@@ -1,0 +1,3 @@
+<promoteOrderHeader bind:search='search' bind:changList='getList' status='{{status}}'/>
+<promoteOrderList bind:deleteData='deleteData' data='{{data}}'/>
+<promoterCenter name='{{title}}'></promoterCenter>

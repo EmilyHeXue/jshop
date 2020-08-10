@@ -1,0 +1,7 @@
+<Banner />
+<Classify />
+<Goods background='{{background}}' goods='{{goods}}' />
+
+<Nav catchtap='go'>
+  我的兑换
+</Nav>

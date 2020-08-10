@@ -1,0 +1,32 @@
+<view class='groupCard'>
+  <view style='background: {{background}}; color: #ffffff;' class='grounCard-card'>
+    <view class='card-top'>
+      <view class='top-leavel' catchtap='goInfo' data-url='/promoter/promoterlevel/promoterlevel'>
+        <image lazy-load src='/images/group/groupContent/v2.png' class='leavel-icon'></image>
+        {{leader_name}}
+        <view class='leavel-right'>></view>
+      </view>
+      <!--<view catchtap='go' data-url='/group/creategroup/creategroup?id=1' class='top-edit'>编辑</view>-->
+    </view>
+    <view class='card-info'>
+      <image lazy-load class='info-avatar' src='{{avatar}}'></image>
+      <view class='info-center'>
+        <view class='info-name'>{{data.realname}}</view>
+        <view class='info-area'>{{data.area_name}}</view>
+      </view>
+      <view class='info-btn' >
+        {{is_leader ? "自提点" : leader_name}}
+      </view>
+    </view>
+  </view>
+
+  <view class='tab1'>
+    <image lazy-load class='icon'></image>
+    <view class='content'>{{announcement}}</view>
+  </view>
+
+  <view class='tab2'>
+    <view class='price'>{{balance}}</view>
+    <view catchtap='go' data-url='/promoter/withdrawal/withdrawal' class='btn'>提现</view>
+  </view>
+</view>

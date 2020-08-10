@@ -1,0 +1,26 @@
+<view class="userCard">
+  <view class="card-content">
+    <view class="card" bindtap="go" data-link='/pages/share/share?type=1'>
+      <view class="card-name">店铺推广</view>
+      <view class="card-footer">
+        <view class="footer-left">发海报</view>
+        <image lazy-load class="footer-right" src='/images/png/right.png'></image>
+      </view>
+    </view>
+    <button class="card" open-type="share">
+      <view class="card-name">邀请好友</view>
+      <view class="card-footer">
+        <view class="footer-left">拉好友</view>
+        <image lazy-load class="footer-right" src='/images/png/right.png'></image>
+      </view>
+    </button>
+  </view>
+  <view class="store">
+    <image lazy-load class="store-avatar" src='{{shopavatar}}'></image>
+    <view class="store-content">
+      <view class="store-name">{{shopname || '团多多果业'}}</view>
+      <view class="store-label">立即去推广商品</view>
+    </view>
+    <view class="store-btn" bindtap="go" data-link='/pages/index/index/index'>GO</view>
+  </view>
+</view>

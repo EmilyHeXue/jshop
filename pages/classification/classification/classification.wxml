@@ -1,0 +1,142 @@
+
+<view style='padding-bottom: {{foorterFlag ? "50px" : "0px"}}'>
+  <view class='search'>
+    <input  catchtap='go' data-url='/pages/search/search/search' placeholder='' disabled='{{true}}'></input>
+    <image lazy-load class='search-icon' src='/images/index/search/search.png'></image>
+    <view class='link' catchtap='go' data-url='/pages/index/index/index'>
+      <image lazy-load class='icon' src='/images/goodsItem/footer/shop.png'></image>
+      <view>首页</view>
+    </view>
+    <view class='link' catchtap='go' data-url='/pages/home/my/my'>
+      <image lazy-load class='icon' src='/images/goodsItem/footer/my.png'></image>
+      <view>我的</view>
+    </view>
+    
+  </view>
+  <scroll-view scroll-y class='tab-btn'>
+    <block wx:for='{{shopAdminCategory}}' wx:key='id'>
+      <view class='{{active == index?"on":""}}' data-index='{{index}}' data-id='{{item.id}}' bindtap='tab1'><image lazy-load class='tab-btn-icon' src='{{item.pic_url}}'></image><view class='tab-btn-name'>{{item.name}}</view></view>
+    </block>
+  </scroll-view>
+  <view class='tab-con'>
+    <view class='list'>
+      <image lazy-load src='{{shopAdminCategory[active].img_url}}' hidden='{{!shopAdminCategory[active].img_url}}' class='Advertisement'></image>
+      <view class='classification'>
+        <block wx:for='{{shopCategory}}' wx:key='id'>
+          <view 
+            class='{{current == index ? "on" : ""}}'
+            style='background: {{current == index ? background : ""}}; border-color: {{current == index ? background : "#545454"}}'
+            data-id='{{item.id}}' 
+            data-index='{{index}}' 
+            bindtap='tab2'>{{item.name}}</view>
+        </block>
+      </view>
+      
+      <block wx:for='{{data}}' wx:key='id'>
+        <view class='item'>
+          <image lazy-load data-id='{{item.id}}' data-name='{{item.name}}' data-is_bargain='{{item.is_bargain == 1}}' catchtap='toItem' src='{{item.pic_urls[0]}}'></image>
+          <view class='right'>
+            <view data-id='{{item.id}}' data-name='{{item.name}}' data-is_bargain='{{item.is_bargain == 1}}' catchtap='toItem' class='name'>{{item.name}}</view>
+            <view data-id='{{item.id}}' data-name='{{item.name}}' data-is_bargain='{{item.is_bargain == 1}}' catchtap='toItem' class='lettername'>{{item.short_name}}</view>
+            <view class='avatar'>
+              <view class='avatar-content'>
+                <block wx:for='{{item.avatar}}' wx:key='item' wx:if='{{index < 3}}'>
+                  <image lazy-load class='avatar-item' src='{{item}}'></image>
+                </block>
+                已抢购{{item.sold}}件
+              </view>
+            </view>
+            <view class='price'>
+              <view class='xian'>
+                <text>¥</text>{{item.min_group_price || item.price}}
+              </view>
+              <view class='yuan'>¥ {{item.line_price}}</view> 
+              <view class='qiang'  wx:if='{{item.stock.length == 1}}' >
+                <view 
+                  wx:if='{{cartProperty[item.stock[0].id] && cartProperty[item.stock[0].id] != 0}}'
+                  class='qiang-btn'
+                  catchtap="operationShopCart"
+                  data-index='{{index}}' 
+                  style='background: {{background}}'
+                >-</view>
+                <view class='nums' wx:if='{{cartProperty[item.stock[0].id] && cartProperty[item.stock[0].id] != 0}}'>{{cartProperty[item.stock[0].id]}}</view>
+                <view 
+                  class='qiang-btn' 
+                  catchtap="addShopCart" 
+                  data-index='{{index}}' 
+                  style='background: {{background}}'
+                >+</view>
+              </view>
+              
+              <view class='xuanguige' catchtap='showProperty' data-index='{{index}}' wx:else style='background: {{background}}'>选规格</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<!--悬浮购物车-->
+<ShopCart 
+  loginFlag='{{loginFlag}}' 
+  cartindex='{{cartindex}}' 
+  bind:initcartData='initcartData'/>
+
+<!--弹出层-->
+<mask catchtap='showLayer' wx:if='{{layerFlag}}'>
+  <layer catchtap>
+    <header>商品属性</header>
+    <view class='content'>
+      <view class="content-title">
+        <image src='{{goodPropertyDetail.pic_url}}' mode='widthFix'></image>
+        <view class="content-title-right">
+          <view>价格{{goodPropertyDetail.price}}</view>
+          <view>库存{{goodPropertyDetail.number}}</view>
+          <view>已选: "{{goodPropertyDetail.property1_name}}{{goodPropertyDetail.property2_name}}"</view>
+        </view>
+      </view>
+      <scroll-view scroll-y class="content-list">
+        <view class='goodsPropertyList-title'>{{property1_name}}</view>
+        <view class="goodsPropertyList">
+          <block wx:for='{{property1List}}' wx:key='id'>
+            <view
+              catchtap="spliceProperty1" 
+              data-index='{{index}}' 
+              style='border-color: {{index == property1index ? background : "#595959"}}; color: {{index == property1index ? background : "#595959"}};'
+              class='goodsProperty'>
+              {{item}}
+            </view>
+          </block>
+        </view>
+        <view class='goodsPropertyList-title' wx:if='{{property2List[0] != ""}}'>{{property2_name}}</view>
+        <view class="goodsPropertyList" wx:if='{{property2List[0] != ""}}'>
+          <block wx:for='{{property2List}}' wx:key='id'>
+            <view 
+              catchtap="getPropertyDetail" 
+              data-index='{{index}}' 
+              style='border-color: {{index == property2index ? background : "#595959"}}; color: {{index == property2index ? background : "#595959"}};'
+              class='goodsProperty'>
+              {{item}}
+            </view>
+          </block>
+        </view>
+        <view class='goodsPropertyList-title' style='padding: 5rpx;'></view>
+        <view class="goodsPropertyNumber">
+          <view class="goodsPropertyNumber-label">
+            选择数量
+          </view>
+          <view class="goodsPropertyNumber-right">
+            <view catchtap="changeNumber" data-type='reduce' class="shopCart-compute-btn">-</view>
+            <view class="shopCart-compute-number">{{number}}</view>
+            <view catchtap="changeNumber" data-type='add' class="shopCart-compute-btn">+</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="layer-footer">
+      <button  catchtap="propertyToCart"style='background: {{background}}'>加入购物车</button>
+    </view>
+  </layer>
+</mask>
+<footer cartUpdata='{{cartindex}}' bindshow='show'></footer>

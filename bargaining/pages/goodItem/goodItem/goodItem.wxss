@@ -1,0 +1,4 @@
+/* bargaining/pages/goodItem/goodItem/goodItem.wxss */
+page{
+  background: #f2f2f2;
+}

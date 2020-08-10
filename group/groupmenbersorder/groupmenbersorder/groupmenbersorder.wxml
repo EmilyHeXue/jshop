@@ -1,0 +1,4 @@
+<GroupMenbersOrderHeader bind:search='search' bind:changList='getList' status='{{status}}'/>
+<GroupOrderList bind:deleteData='deleteData' data='{{data}}'/>
+
+<picker mode='date' bindchange='showTime' style="" class="fixed-btn">一键收货</picker>

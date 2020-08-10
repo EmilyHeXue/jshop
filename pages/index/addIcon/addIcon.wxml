@@ -1,0 +1,3 @@
+<view wx:if='{{showFlag}}'  class='addIcon' style='top: {{top}}px'>
+  <image lazy-load mode="widthFix" src='/images/index/click.png'></image>
+</view>

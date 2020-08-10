@@ -1,0 +1,14 @@
+<view class='{{page ? "page":""}} couponRedemptionCenter'>
+  <image lazy-load class='couponsCenter-print'></image>
+  <scroll-view scroll-y class='couponsCenter'>
+    <block wx:for='{{coupons}}' wx:key='id'>
+      <view class='couponsCenter-item'>
+        <image lazy-load src='/images/my/couponRedemptionCenter/couponsItem.png' class='couponsCenter-item-img'></image>
+        <view class='couponsCenter-item-price'>{{item.price}}元优惠券</view>
+        <view class='couponsCenter-item-full'>说明: 满{{item.full_price}}使用/限量{{item.count}}张</view>
+        <view class='couponsCenter-item-get' bindtap='getRedEnvelope' data-id='{{item.id}}'>立即领取</view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<view>{{list.aaa}}</view>

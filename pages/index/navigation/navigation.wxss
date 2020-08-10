@@ -1,0 +1,38 @@
+.list{
+  box-sizing:border-box;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.item{
+  text-align:center;
+  padding:10px 0;
+  line-height:20px;
+}
+
+.navigator-img{
+  display:block;
+  margin:0 auto 5px;
+  border-radius:50%;
+  overflow:hidden;
+  width:48px;
+  height:48px;
+}
+
+.list{
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  overflow: hidden;
+}
+.type1{
+  grid-template-columns: 1fr 1fr;
+}
+.type2{
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.type3{
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.type4{
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}

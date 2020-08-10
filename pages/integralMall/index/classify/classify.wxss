@@ -1,0 +1,32 @@
+.scroll{
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 22rpx;
+  margin-top: 0;
+  padding: 22rpx 30rpx;
+  box-sizing: border-box;
+  background: #ffffff;
+  width: 700rpx;
+  border-radius: 20rpx;
+}
+.item{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100rpx;
+  flex-flow: row wrap;
+  font-size: 28rpx;
+  margin: 0 40rpx;
+}
+.item:first-child{
+  margin-left: 0;
+}
+.item:last-child{
+  margin-right: 0;
+}
+.classify-img{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-bottom: 10rpx;
+}

@@ -1,0 +1,13 @@
+<view>
+  <view class="header">
+    <view bindtap="changeList" data-status='1' style="border-bottom:{{index == 1 ? '2px solid #E1B365' : ''}};" class="header-item">全部客户</view>
+    <view bindtap="changeList" data-status='2' style="border-bottom:{{index == 2 ? '2px solid #E1B365' : ''}};" class="header-item">已产生佣金</view>
+  </view>
+  <view class="search">
+    <image lazy-load src='/images/search/search/search.png'></image>
+    <input bindblur="getData"></input>
+  </view>
+  <List data='{{data}}'/>
+</view>
+
+ 

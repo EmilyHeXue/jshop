@@ -1,0 +1,57 @@
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20rpx;
+  justify-items: center;
+  padding: 0 20rpx;
+}
+
+.item{
+  width: 340rpx;
+  height: 440rpx;
+  background: #fff;
+  border: 18rpx;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  border-radius: 18rpx;
+  padding: 22rpx 20rpx;
+  box-sizing: border-box;
+}
+.item-img{
+  width: 300rpx;
+  height: 300rpx;
+}
+.item-center{
+  width: 300rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 24rpx;
+  padding: 8rpx 12rpx;
+  box-sizing: border-box;
+}
+.item-bottom{
+  flex: 1;
+  padding: 8rpx 12rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+}
+.item-bottom-left{
+  color: red;
+}
+.item-bottom-left::before{
+  content: '积分: ';
+  color: #101010;
+}
+.item-bottom-right{
+  color: red;
+  padding: 2rpx 24rpx;
+  border-radius: 50rpx;
+  border: 1px solid red;
+}

@@ -1,0 +1,52 @@
+<view class='mask' wx:if='{{layerFlag}}'>
+  <view class='layer'>
+    <!--关闭按钮-->
+    <image lazy-load class='layer-content-img' src='/images/png/close.png' catchtap='hideLayer' />
+
+    <view class='layer-content'>
+      <view class='content-header'>
+        <image lazy-load class='goods-img' src='{{gooddetail.pic_url}}'></image>
+        <view class='goods-content'>
+          <view class='goods-price'>{{gooddetail.price}}</view>
+          <view class='goods-sold'>库存{{gooddetail.number}}件</view>
+          <view class='goods-name'>{{property1.data[property1.flag]}} {{property2.name}}</view>
+        </view>
+      </view>
+      <view class='content-center'>
+        <scroll-view>
+          <view>
+            <view class='layer-classification'>
+              <view class='layer-classification-name'>{{property1.name}}</view>
+              <view class='layer-classification-data'>
+                <block wx:for='{{property1.data}}'>
+                  <view catchtap="getProperty2List" data-index='{{index}}' data-name='{{item}}' class='layer-classification-data-item {{ index == property1.flag ? "select":""}}'>{{item}}</view>
+                </block>
+              </view>
+            </view>
+            <view wx:if='{{property2.name}}' class='layer-classification'>
+              <view class='layer-classification-name'>{{property2.name}}</view>
+              <view class='layer-classification-data'>
+                <block wx:for='{{property2.data}}'>
+                  <view catchtap="getProperty2Detail" data-index='{{index}}' data-name='{{item}}' class='layer-classification-data-item {{ index == property2.flag ? "select":""}}'>{{item}}</view>
+                </block>
+              </view>
+            </view>
+            <!--购买数量-->
+            <view class='tabbar'>
+              <view class='tabbar-text'>购买数量</view>
+              <view class='tabbar-item'>
+                <view catchtap='subtract' class='tabbar-btn'>-</view>
+                <view class='tabbar-nums'>{{num}}</view>
+                <view catchtap='add' class='tabbar-btn'>+</view>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <view class='layer-footer'>
+      <view wx:if='{{isBuy}}' class='footer-btn' catchtap="tobuy">立即购买</view>
+      <view wx:else class='footer-btn' catchtap="postSubscribeMessage">发起砍价</view>
+    </view>
+  </view>
+</view>

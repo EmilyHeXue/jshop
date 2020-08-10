@@ -1,0 +1,25 @@
+<mask catchtap='closeLayer' wx:if='{{flag && data.length != 0}}'>
+  <layer catchtap>
+    <image lazy-load class='header-img' mode="widthFix" src='/images/index/advertising/header.png'></image>
+    <view class='header-text'>新人优惠券</view>
+    <scroll-view class='scroll' scroll-y>
+      <block wx:for='{{data}}'>
+        <view class='item'>
+          <view class='left'>
+            <view class='price'>{{item.price}}</view>
+            <view class='fullprice'>满{{item.full_price}}元可用</view>
+          </view>
+          <view class='right'>
+            <view class='name'>{{item.name}}</view>
+            <view class='date'>{{item.to_date}}</view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+    <view class='footer'>
+      <form report-submit bindsubmit="getAll">
+        <button form-type="submit" class='btn'>立即领取</button>
+      </form>
+    </view>
+  </layer>
+</mask>

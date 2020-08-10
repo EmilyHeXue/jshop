@@ -1,0 +1,95 @@
+/* 首页红包 */
+.coupons{
+  overflow:hidden;
+  height:190rpx;
+  
+  margin-top: 15rpx;
+}
+.scroll{
+  overflow:hidden;
+  white-space:nowrap;
+  box-sizing: border-box;
+  background:#ffffff;
+  margin: 20rpx;
+  width: auto;
+  border-radius: 10rpx;
+}
+.coupons-item{
+  display:inline-block;
+  margin:20rpx 20rpx 18rpx 20rpx;
+  background:linear-gradient(to bottom, #ff63a2, #ff0166);
+  color:#fff;
+  overflow: hidden;
+  border-radius: 20rpx;
+  height: 100%;
+}
+
+.flex{
+  display:flex;
+  flex-flow:row wrap;
+  align-items:center;
+}
+.coupons-item-left{ /* 左侧区域 */
+  display:flex;
+  flex-flow:column wrap;
+  justify-content:center;
+  align-items:center;
+  padding:25rpx 40rpx;
+  position:relative;
+  border-right: 1px dotted #ffffff;
+}
+.coupons-item-price{ /*价格*/
+  font-size:30rpx;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+  align-items:flex-end;
+  margin-right:10rpx;
+}
+.coupons-item-price::before{ /*价格*/
+  font-size:30rpx;
+  content:'￥';
+}
+
+.coupons-item-content{ /*左侧文字信息*/
+  font-size:20rpx;
+}
+
+.top-rice{ /*与背景色一样的圆点*/
+  position:absolute;
+  width:30rpx;
+  height:30rpx;
+  background-color: #f8f8f8;
+  border-radius:50%;
+  right:-15rpx;
+  top: -15rpx;
+}
+.bottom-rice{ /*与背景色一样的圆点*/
+  position:absolute;
+  width:30rpx;
+  height:30rpx;
+  background-color:#f8f8f8;
+  border-radius:50%;
+  right:-15rpx;
+  bottom: -15rpx;
+}
+
+.coupons-item-conditions{
+  font-size: 20rpx;
+}
+
+
+.coupons-img{
+  width: 220rpx;
+  margin-right: 20rpx;
+}
+.coupons-img:last-child{
+  margin-right: 0;
+}
+.coupons-item-right{
+  width: 34px;
+  font-size: 14px;
+  padding:5px 10px;
+  box-sizing: border-box;
+  white-space: pre-wrap;
+}

@@ -1,0 +1,16 @@
+<block wx:for='{{list}}' wx:key='item'>
+  <view class="item">
+    <view class='item-title'>
+      <view class="ordersn">订单号: {{item.order_sn}}</view>
+      <view class="copy" catchtap="copy" data-ordersn='{{item.order_sn}}'>复制</view>
+    </view>
+    <view class='item-content'>
+      <view class="content-top">
+        <view class="content-shopname">{{item.store}}</view>
+        <view class="content-type">{{item.type}}</view>
+        <view class="content-price">{{item.money}}</view>
+      </view>
+      <view class="content-date">{{item.format_create_time}}</view>
+    </view>
+  </view>
+</block>

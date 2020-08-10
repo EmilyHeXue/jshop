@@ -1,0 +1,73 @@
+<image lazy-load src='{{banner}}' class='banner'></image>
+<form bindsubmit="post" class='form'>
+  <view class='form-item'>
+    <view class='form-label'>品牌名称</view>
+    <view class='form-input'>
+      <input name='brand' type='text'></input>
+    </view>
+  </view>
+  <view class='form-item'>
+    <view class='form-label'>产品类型</view>
+    <view class='form-input'>
+      <input name='mold' type='text'></input>
+    </view>
+  </view>
+  <view class='form-item'>
+    <view class='form-label'>所在城市</view>
+    <view class='form-input'>
+      <input name='city' type='text'></input>
+    </view>
+  </view>
+  <view class='form-item'>
+    <view class='form-label'>产品来源</view>
+    <view class='form-input'>
+      <radio-group name='brand_type' value='1' class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{product}}">
+          <radio value="{{item.value}}" checked="{{item.checked}}" />
+          {{item.name}}
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class='form-item'>
+    <view class='form-label'>产品介绍</view>
+    <view class='form-input'>
+      <textarea name='introduce' class='textarea'></textarea>
+    </view>
+  </view>
+  <view class='form-item'>
+    <view class='form-label'>样品图片</view>
+    <view class='form-input'>
+      <view wx:if='{{images.length != 5}}' class='add' catchtap='chooseImage'>
+        <image lazy-load class='add-img' src='/images/supplier/add.png'></image>
+      </view>
+      <view wx:if='{{images.length == 0}}' class='instructions'>
+        请上传您的产品照片，以便我们快速了解您的产品，最多上传5张
+      </view>
+      <block wx:for='{{images}}' src='{{index}}'>
+        <view class='add'>
+          <image lazy-load class='add-img' src='{{item}}'></image>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='form-item'>
+    <view class='form-label'>姓名</view>
+    <view class='form-input'>
+      <input name='realname' type='text'></input>
+    </view>
+  </view>
+  <view class='form-item'>
+    <view class='form-label'>电话</view>
+    <view class='form-input'>
+      <input name='phone' type='text'></input>
+    </view>
+  </view>
+  <view class='form-item'>
+    <view class='form-label'>职位</view>
+    <view class='form-input'>
+      <input name='position' type='text'></input>
+    </view>
+  </view>
+  <button class='btn' style='background: {{background}};' form-type="submit">提交申请</button>
+</form>

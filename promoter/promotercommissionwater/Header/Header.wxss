@@ -1,0 +1,29 @@
+.GroupOrderHeader{
+  font-size: 26rpx;
+}
+.GroupOrderHeader-header{
+  background: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.GroupOrderHeader-header-item{
+  padding: 20rpx;
+  border-bottom: 4rpx solid #ffffff;
+}
+
+.select{
+  border-bottom: 4rpx solid #ff7c13 ;
+  color: #ff7c13 ;
+  animation: show 1s;
+}
+
+@keyframes show{
+  from{
+    color:#555;
+    border-bottom: 4rpx solid #ffffff;
+  } to {
+    border-bottom: 4rpx solid #ff7c13 ;
+    color: #ff7c13 ;
+  }
+}

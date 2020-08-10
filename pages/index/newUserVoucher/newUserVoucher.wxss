@@ -1,0 +1,119 @@
+
+
+mask{
+  width: 750rpx;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+layer{
+  position: absolute;
+  top: 20vh;
+  left: 87rpx;
+  width: 576rpx;
+}
+.header-img{
+  width: 576rpx;
+  vertical-align: bottom;
+}
+.header-text{
+  font-weight: bold;
+  color: #ffffff;
+  background: #ff5f01;
+  font-size: 44rpx;
+  text-align: center;
+  padding: 20rpx 0;
+}
+.scroll{
+  max-height: 440rpx; 
+  background: #ff5f01;
+  box-sizing: border-box;
+  padding: 0 32rpx;
+}
+
+.item{
+  display: flex;
+  height: 136rpx;
+  margin-bottom: 20rpx;
+}
+.item:last-child{
+  margin-bottom: 0;
+}
+.left{
+  background: #ffffff;
+  position: relative;
+  border-top-left-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  width: 156rpx;
+  border-right: 1px dotted #bbbbbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.left::after{
+  content: '';
+  width: 20rpx;
+  height: 20rpx;
+  position: absolute;
+  right: -10rpx;
+  top: -10rpx;
+  background: #ff5f01;
+  border-radius: 50%;
+}
+.left::before{
+  content: '';
+  width: 20rpx;
+  height: 20rpx;
+  position: absolute;
+  right: -10.5rpx;
+  bottom: -10.5rpx;
+  background: #ff5f01;
+  border-radius: 50%;
+}
+.price{
+  font-size: 46rpx;
+  color: red;
+  font-weight: bold;
+}
+.fullprice{
+  font-size: 20rpx;
+}
+.right{
+  background: #ffffff;
+  border-top-right-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column wrap;
+  padding-left: 32rpx;
+}
+.name{
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.date{
+  font-size: 20rpx;
+  color: #999999;
+  margin-top: 20rpx;
+}
+.date::before{
+  content: '有效期至: ';
+}
+
+
+.footer{
+  padding: 26rpx;
+  background: #ff5f01;
+}
+.btn{
+  border-radius: 50rpx;
+  color: #ff4148;
+  background: #ffe747;
+  height: 60rpx;
+  width: 346rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}

@@ -1,0 +1,103 @@
+.search{
+  height:190rpx;
+  padding:30rpx 100rpx;
+  background: rebeccapurple;
+  font-size:26rpx;
+  position: relative;
+}
+.search-icon{
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  right: 120rpx;
+  top: 50rpx;
+}
+.search-item{
+  background: #fff;
+  height:80rpx;
+  border-radius: 60rpx;
+  padding: 0 20rpx;
+  padding-right:70rpx;
+}
+.placeholder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.placeholder::before{
+  content:'';
+  width: 50rpx;
+}
+.card{
+  background: #ffffff;
+  width:630rpx;
+  margin: 0 auto;
+  margin-top: -70rpx;
+  position: relative;
+  border-radius: 20rpx;
+  padding:30rpx;
+  font-size:26rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.card-avatar{
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  top: -50rpx;
+}
+.card-title{
+  width: 100%;
+  border-left:#f8b100 10rpx solid;
+  padding-left:20rpx;
+  font-size:24rpx;
+  margin-bottom:20rpx;
+}
+
+.card-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.card-name{
+  font-size:24rpx;
+  padding:20rpx 0;
+  text-align:center;
+}
+.card-community{
+  font-size:40rpx;
+  color:#ff4649;
+  text-align:center;
+}
+.card-address{
+  font-size:24rpx;
+  padding:20rpx 0;
+  text-align:center;
+}
+
+
+
+.post{
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  border: 1px solid red;
+  color: red;
+  border-radius: 50rpx;
+  padding: 5rpx 20rpx;
+}
+
+.repositioning{
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+  border: 1px solid #eee;
+  padding: 5rpx 10rpx;
+  border-radius: 50rpx;
+  color: #999;
+}

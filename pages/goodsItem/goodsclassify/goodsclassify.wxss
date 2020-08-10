@@ -1,0 +1,51 @@
+.chooseGoods {
+  background: #fff;
+  margin: 0 0 2vw 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3vw 2vw 3vw 4vw;
+}
+
+.store-item {
+  display: flex;
+  width: 96vw;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.store-content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.store-name {
+  font-size: 4vw;
+  color: #888;
+}
+
+.store-name:after {
+  content: '规格';
+  font-size: 3vw;
+  color: #888;
+  margin-left: 1vw;
+}
+
+.store-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.store-right-text {
+  font-size: 3vw;
+}
+
+.store-go {
+  width: 4vw;
+  height: 4vw;
+  margin: 0vw 1vw;
+}

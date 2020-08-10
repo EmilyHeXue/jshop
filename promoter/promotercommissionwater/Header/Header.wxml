@@ -1,0 +1,7 @@
+<view class='GroupOrderHeader'>
+  <view class='GroupOrderHeader-header'>
+    <block wx:for='{{menu}}' wx:key='{{index}}'>
+      <view catchtap='changeIndex' data-index='{{index}}'  class='GroupOrderHeader-header-item {{index === selectIndex ? "select":""}}'>{{item.text}}</view>
+    </block>
+  </view>
+</view>

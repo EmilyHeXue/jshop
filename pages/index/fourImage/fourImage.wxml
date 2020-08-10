@@ -1,0 +1,10 @@
+<view class="view-bannerThree">
+  <view class="list">
+    <image class='left' catchtap='go' data-link='{{data.details.imgs[0].link}}' src="{{data.details.imgs[0].src}}"></image>
+    <view class='right'>
+      <image class='small-img' catchtap='go' data-link='{{data.details.imgs[1].link}}' src="{{data.details.imgs[1].src}}"></image>
+      <image class='small-img' catchtap='go' data-link='{{data.details.imgs[2].link}}' src="{{data.details.imgs[2].src}}"></image>
+      <image class='small-img' catchtap='go' data-link='{{data.details.imgs[3].link}}' src="{{data.details.imgs[3].src}}"></image>
+    </view>
+  </view>
+</view>

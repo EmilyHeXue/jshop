@@ -1,0 +1,53 @@
+.audio{
+  display: flex;
+  justify-content: center;
+  margin: 20rpx;
+  background: #ffffff;
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+.item{
+  flex:1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.left{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.poster{
+  height: 200rpx;
+  width: 200rpx;
+}
+.btn-play{
+  position: absolute;
+  height: 80rpx;
+  width: 80rpx;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.right{
+  flex: 1;
+  padding: 10px;
+}
+
+.txt1{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.time{
+  font-size:1.5em;
+}
+
+.txt2{
+  font-size:1.5em;
+  line-height: 2.5em;
+}

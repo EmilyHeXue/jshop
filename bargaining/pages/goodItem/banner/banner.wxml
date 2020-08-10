@@ -1,0 +1,30 @@
+<view class='banner'>
+  <swiper class='swiper'>
+    <block wx:for='{{data.pic_urls}}'>
+      <swiper-item class='swiper-item'>
+        <image lazy-load src='{{item}}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='countdown' wx:if='{{timeout}}'>
+    距离活动还有
+    <view class='date-label'>{{day}}</view>天
+    <view class='date-label'>{{hour}}</view>:
+    <view class='date-label'>{{minute}}</view>:
+    <view class='date-label'>{{second}}</view>
+  </view>
+  <view class='countdown' wx:else>
+    活动已结束
+  </view>
+  
+  <view class='content'>
+    <view class='content-price'>
+      <view class='content-label red'>最低</view>
+      <view class='price red'>{{data.min_price}}</view>
+      <view class='content-label gray'>原价</view>
+      <view class='original-price gray'>{{data.price}}</view>
+    </view>
+    <view class='content-name'>{{data.name}}</view>
+    <view class='content-time'>活动时间: {{data.format_bargain_start_time}} 至 {{data.format_bargain_end_time}}</view>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/group/changegroup/changeGroupList/changeGroupList.wxml-->
+<view class='changeGroupList'>
+  <view class='changeGroupList-title'>附近社区:</view>
+  <view class='changeGroupList-content'>
+    <block wx:for='{{data}}' wx:key='item'>
+      <view class='changeGroupList-item'>
+        <image lazy-load src='{{item.avatar}}' class='item-img'></image>
+        <view class='item-content'>
+          <view class='item-community'>{{item.area_name}}</view>
+          <view class='item-address'>{{item.addr}}</view>
+          <view class='item-group'>{{leader_name}}:{{item.realname}}</view>
+        </view>
+        <view class='item-right'>
+          <view class='item-distance'>距离{{item.juli}}km</view>
+          <view class='item-btn' data-area='{{item}}' catchtap='catchArea'>进入{{leader_name}}小区</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

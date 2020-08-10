@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "promoteOrderHeader": "/superuser/superuserorder/superuserorderHeader/superuserorderHeader",
+    "promoteOrderList": "/superuser/superuserorder/superuserorderList/superuserorderList"
+  }
+}

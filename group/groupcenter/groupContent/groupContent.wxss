@@ -1,0 +1,113 @@
+.groupCard{
+  
+}
+.grounCard-card{
+  background: #AB9FFF;
+  padding-bottom: 70rpx;
+  padding-top: 35rpx;
+}
+.card-top{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 30rpx;
+  position: relative;
+  font-size: 32rpx;
+}
+.top-leavel{
+  display: flex;
+  align-items: center;
+}
+.leavel-icon{
+  width: 36rpx;
+  height: 36rpx;
+  margin: 10rpx;
+}
+.leavel-right{
+  color: #777;
+  margin-left: 20rpx;
+}
+.top-edit{
+  position: absolute;
+  right: 30rpx;
+  top: 0rpx;
+  font-size: 24rpx;
+}
+.card-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30rpx 0 58rpx;
+}
+.info-avatar{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.info-center{
+  font-size: 28rpx;
+  flex: 1;
+  margin-left: 44rpx;
+}
+.info-name{
+
+}
+.info-area{
+
+}
+.info-btn{
+  font-size: 24rpx;
+  border-radius: 50rpx;
+  border: 1px solid #ffffff;
+  padding: 5rpx 20rpx;
+}
+
+.tab1{
+  background: #fff;
+  width: 710rpx;
+  display: flex;
+  padding: 18rpx;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: -40rpx;
+  border-radius: 8rpx;
+}
+
+.tab1 .icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.tab1 .content{
+  font-size: 28rpx;
+}
+
+.tab2{
+  background: #fff;
+  width: 710rpx;
+  display: flex;
+  padding: 18rpx;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  justify-content: space-between;
+}
+.tab2 .price{
+  color: red;
+}
+.tab2 .price::after{
+  content: '元';
+  color: #555;
+}
+.tab2 .price::before{
+  content: '待提现: ';
+  color: #555;
+}
+
+.tab2 .btn{
+  font-size: 24rpx;
+  border-radius: 50rpx;
+  border: 1px solid #555;
+  padding: 5rpx 20rpx;
+}

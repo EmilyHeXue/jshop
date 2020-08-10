@@ -1,0 +1,14 @@
+<view class='seckillScroll'>
+  <view class='head'>
+    <view class='head-name'>秒杀热抢</view>
+    <view class='head-date'>{{secound}}s后换一批</view>
+  </view>
+  <view class='goods {{animation ? "animation" : ""}}'>
+    <block wx:for='{{list}}'>
+      <view class='item' catchtap="go" data-id='{{item.goods_id}}'>
+        <image lazy-load class='item-img' src='{{item.pic_urls}}' />
+        <view class='item-price'>{{item.price}}</view>
+      </view>
+    </block>
+  </view>
+</view>

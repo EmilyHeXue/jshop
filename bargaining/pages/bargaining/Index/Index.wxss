@@ -1,0 +1,134 @@
+/*轮播图-start*/
+.banner-item{
+  height: 300rpx;
+  width: 750rpx;
+}
+.banner-item-img{
+  background: rgba(139, 195, 74, 1);
+  width: 100%;
+  height: 100%;
+}
+/*轮播图-start*/
+
+/*商品列表-start*/
+.center{
+  padding-bottom: 90rpx;
+}
+.goods-item{
+  padding: 38rpx 34rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid #f4f4f4;
+}
+.goods-img{
+  width: 240rpx;
+  height: 240rpx;
+  margin-right: 32rpx;
+}
+.goods-content{
+  flex: 1;
+  height: 240rpx;
+}
+.goods-name{
+  font-size: 36rpx;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.goods-buy{
+  display: flex;
+  margin-top: 14rpx;
+}
+.goods-buy-avatar{
+  display: flex;
+}
+.goods-buy-avatar-item{
+  background: #ff9800;
+  width: 40rpx; 
+  height: 40rpx;
+  border-radius: 50%;
+  margin-right: 4rpx;
+}
+.goods-buy-content{
+  font-size: 24rpx;
+  color: #6f6f6f;
+}
+.goods-linePrice{
+  margin-top: 32rpx;
+  color: #aaaaaa;
+  font-weight: bold;
+  font-size: 32rpx;
+  text-decoration: line-through;
+}
+.goods-linePrice::before{
+  content: '￥';
+  font-size: 28rpx;
+}
+.goods-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+.goods-footer-price{
+  display: flex;
+  color: #FF1313;
+  align-items: baseline;
+}
+.goods-footer-price-content{
+  font-size: 28rpx;
+}
+.goods-price::before{
+  content: '￥';
+  font-size: 28rpx;
+}
+.goods-price{
+  font-size: 40rpx;
+}
+.goods-btn{
+  color: #ffffff;
+  padding: 8rpx 26rpx;
+  border-radius: 50rpx;
+}
+.buy{
+  background: red;
+}
+.err{
+  background: #CECECE;
+}
+/*商品列表-end*/
+
+
+/*底部导航-start*/
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 750rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ffffff;
+  height: 84rpx;
+}
+.footer-item{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 16rpx;
+}
+.footer-text{
+  font-size: 28rpx;
+  color: #575757;
+}
+.bind{
+  color: #ff9800;
+}
+/*底部导航-end*/

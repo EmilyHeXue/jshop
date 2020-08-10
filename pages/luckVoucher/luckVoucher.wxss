@@ -1,0 +1,193 @@
+page{
+  background: #f2f2f2;
+}
+.banner{
+  width: 750rpx;
+  margin-bottom: 34rpx;
+}
+.voucher{
+  width: 610rpx;
+  height: 124rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  overflow: hidden;
+  border-radius: 12rpx;
+  margin: 0 auto;
+}
+
+.voucher-left{
+  position: relative;
+  margin-right: 1px;
+  background: #ff5b67;
+  flex: 1;
+  height: 124rpx;
+  padding-left: 56rpx;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+.voucher-left::after{
+  position: absolute;
+  content: '';
+  width: 33rpx;
+  height: 16.5rpx;
+  right: -16.5rpx;
+  bottom: 0;
+  background: #ffffff;
+  border-radius: 33rpx 33rpx 0 0;
+}
+.voucher-left::before{
+  position: absolute;
+  content: '';
+  width: 33rpx;
+  height: 16.5rpx;
+  right: -16.5rpx;
+  top: 0;
+  background: #ffffff;
+  border-radius: 0 0 33rpx 33rpx;
+}
+.voucher-name{
+  font-size: 36rpx;
+}
+.voucher-fullprice{
+  font-size: 20rpx;
+}
+.voucher-right{
+  background: #ff5b67;
+  height: 124rpx;
+  width: 180rpx;
+  line-height: 124rpx;
+  text-align: center;
+}
+.voucher-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 66rpx;
+  padding: 28rpx 0;
+  border-bottom: 1px solid #dfdfdf;
+}
+.voucher-date{
+  flex: 1;
+  font-size: 24rpx;
+  color: #aeaeae;
+}
+.voucher-btn{
+  border: 1px solid #ff9800;
+  color: #ff9800;
+  border-radius: 50rpx;
+  height: 64rpx;
+  width: 200rpx;
+  line-height: 64rpx;
+  background: none;
+  box-sizing: content-box;
+  font-size: 28rpx;
+}
+
+.title{
+  text-align: center;
+  padding: 20rpx 0 40rpx 0;
+  font-size: 28rpx;
+}
+.getinfo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.getinfo-title{
+  color: #9d9d9d;
+  font-size: 28rpx;
+}
+
+.getinfo-items{
+  width: 636rpx;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12rpx;
+  overflow: hidden;
+  margin-top: 16rpx;
+}
+.getinfo-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0rpx 40rpx;
+  padding: 32rpx 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+.getinfo-item:last-child{
+  border-bottom-width: 0;
+}
+
+
+.getinfo-avatar{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+.getinfo-center{
+  flex: 1;
+  font-size: 28rpx;
+  padding-left: 14rpx;
+}
+.getinfo-name{
+  margin-bottom: 6rpx;
+}
+.getinfo-date{
+  color: #a8a6a6;
+}
+.getinfo-right{
+  text-align: right;
+}
+.getinfo-price{
+  color: red;
+  font-size: 42rpx;
+}
+.getinfo-price::after{
+  content: '元';
+  font-size: 34rpx;
+}
+.getinfo-bigger{
+  font-size: 24rpx;
+  color: #fec747;
+  display: flex;
+  align-items: center;
+  margin-top: 4rpx;
+}
+.getinfo-bigger::before{
+  content: '';
+  width: 36rpx;
+  height: 36rpx;
+  background: url(https://imgs.juanpao.com/ui/5c6e0ede216d1b.png);
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+  display: block;
+  margin-right: 8rpx;
+}
+
+mask{
+  width: 750rpx;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+layer{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
+}
+layer .icon{
+  width: 500rpx;
+}
+.layer-btn{
+  position: absolute;
+  bottom: 35rpx;
+  width: 600rpx;
+  opacity: 0;
+}

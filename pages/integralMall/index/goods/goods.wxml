@@ -1,0 +1,12 @@
+<view class='grid'>
+  <block wx:for='{{goods}}' wx:key='id'>
+    <view class='item' catchtap="go" data-id='{{item.id}}'>
+      <image lazy-load class='item-img' src='{{item.pic_urls[0]}}'></image>
+      <view class='item-center'>{{item.name}}</view>
+      <view class='item-bottom'>
+        <view class='item-bottom-left'>{{item.score}}</view>
+        <view class='item-bottom-right' style='border-color: {{background}}; color: {{background}}'>兑换</view>
+      </view>
+    </view>
+  </block>
+</view>

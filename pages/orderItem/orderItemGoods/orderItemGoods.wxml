@@ -1,0 +1,53 @@
+<view class="orderItemGoods">
+  
+    <!--商品列表-->
+    <view>
+      <block wx:for='{{goodsData.data}}' wx:key='{{item.id}}'>
+        <navigator url="/pages/goodsItem/goodsItem/goodsItem?id={{item.goods_id}}" class='orderItemGoods-item'>
+          <image lazy-load src='{{item.pic_url}}' class='orderItemGoods-item-img'></image>
+          <view class='orderItemGoods-item-content'>
+            <view class='orderItemGoods-item-left'>
+              <view class='orderItemGoods-item-text'>{{item.name}}</view>
+              <view class='orderItemGoods-item-type'>{{item.property1_name}} {{item.property2_name}}</view>
+            </view>
+            <view class='orderItemGoods-item-right'>
+              <view class='orderItemGoods-item-price'>￥{{item.price}}</view>
+              <view class='orderItemGoods-item-nums'>x{{item.number}}</view>
+            </view>
+          </view>
+        </navigator>
+      </block>
+    </view>
+    
+    
+    <!--商品信息-->
+    <view class='goodsOrder'>
+      <view class='goodsOrder-goods'>
+        <view class='goodsOrder-item'>
+          <view class='goodsOrder-item-left'>商品总价</view>
+          <view class='goodsOrder-item-right'>￥{{goodsData.orderAllPrice}}</view>
+        </view>
+        <view class='goodsOrder-item'>
+          <view class='goodsOrder-item-left'>运费</view>
+          <view class='goodsOrder-item-right'>{{goodsData.express_price == 0 ? "包邮" : "￥" + goodsData.express_price}}</view>
+        </view>
+        <view class='goodsOrder-item'>
+          <view class='goodsOrder-item-left'>店铺优惠</view>
+          <view class='goodsOrder-item-right'>-￥{{goodsData.voucher}}</view>
+        </view>
+        <view class='goodsOrder-item' wx:if='{{goodsData.reduction_achieve != "0.00"}}'>
+          <view class='goodsOrder-item-left'>满减优惠</view>
+          <view class='goodsOrder-item-right'>-￥{{goodsData.reduction_achieve}}</view>
+        </view>
+      </view>
+      
+      <view class='goodsOrder-allPrice'>
+        <h5 class='goodsOrder-item-left'>订单总价</h5>
+        <h5 class='goodsOrder-item-right'>￥{{goodsData.total_price}}</h5>
+      </view>
+      <view class='goodsOrder-shifukuan'>
+        <h4 class='goodsOrder-item-left'>实付款</h4>
+        <h4 class='goodsOrder-item-right'>￥{{goodsData.payment_money}}</h4>
+      </view>
+    </view>
+  </view>

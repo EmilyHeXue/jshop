@@ -1,0 +1,17 @@
+<view class='header' style='background: {{background}}'>
+  <image lazy-load class="bg" src='/images/skill/ptbg.png' mode='widthFix'></image>
+  <image lazy-load class="headerimg" src='/images/skill/zdms.png' mode='widthFix'></image>
+</view>
+<scroll-view class='scroll' style='background: {{background}}' scroll-x>
+  <block wx:for='{{menu}}' wx:key='{{index}}'>
+    <view class='scroll-item {{index == selectIndex ? "select" : ""}}'  catchtap='change' data-index='{{index}}'>
+      <!--<view class='date'>{{item.start_time_month}}月{{item.start_time_day}}日</view>-->
+      <view class='time'>{{item.start_time2}}</view>
+      <view class='footer'>
+        <view wx:if='{{item.state == 1}}'>未开始</view>
+        <view wx:if='{{item.state == 2}}'>进行中</view>
+        <view wx:if='{{item.state == 3}}'>已结束</view>
+      </view>
+    </view>
+  </block>
+</scroll-view>

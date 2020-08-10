@@ -1,0 +1,6 @@
+/* pages/applicationForDrawback/applicationForDrawback/applicationForDrawback.wxss */
+page{
+  background-color: #eeeeee;
+  padding-bottom:100rpx;
+}
+

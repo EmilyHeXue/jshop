@@ -1,0 +1,25 @@
+<!--pages/coupons/coupons/coupons.wxml-->
+<view class='{{page ? "page":""}}'>
+  <view class='to-coupons-center'>
+    <view class='to-coupons-center-item' bindtap='toCouponsCenter'>领券中心>></view>
+  </view>
+
+  <view class='coupons'>
+    <block wx:for='{{List}}' wx:key='id'>
+      <view class='coupons-item {{item.is_used  == 0 ? "":"guoqi"}}'>
+        <view class='coupons-item-left'>
+          <view class='coupons-item-text'>
+            ￥
+            <view class='coupons-item-price'>{{item.price}}</view>
+          </view>
+          <view class='coupons-item-total_price'>订单金额满{{item.full_price}}元可用</view>
+          <view class='coupons-item-time'>{{item.start_time}}-{{item.end_time}}</view>
+        </view>
+        <view data-index='{{index}}' bindtap='toshopping' class='coupons-item-right'>{{item.is_used == 0 ? '立即使用':'已使用'}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<footer bindshow='footerFlag'></footer>
+

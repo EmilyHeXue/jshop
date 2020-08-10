@@ -1,0 +1,16 @@
+<!--pages/comments/star/star.wxml-->
+<view class='start'>
+  <view class='star-item'>
+    <block wx:for='{{data}}' wx:key='{{index}}'>
+      <image 
+        lazy-load 
+        class='star-item-img' 
+        src='{{item ? "/images/comments/starselected.png":"/images/comments/star.png"}}'
+        data-index='{{index}}'
+        catchtap='choose'
+      >
+      </image>
+    </block>
+  </view>
+  <view class='star-text'>{{text[evaluation]}}</view>
+</view>

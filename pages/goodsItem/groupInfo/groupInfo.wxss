@@ -1,0 +1,31 @@
+.groupInfo{
+  margin: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #ffffff;
+  display: flex;
+}
+.groupInfo-label{
+  color: #999696;
+  font-size: 24rpx;
+  margin-right: 18rpx;
+}
+.content{
+  flex: 1;
+}
+.content-top{
+  font-size: 28rpx;
+}
+.content-addr{
+  font-size: 24rpx;
+  color: #999696;
+}
+.groupInfo-right{
+  color: #FF6200;
+  font-size: 20rpx;
+  margin-left: 20rpx;
+}
+.groupInfo-icon{
+  width: 44rpx;
+}

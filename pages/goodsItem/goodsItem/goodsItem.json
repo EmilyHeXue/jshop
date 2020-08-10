@@ -1,0 +1,23 @@
+{
+  "usingComponents":{
+    "goodsimage": "/pages/goodsItem/image/image",
+    "goodsfooter": "/pages/goodsItem/footer/footer",
+    "goodsCoupons":"/pages/goodsItem/goodsCoupons/goodsCoupons",
+    "goodsclassify":"/pages/goodsItem/goodsclassify/goodsclassify",
+    "goodsComment": "/pages/goodsItem/goodsComment/goodsComment",
+    "store": "/pages/goodsItem/store/store",
+    "login": "/pages/login/login",
+    "layer": "/pages/goodsItem/layer/layer",
+    "footer": "/pages/footer/footer",
+    "goodsPrice": "/pages/goodsItem/groupPrice/groupPrice",
+    "goodsInfo": "/pages/goodsItem/goodsInfo/goodsInfo",
+    "groupInfo": "/pages/goodsItem/groupInfo/groupInfo",
+    "buyPeople": "/pages/goodsItem/buypeople/buypeople",
+    "Share": "/pages/goodsItem/share/share",
+    "groupPlayer": "/pages/goodsItem/groupPlayer/groupPlayer",
+    "groupRecommended": "/pages/goodsItem/groupRecommended/groupRecommended",
+    "recommendGoods":"/pages/utill/recommendGoods/recommendGoods",
+    "advanceInfo":"/pages/goodsItem/advanceInfo/advanceInfo"
+  },
+  "navigationStyle": "custom"
+}

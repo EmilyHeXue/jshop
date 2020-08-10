@@ -1,0 +1,79 @@
+<!--pages/goodsItem/footer/footer.wxml-->
+<view class='footer'>
+  <view class='footer-menu' bindtap='goIndex'>
+    <image lazy-load class='footer-menu-img' src='/images/goodsItem/footer/shop.png'/>
+    <view class='footer-menu-text'>店铺</view>
+  </view>
+  <navigator open-type="navigate" url='/pages/shopCart/shopCart/shopCart' class='footer-menu'>
+    <image lazy-load class='footer-menu-img' src='/images/goodsItem/footer/shopcart.png'/>
+    <view class='footer-menu-text'>购物车</view>
+  </navigator>
+  <button open-type="contact" class='footer-menu'>
+    <image lazy-load class='footer-menu-img' src='/images/goodsItem/footer/kefu.png'/>
+    <view class='footer-menu-text'>客服</view>
+  </button>
+  <!--下架商品-->
+  <view class='footer-button' wx:if='{{data.status == 0}}'>
+    <view class='footer-button-right gray'>商品已下架</view>
+  </view>
+  <!--正常商品-->
+  <view class='footer-button' wx:if='{{goodstype != 2 && data.status == 1 && data.is_cart == 1 && data.is_advance_sale != 1 && data.is_bargain != 1}}'>
+    <view class='footer-button-left' bindtap='addGoodsShop'>加入购物车</view>
+    <view class='footer-button-right' bindtap='toBuy'>立即购买</view>
+  </view>
+  <view class='footer-button' wx:if='{{goodstype != 2 && data.status == 1 && data.is_cart == 0 && data.is_advance_sale != 1 && data.is_bargain != 1}}'>
+    <view class='footer-button-right' bindtap='toBuy'>立即购买</view>
+  </view>
+
+  <!--预购商品-->
+  <view class='footer-button' wx:if='{{goodstype != 2 && data.status == 1 && data.is_advance_sale == 1}}'>
+    <view class='footer-button-right' bindtap='toBuy'>
+      <view class="advance-left">
+        <view class="advance-left-text">支付尾款{{data.advance_info.goods_info.tail_money}}后</view>
+        <view class="advance-left-days">{{data.advance_info.days}}天内发货</view>
+      </view>
+      <view class="advance-right">
+        <view class="advance-front_money">{{data.advance_info.front_money}}</view>
+        <view class="advance-deduction">定金抵{{data.advance_info.deduction}} 立即支付</view>
+      </view>
+    </view>
+  </view>
+  
+  <!--拼团商品开启单独购买-->
+  <view class='footer-button' wx:if='{{goodstype == 2 && data.status == 1 && data.group.is_self == 1}}'>
+    <view class='footer-button-left group-btn' bindtap='toBuy'>
+      <view class='group-price'>{{price}}</view>
+      <view class="group-text">单独购买</view>
+    </view>
+    <view class='footer-button-right group-btn' bindtap='toGroupBuy'>
+      <view class='group-price'>{{group_price}}</view>
+      <view class="group-text">{{data.group.number}}人团</view>
+    </view>
+  </view>
+
+  <!--拼团商品未开启单独购买-->
+  <view class='footer-button' wx:if='{{goodstype == 2 && data.status == 1 && data.group.is_self == 0}}'>
+    <view class='footer-button-right group-btn' bindtap='toGroupBuy'>
+      <view class='group-price'>{{group_price}}</view>
+      <view class="group-text">{{data.group.number}}人团</view>
+    </view>
+  </view>
+  <!--拼团商品未开启单独购买-->
+  <view class='footer-button' wx:if='{{goodstype != 2 && data.status == 1 && data.is_bargain == 1}}'>
+    <view class='footer-button-right group-btn' bindtap='toBuy'>
+      发起砍价
+    </view>
+  </view>
+</view>
+
+
+<view catchtap="close" class='mask' wx:if='{{propertyFlag}}'>
+  <view catchtap class='layer'>
+    <view class='layer-title'>请选择拼团人数</view>
+    <view class='layer-content'>
+      <block wx:for='{{property}}' wx:key='{{item}}'>
+        <view catchtap="change" data-index='{{index}}' class='content-item'>{{item}}人团</view>
+      </block>
+    </view>
+  </view>
+</view>

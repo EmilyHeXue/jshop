@@ -1,0 +1,56 @@
+<view class='screen' wx:if='{{data.length != 0}}'>
+    <view class='left'>
+        <view class='left-item {{active==1?"on":""}}' data-index='1' bindtap='tab'>综合</view>
+        <view class='left-item {{active==2?"on":""}}' data-index='2' bindtap='tab'>销量</view>
+    </view>
+    <view class='right'>
+        <image lazy-load bindtap='switch' src='/images/search/searchData/switch.png'></image>
+    </view>
+</view>
+<view class='list-transverse' hidden='{{switch == false}}'>
+  <block wx:for='{{data}}' wx:key='index'>
+    <view class='item' catchtap='goGoods' data-id='{{item.id}}'>
+        <image lazy-load src='{{item.pic_urls[0]}}'></image>
+        <view class='right'>
+            <view class='name'>{{item.name}}</view>
+            <view class='introduce'>{{item.simple_info}}</view>
+            <view class='Sold'>已售{{item.sold}}件</view>
+            <view class='price'>
+                <view class='xian'>
+                    <text>¥</text>{{item.price}}
+                </view>
+                <view class='yuan'>¥ {{item.price}}</view>
+                <view style='background: {{background}}' class='qiang'>立即抢购</view>
+            </view>
+        </view>
+    </view>
+  </block>
+</view>
+
+<view class='list-vertical' hidden='{{switch == true}}'>
+  <block wx:for='{{data}}' wx:key='index'>
+    <view class='item' catchtap='goGoods' data-id='{{item.id}}'>
+        <image lazy-load src='{{item.pic_urls[0]}}'></image>
+        <view class='right'>
+            <view class='name'>{{item.name}}</view>
+            <view class='price'>
+                <view class='xian'>
+                    <text>¥</text>{{item.price}}
+                </view>
+                <view class='yuan'>已售{{item.sold}}件</view>
+            </view>
+        </view>
+    </view>
+  </block>
+</view>
+
+<view class='nav' hidden='{{nav}}' bindtap='hide'>
+  <view class='nav-back'>
+    <block wx:for='{{classifyData}}' wx:key='index'>
+      <view>
+          <image lazy-load src='{{item.pic_url}}'></image>
+          <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+</view>

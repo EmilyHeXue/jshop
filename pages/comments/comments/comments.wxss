@@ -1,0 +1,6 @@
+.post-btn{
+  color: #ffffff;
+  width: 210rpx;
+  margin-bottom:9px;
+  font-size: 30rpx;
+}

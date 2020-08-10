@@ -1,0 +1,39 @@
+<!--购物车-->
+<!---->
+<view class='{{page ? "page":""}}'>
+  <login bind:myevent='getjwt' show='{{showLogin}}'></login>
+
+  <!--头部-->
+  <header 
+    bind:checkALl='checkALl'
+    bind:showDel='showDel'
+    bind:closeDel='showDel'
+    show='{{show}}'>
+  </header>
+
+  <!--商品信息-->
+  <shopItem
+    bind:changeFlag='changeCartData'
+    bind:changeGoodsNumber='changeGoodsNumber'
+    bind:cartUpdata='getCartList'
+    cartdata='{{cartData}}'>
+  </shopItem>
+
+  <nodata
+    wx:if='{{!noLogin}}'
+    nodataFlag='{{nodataFlag}}'
+  >
+  </nodata>
+  <login noLogin='{{noLogin}}'/>
+  <!--底部-->
+  <Cartfooter 
+    bind:checkALl='checkALl' 
+    bind:regetData='getCartList'
+    allPrice='{{allPrice}}'
+    chooseData='{{chooseData}}'
+    checked='{{flag}}'
+    show='{{show}}'>
+  </Cartfooter>
+</view>
+
+<footer cartUpdata='{{cartUpdata}}' bindshow='show'></footer>

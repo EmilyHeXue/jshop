@@ -1,0 +1,12 @@
+<view class='GroupMenbersOrderHeader'>
+    <view class='GroupMenbersOrderHeader-item {{ 2 == menuIndex ? "select" : "" }}' catchtap='changeindex' data-index='{{2}}'>待结算
+      <text class='{{ 2 == menuIndex ? "selectline" : "" }}'></text>
+    </view>
+    <view class='GroupMenbersOrderHeader-item {{ 1 == menuIndex ? "select" : "" }}' catchtap='changeindex' data-index='{{1}}'>已结算
+      <text class='{{ 1 == menuIndex ? "selectline" : "" }}'></text>
+    </view>
+</view>
+<view class='search'>
+  <image lazy-load catchtap='search' class='search-icon' src='/images/search/search/search.png'></image>
+  <input bindblur="search" value='{{searchData}}' class='search-input' placeholder='请输入' bindinput='write'></input>
+</view>

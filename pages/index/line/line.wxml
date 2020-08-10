@@ -1,0 +1,3 @@
+<view class='line' style='background: {{data.details.color2}}; padding: {{data.details.paddingTopBottom}}px 0;'>
+  <view style='border-bottom: {{data.details.boxHeight}}px {{list[data.details.style]}} {{data.details.color1}}'> </view>
+</view>

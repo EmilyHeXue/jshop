@@ -1,0 +1,6 @@
+<rich-text nodes='{{data}}'></rich-text>
+<form class='form' report-submit bindsubmit='post'>
+  <button class='post' form-type='submit'>立即申请</button>
+  <button class='phone' catchtap="call">电话咨询</button>
+</form>
+

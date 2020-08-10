@@ -1,0 +1,43 @@
+<image lazy-load class='banner' src='https://imgs.juanpao.com/ui/5c32a5bf29f2c-3.png' mode="widthFix"></image>
+<view class='voucher'>
+  <view class='voucher-left'>
+    <view class='voucher-name'>拼手气红包</view>
+    <view class='voucher-fullprice'>订单满{{receive_info.pull_price}}可用</view>
+  </view>
+  <view class='voucher-right'>{{receive_info.price}}元</view>
+</view>
+<view class='voucher-item'>
+  <view class='voucher-date'>{{receive_info.start_time}}至{{receive_info.end_time}}可用</view>
+  <form report-submit bindsubmit="go">
+    <button form-type="submit" class='voucher-btn'>立即使用</button>
+  </form>
+</view>
+<view class='title'>红包已放入: 个人中心-优惠券</view>
+<view class='getinfo'>
+  <view class='getinfo-title'>看看大家手气怎么样</view>
+  <view class='getinfo-items'>
+    <block wx:for='{{receive_List}}' wx:key='{{item.id}}'>
+      <view class='getinfo-item'>
+        <image lazy-load class='getinfo-avatar' src='{{item.avatar}}'></image>
+        <view class='getinfo-center'>
+          <view class='getinfo-name'>{{item.nickname}}</view>
+          <view class='getinfo-date'>{{item.create_time}}</view>
+        </view>
+        <view class='getinfo-right'>
+          <view class='getinfo-price'>{{item.price}}</view>
+          <!--<view class='getinfo-bigger' wx:if='{{item.is_licky == 1}}'>手气最佳</view>-->
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+
+<mask wx:if='{{layerFlag}}' catchtap='show'>
+  <layer catchtap>
+    <image lazy-load class='icon' mode="widthFix" src='https://imgs.juanpao.com/ui/5c85decb96279.png'></image>
+    <form report-submit bindsubmit="share" class='layer-btn'>
+      <button form-type="submit" class='layer-btn'>click</button>
+    </form>
+  </layer>
+</mask>

@@ -1,0 +1,12 @@
+<view class='closingTime'>
+  <image lazy-load src='/images/closingTime/logo.png' class='closingTime-img'></image>
+  <view class='closingTime-status'>店铺打烊中</view>
+  <view class='closingTime-item'>
+    <view class='closingTime-btn'>进店看看</view>
+    <view class='closingTime-bottom'>
+      <image lazy-load src='/images/closingTime/icon.png' class='closingTime-icon'></image>
+      <view class='closingTime-text'>联系商家</view>
+    </view>
+  </view>
+</view>
+<view class='banquan'>-提供技术支持</view>

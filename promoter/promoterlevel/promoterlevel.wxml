@@ -1,0 +1,41 @@
+<view>
+  <!--名片区域-->
+  <view class='card'>
+    <image lazy-load src='/images/group/grouplevel/card.png' class='card-bg'></image>
+    <view class='card-info'>
+      <!--头部-->
+      <view class='card-user-info'>
+        <image lazy-load src='{{avatar}}' class='card-user-avatar'></image>
+        <view class='card-user-right'>
+          <view class='card-user-name'>{{nickname}}</view>
+          <view class='card-user-level'>经验值: {{experience}}</view>
+        </view>
+      </view>
+      <!--等级区域-->
+      <view class='card-center'>
+        <image lazy-load src='/images/group/groupContent/v2.png' class='card-center-icon'></image>
+        <view class='card-center-text'>{{level_name}}</view>
+      </view>
+      <!--当前等级-->
+      <view class='card-bottom'>
+        <view class='card-bottom-min'>{{nowexperience}}</view>
+        <view class='card-bottom-article'>
+          <view style='width: {{(experience - nowexperience) / nextexperience * 100}}%' class='card-bottom-current'></view>
+        </view>
+        <view class='card-bottom-max'>{{nextexperience}}</view>
+      </view>
+      <view class='card-level'>
+        <view class='card-level-left'>当前等级</view>
+        <view class='card-level-right'>下一等级</view>
+      </view>
+    </view>
+  </view>
+
+  <!--等级说明-->
+  <view class='level-instructions'>{{leader_name}}等级规则：按照经验值计算等级，上月经验值到下月1日会折损50%，每月16日计算等级
+如：上月累计经验值10000，到本月1日会折损为5000，到16日计算的是5000+本月累计的经验值，进行升降级</view>
+  <view class='equities'>
+    <view class='equities-header'>我的权益</view>
+    <view class='equities-content'>按上月佣金奖励{{preferential}}%</view>
+  </view>
+</view>

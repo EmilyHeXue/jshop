@@ -1,0 +1,20 @@
+<view>
+  <view class='header'>
+    <view catchtap='changeTab' data-index='0' class='tab {{type == 0 ? "select" : ""}}'>已兑换</view>
+    <view catchtap='changeTab' data-index='1' class='tab {{type == 1 ? "select" : ""}}'>已发货</view>
+  </view>
+
+  <view>
+    <block wx:for='{{data}}' wx:key='index'>
+      <view class='item'>
+        <image lazy-load class='item-img' src='{{item.pic_url}}'></image>
+        <view class='item-content'>
+          <view class='item-name'>{{item.name}}</view>
+          <view class='item-price'>{{item.score}}</view>
+          <view class='item-status-will' wx:if='{{item.status == 0}}'>等待商家发货</view>
+          <view class='item-status-ing' catchtap="findExpress" data-express_name='{{item.express_name}}' data-order_sn='{{item.order_sn}}' data-simple_name='{{item.simple_name}}' data-express_number='{{item.express_number}}' wx:if='{{item.status == 1}}'>已发货: {{item.express_name}} {{item.express_number}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

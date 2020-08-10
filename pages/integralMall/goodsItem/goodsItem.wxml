@@ -1,0 +1,30 @@
+<view>
+  <view class='top'>
+    <swiper
+      class="swiper" 
+      autoplay
+      circular>
+      <block wx:for='{{data.pic_urls}}' wx:key='{{index}}'>
+        <swiper-item>
+          <image lazy-load class='top-img' src='{{item}}'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    
+    <view class='top-card'>
+      <view class='card-top'>{{data.name}}</view>
+      <view class='card-center'>
+        <view class='card-price'>{{data.score}}</view>
+        <view class='card-sold'>已有{{data.sale}}人兑换/剩{{data.stocks}}件</view>
+      </view>
+      <form report-submit bindsubmit='go'>
+        <button form-type='submit' class='card-btn' style='background: {{background}}'>立即兑换</button>
+      </form>
+    </view>
+  </view>
+
+  <view class='info'>
+    <view class='info-header'>商品详情</view>
+    <rich-text nodes='{{data.detail_info}}'></rich-text>
+  </view>
+</view>
